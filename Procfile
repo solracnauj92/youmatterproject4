@@ -1,1 +1,1 @@
-web: gunicorn you_matter.wsgi
+web: gunicorn you_matter.wsgi --log-file -
