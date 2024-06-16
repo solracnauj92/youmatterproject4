@@ -29,8 +29,11 @@ SECRET_KEY = 'django-insecure-n8&-)s@m2di+(t8w$xez214h9-pl9c=#x^o8erwk@r=vb*xk@(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-solracnauj9-youmatterpr-qrrse43ivwv.ws-eu114.gitpod.io',
-'.herokuapp.com','8000-solracnauj9-youmatterpr-6a4aa3gzwe4.ws-eu114.gitpod.io'
+ALLOWED_HOSTS = [
+'youmatterproject4-4051e707d991.herokuapp.com',
+'8000-solracnauj9-youmatterpr-qrrse43ivwv.ws-eu114.gitpod.io',
+'.herokuapp.com',
+'8000-solracnauj9-youmatterpr-6a4aa3gzwe4.ws-eu114.gitpod.io',
 ]
 
 
@@ -126,7 +129,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
