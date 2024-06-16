@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Post
+from django.views.generic import ListView
+
 
 # Create your views here.
-class PostList(generic.ListView):
+class Index(ListView):
     model = Post
-    template_name = 'main_page/post_list.html'  # Specify the template to use
+    template_name = 'main_page/index.html'
+    paginate_by = 6
 
     def get_queryset(self):
-        """Return the queryset of posts."""
         return Post.objects.filter(status=1)
