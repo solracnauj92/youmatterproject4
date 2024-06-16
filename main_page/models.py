@@ -37,3 +37,15 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="tags", default=1)
+
+    def __str__(self):
+        return self.name
+
+def profile_page(request):
+    user = get_object_or_404(User, user=request.user)
+    comments = user.commenter.all()
