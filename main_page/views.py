@@ -9,4 +9,4 @@ class PostList(generic.ListView):
 
     def get_queryset(self):
         """Return the queryset of posts."""
-        return Post.objects.all()
+        return Post.objects.filter(status=1)
