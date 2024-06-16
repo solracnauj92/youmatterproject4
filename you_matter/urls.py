@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from main_page import views as index_views
+from main_page.views import PostList
 from about import views as about_views
 
 
 
 urlpatterns = [
+    path('', PostList.as_view(), name='post-list'),
     path("", include("main_page.urls"), name="main_page-urls"),
     path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
