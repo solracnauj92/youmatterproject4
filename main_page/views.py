@@ -23,7 +23,6 @@ def post_detail(request, slug):
 
     :template:`blog/post_detail.html`
         """
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+    post = get_object_or_404(Post, slug=slug, status=1)
 
     return render(request, 'main_page/post_detail.html', {'post': post})

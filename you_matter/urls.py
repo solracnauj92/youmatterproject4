@@ -27,4 +27,5 @@ urlpatterns = [
     path('about/', about_views.about_me, name='about'),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
+  
 ]
