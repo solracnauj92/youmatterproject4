@@ -1,6 +1,16 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.contrib import messages
+from .models import About
+
 
 # Create your views here.
 def about_me(request):
-    return HttpResponse("This would be the about page")
+    about = About.objects.all().order_by("-updated_on").first()
+    
+    if request.method == "POST":
+        # Process any POST request data here if needed
+        messages.add_message(request, messages.SUCCESS, "Message received!")
+    
+    return render(request, "about/about.html", {
+        "about": about,
+    })
