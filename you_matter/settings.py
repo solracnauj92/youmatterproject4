@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
 '8000-solracnauj9-youmatterpr-qrrse43ivwv.ws-eu114.gitpod.io',
 '.herokuapp.com',
 '8000-solracnauj9-youmatterpr-6a4aa3gzwe4.ws-eu114.gitpod.io',
-'8000-solracnauj9-youmatterpr-6pvgc2f5dji.ws-eu114.gitpod.io' 
+'8000-solracnauj9-youmatterpr-6pvgc2f5dji.ws-eu114.gitpod.io', 
 ]
 
 
