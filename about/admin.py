@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import About
+from .models import About, Newsletter
 from django_summernote.admin import SummernoteModelAdmin
-from .models import CollaborateRequest, Newsletter
+from .models import CollaborateRequest
 
 # Register your models here.
 @admin.register(About)
@@ -15,7 +15,4 @@ class CollaborateRequestAdmin(admin.ModelAdmin):
 
     list_display = ('message', 'read',)
 
-@admin.register(Newsletter)
-class NewsletterAdmin(admin.ModelAdmin):
-    list_display = ('email', 'date')
-    search_fields = ('email',)
+admin.site.register(Newsletter)    

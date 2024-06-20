@@ -7,7 +7,7 @@ class CollaborateForm(forms.ModelForm):
         model = CollaborateRequest
         fields = ('name', 'email', 'message')
 
-class NewsletterForm(forms.ModelForm):
+class NewsletterSignupForm(forms.ModelForm):
     class Meta:
         model = Newsletter
         fields = ['email']

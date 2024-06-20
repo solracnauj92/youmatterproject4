@@ -22,7 +22,6 @@ class CollaborateRequest(models.Model):
 
     def __str__(self):
         return f"Collaboration request from {self.name}"
-        
 
 class Newsletter(models.Model):
     """Guests can signup to our Newsletter."""
@@ -33,4 +32,4 @@ class Newsletter(models.Model):
         ordering = ["email"]
 
     def __str__(self):
-        return self.email  
+        return self.email
