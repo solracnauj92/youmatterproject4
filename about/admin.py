@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About, Newsletter
+from .models import About
 from django_summernote.admin import SummernoteModelAdmin
 from .models import CollaborateRequest
 
@@ -15,4 +15,3 @@ class CollaborateRequestAdmin(admin.ModelAdmin):
 
     list_display = ('message', 'read',)
 
-admin.site.register(Newsletter)    

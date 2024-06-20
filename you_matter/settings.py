@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'main_page',
     'about',
+    'newsletter',
 ]
 
 SITE_ID = 1

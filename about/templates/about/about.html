@@ -28,19 +28,19 @@
   </div>
   <div class="row">
     <div class="col text-right">
-      <!-- Updated on field goes in here -->
-      <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+        <!-- Updated on field goes in here -->
+        <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
     </div>
-    <!-- Newsletter Signup Form -->
-    <div>
-      <h3>Subscribe to Our Newsletter</h3>
-      <form action="newsletter_signup.html" method="post">
-        {% csrf_token %}
-        {{ newsletter_form.as_p }} <!-- Adjust as_p based on your form rendering preference -->
-        <button type="submit" class="btn btn-primary">Subscribe</button>
-      </form>
+</div>
+<div class="row">
+    <div class="col">
+        <!-- Newsletter Signup Form -->
+        <form method="post" action="{% url 'newsletter_signup' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        </form>
+        <!-- End Newsletter Signup Form -->
     </div>
-    <!-- End Newsletter Signup Form -->
-  </div>
 </div>
 {% endblock content %}

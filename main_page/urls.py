@@ -1,5 +1,5 @@
 from .views import Index, post_detail
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 
@@ -10,5 +10,6 @@ urlpatterns = [
          views.comment_edit, name='comment_edit'),
     path('<slug:slug>/delete_comment/<int:comment_id>',
     views.comment_delete, name='comment_delete'),
+    path('about/', include('about.urls')),
     
 ]

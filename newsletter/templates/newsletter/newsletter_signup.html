@@ -1,0 +1,21 @@
+
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletter Signup</title>
+</head>
+<body>
+    <h1>Sign up for our Newsletter</h1>
+    <form method="post" action="{% url 'newsletter_signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>
+
+{% endblock %}

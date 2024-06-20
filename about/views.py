@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
 from .models import About
-from .forms import CollaborateForm, NewsletterSignupForm
+from .forms import CollaborateForm
 
 
 # Create your views here.
@@ -25,15 +25,3 @@ def about_me(request):
         "about": about,
         "collaborate_form": collaborate_form
     })
-
-def newsletter_signup(request):
-    if request.method == 'POST':
-        form = NewsletterSignupForm(request.POST)
-        if form.is_valid():
-            form.save()
-            # Optionally, you can add a success message or redirect to a thank you page
-            return redirect('home')  # Adjust 'home' to your actual homepage URL name
-    else:
-        form = NewsletterSignupForm()
-    
-    return render(request, 'about/newsletter_signup.html', {'form': form})

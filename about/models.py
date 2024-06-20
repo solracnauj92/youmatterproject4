@@ -2,6 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 
+
 # Create your models here.
 class About(models.Model):
 
@@ -22,14 +23,3 @@ class CollaborateRequest(models.Model):
 
     def __str__(self):
         return f"Collaboration request from {self.name}"
-
-class Newsletter(models.Model):
-    """Guests can signup to our Newsletter."""
-    email = models.EmailField(max_length=256, unique=True, blank=False, null=False)
-    date = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ["email"]
-
-    def __str__(self):
-        return self.email
