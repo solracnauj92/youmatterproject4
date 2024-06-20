@@ -13,6 +13,7 @@ class About(models.Model):
     def __str__(self):
         return self.title
 
+
 class CollaborateRequest(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField()
@@ -22,3 +23,14 @@ class CollaborateRequest(models.Model):
     def __str__(self):
         return f"Collaboration request from {self.name}"
         
+
+class Newsletter(models.Model):
+    """Guests can signup to our Newsletter."""
+    email = models.EmailField(max_length=256, unique=True, blank=False, null=False)
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["email"]
+
+    def __str__(self):
+        return self.email  
