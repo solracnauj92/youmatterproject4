@@ -1,4 +1,3 @@
-# newsletter/views.py
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import NewsletterSignupForm
@@ -12,5 +11,9 @@ def newsletter_signup(request):
             return redirect('about')  
     else:
         form = NewsletterSignupForm()
-    
     return render(request, 'newsletter/newsletter_signup.html', {'form': form})
+
+def connect_view(request):
+    return render(request, 'newsletter/connect.html')
+
+ 

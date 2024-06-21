@@ -1,7 +1,8 @@
-{% load static %}
+{{% load static %}
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'newsletter:connect' as newsletter_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -59,6 +60,9 @@
                           >About</a
                         >
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link {% if request.path == newsletter_url %}active{% endif %}" aria-current="page" href="{% url 'newsletter:connect' %}">Connect</a>
+                    </li>
                       {% if user.is_authenticated %}
                       <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
