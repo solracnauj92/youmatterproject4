@@ -7,8 +7,34 @@ body {
     background-color: #F9FAFC;
 }
 
+
+/* Alert message styles */
+.alert {
+    margin-bottom: 1rem; 
+}
+
+.alert-dismissible .btn-close {
+    font-size: 1rem; 
+}
+
+/* Main content section styles */
+.main-bg {
+    background-color: #ffffff; 
+}
+
+/* Login/logout status paragraph styles */
+.text-end {
+    font-size: 14px; 
+    font-style: italic; 
+    color: #004AAD; 
+    margin-bottom: 0; 
+}
+
+/* Alert message styles */
+
+
 .red-o {
-    color: #E84610;
+    color: #000000;
 }
 
 .thin {
@@ -41,7 +67,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-color: #004AAD;
 }
 
 .scale {
@@ -50,9 +76,9 @@ body {
 }
 
 .author {
+    font-family: "Questrial", sans-serif;
     color: white;
     margin: 4px;
-    text-transform: uppercase;
 }
 
 .masthead {
@@ -91,12 +117,13 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #000000;
+    font-family: "Questrial", sans-serif;
 }
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #004AAD;
 }
 
 .post-title {
@@ -106,7 +133,7 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: rgb(255, 255, 255);
 }
 
 .btn-signup,
@@ -161,17 +188,50 @@ body {
 /* Navbar Link Styles */
 .navbar-nav .nav-item .nav-link {
     font-family: "Questrial", sans-serif;
-    color: #000000; /* Text color */
-    font-weight: 400; /* Font weight */
-    font-size: 16px; /* Font size */
+    color: #000000; 
+    font-weight: 400; 
+    font-size: 16px; 
     
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #38B6FF; /* Text color on hover */
+    color: #38B6FF; 
 }
 
+
 .navbar-nav .nav-item.active .nav-link {
-    color: #004AAD; /* Active tab text color */
-    border-bottom: 2px solid #007bff; /* Active tab bottom border */
+    color: #004AAD; 
+    border-bottom: 2px solid #007bff; 
 }
+
+/* Navbar Link Styles */
+
+/* Navbar Text */
+
+.navbar-text.text-muted {
+    font-family: "Questrial", sans-serif;
+}
+
+/* Navbar Text */
+
+/* Section: Insightful Articles, Expert Advice, Community Support*/
+
+.container.bg-white h2,
+.container.bg-white p {
+    line-height: 1.6; 
+   
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+/* Section: Insightful Articles, Expert Advice, Community Support*/
+
+.bsb-blog-5 h2.display-5 {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    color:  #ffffff; 
+    text-transform: uppercase; }
+
+    .bsb-blog-5 {
+    background-color:#38B6FF; 
+    padding: 10px 0; }
