@@ -42,27 +42,27 @@ Welcome to "You Matter" – a transformative project dedicated to mental health 
 -----
 
 ## Aims and Objectives
-1. Providing Accessible Mental Health Resources
+1. **Providing Accessible Mental Health Resources**
 
 - Offer a wide range of articles, videos, and tools to educate and support individuals in their mental health journey.
 - Ensure resources are easily accessible and presented in a user-friendly manner.
 
-2. Fostering a Supportive Community
+2. **Fostering a Supportive Community**
 
 - Create a safe and welcoming environment where individuals can share their stories, experiences, and challenges.
 - Encourage peer support through forums, discussion groups, and community events.
 
-3. Empowering Individuals
+3. **Empowering Individuals**
 
 - Raise awareness about various mental health conditions and the importance of seeking help.
 - Advocate for the reduction of stigma surrounding mental health issues through education and open dialogue.
 
-4. Connecting People to Professional Support
+4. **Connecting People to Professional Support**
 
 - Offer directories and referrals to mental health professionals for those seeking personalized care.
 - Provide information on how to access crisis support and emergency services when needed.
 
-5. Encouraging Continuous Learning and Growth
+5. **Encouraging Continuous Learning and Growth**
 
 - Facilitate ongoing learning through webinars, workshops, and expert talks.
 - Promote the latest research and developments in mental health care and wellness.
