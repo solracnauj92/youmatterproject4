@@ -3,13 +3,14 @@
 {% block content %}
 
 <!-- index.html content starts here -->
- <!-- Cover Section -->
+<!-- Cover Section -->
 <div class="container-fluid px-0">
     <div class="position-relative">
-        <img src="{% static '/images/cover.jpg' %}" class="img-fluid mb-0" alt="hero-image" style="width: 100%;" width="2000" height="400">
+        <img src="{% static '/images/cover.jpg' %}" class="img-fluid mb-0" alt="hero-image" style="width: 100%;"
+            width="2000" height="400">
     </div>
 </div>
-<!-- End Cover Section --> 
+<!-- End Cover Section -->
 
 <!-- Main Content Sections -->
 <div class="container py-3 bg-white">
@@ -22,25 +23,31 @@
                 <!-- Optional: Add icon or image here -->
             </div>
             <h2 class="h4">Insightful Articles</h2>
-            <p class="text-muted">Dive into our collection of articles written by mental health professionals and individuals with lived experiences. From tips on managing anxiety to strategies for fostering resilience, our content aims to inform and empower you.</p>
+            <p class="text-muted">Dive into our collection of articles written by mental health professionals and
+                individuals with lived experiences. From tips on managing anxiety to strategies for fostering
+                resilience, our content aims to inform and empower you.</p>
         </div>
-        
+
         <!-- Column for Expert Advice -->
         <div class="col mb-4">
             <div class="text-center">
                 <!-- Optional: Add icon or image here -->
             </div>
             <h2 class="h4">Expert Advice</h2>
-            <p class="text-muted">Gain access to advice from qualified therapists, psychologists, and counselors. Our experts share their knowledge on a range of topics, from coping mechanisms to therapeutic techniques, helping you take practical steps towards better mental health.</p>
+            <p class="text-muted">Gain access to advice from qualified therapists, psychologists, and counselors. Our
+                experts share their knowledge on a range of topics, from coping mechanisms to therapeutic techniques,
+                helping you take practical steps towards better mental health.</p>
         </div>
-        
+
         <!-- Column for Community Support -->
         <div class="col mb-4">
             <div class="text-center">
                 <!-- Optional: Add icon or image here -->
             </div>
             <h2 class="h4">Community Support</h2>
-            <p class="text-muted">Join our supportive community where you can connect with others who understand what you’re going through. Share your thoughts, ask questions, and find solidarity in our forums and discussion groups.</p>
+            <p class="text-muted">Join our supportive community where you can connect with others who understand what
+                you’re going through. Share your thoughts, ask questions, and find solidarity in our forums and
+                discussion groups.</p>
         </div>
     </div>
 
@@ -50,56 +57,58 @@
 <!-- Blog -->
 <div class="container-fluid">
     <div class="row">
+        <div class="col">
 
-
-        <section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
-            <div class="container">
-              <div class="row justify-content-md-center">
-                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                  <h2 class="display-5 mb-4 mb-md-5 text-center">Latest Articles</h2>
-                </div>
-              </div>
-            </div>
-
-<!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                alt="placeholder image">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                alt="{{ post.title }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
-                            </div>
-                            
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                            
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}}
-                            </p>
+            <section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                            <h2 class="display-5 mb-4 mb-md-5 text-center">Latest Articles</h2>
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
 
-            </div>
+                <!-- Blog Entries Column -->
+                <div class="col-12 mt-3 left">
+                    <div class="row">
+                        {% for post in post_list %}
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="image-container">
+                                        {% if "placeholder" in post.featured_image.url %}
+                                        <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                            alt="placeholder image">
+                                        {% else %}
+                                        <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                                            alt="{{ post.title }}">
+                                        {% endif %}
+                                        <div class="image-flash">
+                                            <p class="author">Author: {{ post.author }}</p>
+                                        </div>
+                                    </div>
+
+                                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
+
+                                        <h2 class="card-title">{{ post.title }}</h2>
+                                        <p class="card-text">{{ post.excerpt }}</p>
+                                    </a>
+
+                                    <hr>
+                                    <p class="card-text text-muted h6">{{ post.created_on}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:3 %}
+                    </div>
+                    <div class="row">
+                        {% endif %}
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
     {% if is_paginated %}
@@ -119,5 +128,5 @@
 <!-- index.html content ends here -->
 {% endblock %}
 {% block copyright %}
-    &copy; 2024 You Matter. All rights reserved.
+&copy; 2024 You Matter. All rights reserved.
 {% endblock copyright %}
