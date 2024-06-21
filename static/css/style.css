@@ -234,5 +234,5 @@ body {
     text-transform: uppercase; }
 
     .bsb-blog-5 {
-    background-color:#c2d8e5; 
+    background-color:#c2d8e5 !important; 
     padding: 10px 0; }

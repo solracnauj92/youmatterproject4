@@ -1,116 +1,151 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Logo]()
 
-Welcome Juan Carlos Diaz Lara,
+I'm excited to share with you to You Matter, a fictional blog website developed using Django Framework as part of Portfolio Project 4. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Project Overview
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 14, 2024**
+Welcome to "You Matter" – a transformative project dedicated to mental health support and fostering community connections. Imagine a place where understanding flourishes, and empathy turns challenges into victories. As a mental health practitioner, my goal is not just to build a website, but to create a space for people seeking support and connection.
 
-## Gitpod Reminders
+![Hero Page]() 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+----
 
-`python3 -m http.server`
+## [Content](#content)
+- [Aims and Objectives](#aims-objectives)
+- [Agile Development Process](#agile-development-process)
+    - [User Stories](#user-stories)
+    - [Target Audience](#target)
+    - [Age Group and Region](#age-region)
+    - [User Personas](#user-personas)
+     - [First Time Visitor](#first-time-visitor)
+     - [Returning Visitor](#returning-visitor)
+     - [Frequent Visitor](#frequent-visitor)
+  - [Design](#design)
+    - [Wireframes: Figma VS Final version](#wireframes)
+    - [Brand & Logo: Canva ](#brand)
+    - [Colour Palette: Canva ](#colour)
+    - [Typography: Google font / Bootstrap ](#typography)
+  - [Desktop, Tablet, Mobile Responsiveness](#responsiveness)
+  - [Features](#features)
+    - [Future Features](#future)   
+  - [Database Control Flow](#database)
+   - [Django Admin](#admin)
+  - [Testing](#testing)
+      - [CSS Validation](#validation)
+      - [Python CI Testing ](#tythontesting )
+      - [Lighthouse](#manual-testing)
+      - [Bugs](#bugs)
+- [Technologies Used](#testing)
+  - [Credits](#credits)
+  - [Acknowledgement](#acknowledgement)
 
-A blue button should appear to click: _Make Public_,
+-----
 
-Another blue button should appear to click: _Open Browser_.
+## Aims and Objectives
+1. Providing Accessible Mental Health Resources
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+- Offer a wide range of articles, videos, and tools to educate and support individuals in their mental health journey.
+- Ensure resources are easily accessible and presented in a user-friendly manner.
 
-A blue button should appear to click: _Make Public_,
+2. Fostering a Supportive Community
 
-Another blue button should appear to click: _Open Browser_.
+- Create a safe and welcoming environment where individuals can share their stories, experiences, and challenges.
+- Encourage peer support through forums, discussion groups, and community events.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+3. Empowering Individuals
 
-To log into the Heroku toolbelt CLI:
+- Raise awareness about various mental health conditions and the importance of seeking help.
+- Advocate for the reduction of stigma surrounding mental health issues through education and open dialogue.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+4. Connecting People to Professional Support
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+- Offer directories and referrals to mental health professionals for those seeking personalized care.
+- Provide information on how to access crisis support and emergency services when needed.
 
-------
+5. Encouraging Continuous Learning and Growth
 
-## Release History
+- Facilitate ongoing learning through webinars, workshops, and expert talks.
+- Promote the latest research and developments in mental health care and wellness.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Agile Development Process
 
-**June 14, 2024,** Temporarily remove Mongo until key issue is resolved
+In developing "You Matter," we have utilized an Agile methodology, specifically employing the Kanban board feature in GitHub. This approach allows us to:
 
-**May 28 2024:** Fix Mongo and Links installs
+- **Highlight Must-Haves, Could-Haves, and More**: Clearly categorize and prioritize tasks and features based on their importance and impact.
+- **Track Progress**: Continuously monitor the project's development and adjust priorities as needed.
+- **Add Issues on the Go**: Dynamically create and manage issues as they arise, ensuring that all aspects of the project are addressed in a timely manner.
+- **User Story Statements**: Each issue includes a user story statement to clarify the goal and context, ensuring that all team members have a shared understanding of the task at hand.
 
-**April 26 2024:** Update node version to 16
+![Kanban Board]() 
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Example User Stories
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+As a site user, I want to:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+1. **Access Mental Health Blogs**
+   - *User Story*: As a user, I want to read blog posts that highlight different mental health topics and subjects so that I can stay informed and find relevant information.
+2. **Subscribe to a Newsletter**
+   - *User Story*: As a user, I want to subscribe to a newsletter to receive regular updates and insights on mental health topics.
+3. **Connect with Community Events**
+   - *User Story*: As a user, I want to find and connect with community events to engage with others and participate in supportive activities.
+4. **Log In and Write Posts**
+   - *User Story*: As a user, I want to log in and write my own posts to share my experiences and thoughts on mental health.
+5. **Comment on Posts**
+   - *User Story*: As a user, I want to comment on blog posts and other users' posts to engage in discussions and offer support.
+6. **Delete My Posts**
+   - *User Story*: As a user, I want to delete my own posts if I no longer want them to be visible.
+7. **Access Crisis Contact Information**
+   - *User Story*: As a user, I want to easily find crisis contact information so that I can get immediate help if needed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Target Audience
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+"You Matter" is designed to support and connect the following groups:
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+1. **Individuals Seeking Mental Health Resources**
+   - People looking for reliable information and resources on mental health topics.
+2. **Community Members Seeking Support**
+   - Individuals who want to engage with a supportive community and share their experiences.
+3. **Mental Health Advocates**
+   - Those who are passionate about raising awareness and reducing the stigma around mental health issues.
+4. **People in Crisis**
+   - Individuals in need of immediate help and information on crisis support.
+5. **Family and Friends of Those Struggling with Mental Health**
+   - Loved ones looking for resources and ways to support their friends or family members.
+6. **Mental Health Professionals**
+   - Therapists, counselors, and other professionals seeking to connect with the community and provide their expertise.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Age Group and Region
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- **Age Group**: Our platform caters to individuals aged 16 and above.
+- **Region**: While our online resources are available worldwide, onsite support is UK-based. We offer virtual chat help but recommend that users also check with local experts and not rely solely on online assistance.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## User Persona
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+In this section, I used UserPersona.dev free AI-powered User Persona Generator. By offering a concise description, it generates insightful user personas. The narratives presented below are inspired by real-life struggles, with due consideration given to privacy and protection through the alteration of names, locations, image and ages. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- Story 1: Sarah (Teenager)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![User1](youmatter/media/shop_images/sarah-userpersona.png) 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Sarah is a 17-year-old high school student who has been struggling with social anxiety. She often felt isolated and overwhelmed in crowded social situations, which affected her academic performance and overall well-being. One day, she stumbled upon the "You Matter" website, where she found articles and self-help resources specifically tailored to teenagers facing similar challenges. She joined a support group and gradually built the confidence to share her experiences. Through the encouragement and guidance of the group, Sarah learned strategies to manage her anxiety and discovered that she wasn't alone in her struggles. Today, Sarah is thriving in school and is excited about the future, thanks to the support and resources she found on the website.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Story 2: Michael (Working Professional)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![User2](youmatter/media/shop_images/michael-userpersona.png) 
 
-------
+Michael, a 35-year-old working professional, had been dealing with work-related stress, anxiety, and burnout for years. He felt overwhelmed and on the brink of quitting his job. After a particularly tough week, he decided to search for mental health support online and came across the "You Matter" website. The resources on stress management, work-life balance, and burnout prevention resonated with him. He started using the self-assessment tools and strategies provided, which helped him regain control over his mental health. Michael also found an online support group for professionals in similar situations. With the support and insights he gained from the community, he made significant changes in his life and career, ultimately finding a better work-life balance and improved mental well-being.
 
-## FAQ about the uptime script
+- Story 3: Margaret (Retired Senior)
 
-**Why have you added this script?**
+![User3](youmatter/media/shop_images/margaret-userpersona.png) 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+Margaret, an 80-year-old retiree, had been feeling increasingly lonely and anxious after losing her spouse and dealing with the challenges of aging. She discovered the "You Matter" website through her grandson and found a wealth of resources tailored to seniors facing mental health issues. The website provided information on coping with grief and isolation and tips for maintaining emotional well-being in later life. Margaret also joined an online seniors' support group where she met fellow retirees facing similar challenges. The connections she made and the compassionate discussions helped her combat her feelings of loneliness and find joy in her golden years. Margaret's experience demonstrates that it's never too late to seek support and that "You Matter" is there for people of all ages.
 
-**How will this affect me?**
+Testimonial 1:
+" 'You Matter' changed my life. It's a sanctuary for teens like me with social anxiety. This place truly cares."
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Testimonial 2:
+" 'You Matter' saved my career. The resources and support here gave me control over my stress. It's a lifesaver."
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Testimonial 3:
+"At 80, I found joy again with 'You Matter.' The resources and support group keep me going. It's never too late to seek help."
