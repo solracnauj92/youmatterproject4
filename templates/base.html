@@ -30,12 +30,11 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
 
    <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{% static '/images/youmatter.png' %}" width="200" height="100" class="d-inline-block align-top" alt="You Matter Logo">
+        <img src="{% static '/images/youmatter.png' %}" width="200" height="100" class="d-inline-block align-top" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,28 +77,27 @@
 </nav>
 <!-- End Navbar -->
 
-    <!-- displaying Django messages -->
-     <div class="container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        {% for message in messages %}
-        <div class="alert {{ message.tags }} alert-dismissible
-          fade show" id="msg" role="alert">
-          {{ message | safe }}
-          <button type="button" class="btn-close"
-            data-bs-dismiss="alert" aria-label="Close"></button>
+<body class="d-flex flex-column h-100">
+      <!-- displaying Django messages -->
+ 
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible
+              fade show" id="msg" role="alert">
+              {{ message | safe }}
+              <button type="button" class="btn-close"
+                data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+          </div>
         </div>
-        {% endfor %}
       </div>
-    </div>
-  </div>
-
-    <main class="flex-shrink-0 main-bg">
-        {% if user.is_authenticated %}
-    <p class="text-end m-3">You are logged in as {{ user }}</p>
-    {% else %}
-    <p class="text-end m-3">You are not logged in</p>
-    {% endif %}
+   
+       <main class="flex-shrink-0 main-bg bg-white">
+           {% if user.is_authenticated %}
+       <p class="text-end m-3">You are logged in as {{ user }}</p>
+       {% else %}
+       <p class="text-end m-3">You are not logged in</p>
+       {% endif %}
 
         {% block content %}
         <!-- Content Goes here -->
