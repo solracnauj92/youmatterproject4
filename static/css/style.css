@@ -1,12 +1,10 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+
 body {
     background-color: #F9FAFC;
-}
-
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
 }
 
 .red-o {
@@ -158,4 +156,22 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+/* Navbar Link Styles */
+.navbar-nav .nav-item .nav-link {
+    font-family: "Questrial", sans-serif;
+    color: #000000; /* Text color */
+    font-weight: 400; /* Font weight */
+    font-size: 16px; /* Font size */
+    
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #38B6FF; /* Text color on hover */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #004AAD; /* Active tab text color */
+    border-bottom: 2px solid #007bff; /* Active tab bottom border */
 }
