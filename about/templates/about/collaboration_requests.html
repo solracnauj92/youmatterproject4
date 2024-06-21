@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h2 class="display-5 mb-4 mb-md-5 text-center">Pending Requests</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Sections -->
+  <div class="container py-3">
+
+    <!-- Section: Insightful Articles, Expert Advice, Community Support -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="list-group">
+            {% for collaboration in collaborations %}
+              <div class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">{{ collaboration.name }} | {{ collaboration.email }}</h5>
+                  <a href="{% url 'approve_collaboration_request' collaboration.id %}" class="btn text-success">
+                    Approve? <i class="fas fa-check-square fa-lg fa-fw"></i>
+                  </a>
+                </div>
+                <small class="text-muted">{{ collaboration.tag }}</small>
+                <p class="mb-1">{{ collaboration.message|safe|linebreaksbr }}</p>
+              </div>
+            {% empty %}
+              <div class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-center">
+                  <h5 class="mb-1">There are currently no pending collaboration requests.</h5>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
