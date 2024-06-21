@@ -3,20 +3,56 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+ <!-- Cover Section -->
+ <div class="container-fluid">
+  <div class="position-relative">
+      <img src="{% static '/images/about.jpg' %}" class="img-fluid mb-0" alt="about-image" style="width: 100%;" width="2000" height="400">
+  </div>
+</div>
+<!-- End Cover Section --> 
+
+<section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h2 class="display-5 mb-4 mb-md-5 text-center"> Get to know us</h2>
+      </div>
+    </div>
+  </div>
+
+<!-- Main Content Sections -->
+<div class="container py-3">
+
+  <!-- Section: Insightful Articles, Expert Advice, Community Support -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <h2>Welcome to Our Mental Health Community</h2>
+        <p>At You Matter, we believe in the power of shared experiences, professional insights, and compassionate support to foster mental wellness. Our mission is to create a safe and nurturing space where individuals can find the information, resources, and encouragement they need to navigate their mental health journeys.</p>
+
+        <h2>Who We Are</h2>
+        <p>We are a dedicated community of mental health professionals, advocates, and individuals with lived experiences. Our platform is built on the foundation of understanding and empathy, providing a sanctuary for those seeking support and guidance. Here, you are never alone.</p>
+
+        <h2>Our Mission</h2>
+        <p>Our mission is to promote mental health awareness, provide valuable resources, and foster a supportive community. We strive to empower individuals by offering insightful articles, expert advice, and real-life stories that inspire and educate. Whether you are looking for tips on managing anxiety, strategies for building resilience, or simply a place to connect with others, [Your Blog Name] is here for you.</p>
+
+        <h2>Community and Support</h2>
+        <p>At [Your Blog Name], we understand the importance of community. Our platform is a place where you can share your experiences, ask questions, and connect with others who understand what you are going through. We believe that by coming together, we can build a stronger, more supportive community that promotes mental wellness for all.</p>
+
+        <h2>Funded by Generosity</h2>
+        <p>Our initiative is made possible by the generous donations of individuals who believe in our mission. We operate as a charity, ensuring that every contribution is directed towards maintaining our services, creating new content, and reaching out to more individuals in need. Your support helps us continue our work and expand our reach, making a difference in the lives of many.</p>
+
+        </div>
+    </div>
+      
+
 <div class="container mt-5">
-  <div class="row">
-    <div class="col-4 text-center">
-      {% if "placeholder" in about.profile_image.url %}
-      <img src="{% static 'images/nobody.jpg' %}" width="75%"
-        alt="placeholder image" >
-      {% else %}
-      <img src="{{ about.profile_image.url }}" width="75%"
-        alt="{{ about.title }}">
-      {% endif %}
+      
     </div>
     <div class="col-8">
       <!-- Title goes between these h2 tags -->
-      <h2>{{ about.title }}</h2>
+      <h2>Join Us</h2>
+        <p>We invite you to explore our collection of articles, participate in discussions, and join our community. Together, we can break the stigma surrounding mental health and create a world where everyone has access to the support they need.</p>
       <!-- Content goes directly underneath this -->
       <form method="post">
         {{ collaborate_form | crispy }}

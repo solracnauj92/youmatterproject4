@@ -1,6 +1,7 @@
 /* Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 
 
 body {
@@ -133,7 +134,7 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: rgb(255, 255, 255);
+    color: lightgray;
 }
 
 .btn-signup,
@@ -233,5 +234,5 @@ body {
     text-transform: uppercase; }
 
     .bsb-blog-5 {
-    background-color:#38B6FF; 
+    background-color:#c2d8e5; 
     padding: 10px 0; }
