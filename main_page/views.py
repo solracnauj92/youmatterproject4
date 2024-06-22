@@ -123,4 +123,4 @@ def like_post(request, post_id):
 def unlike_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     post.unlike(request.user)
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))

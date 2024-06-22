@@ -236,3 +236,18 @@ body {
     .bsb-blog-5 {
     background-color:#c2d8e5 !important; 
     padding: 10px 0; }
+
+/* styles.css */
+
+.social-icons a {
+    color: #004AAD; 
+    font-size: 24px; 
+    transition: color 0.3s; }
+
+.social-icons a:hover {
+    color: #38B6FF; /* Hover color */
+}
+
+.footer-copyright {
+        font-family: "Questrial", sans-serif; 
+        font-weight: 400; }
