@@ -52,7 +52,7 @@
       <form action="{% url 'like_post' post.id %}" method="post" class="d-inline">
           {% csrf_token %}
           {% if user.is_authenticated %}
-              {% if post.is_liked_by user %}
+              {% if post.is_liked_by(user) %}
                   <button type="submit" class="btn btn-link">Unlike</button>
               {% else %}
                   <button type="submit" class="btn btn-link">Like</button>
