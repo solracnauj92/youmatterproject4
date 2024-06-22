@@ -129,10 +129,10 @@ class PostDeleteView(DeleteView):
 def like_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     post.like(request.user)
-    return redirect('post-detail', post_id=post.id)
+    return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
 
 @login_required
 def unlike_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     post.unlike(request.user)
-    return redirect('post-detail', post_id=post.id)
+    return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
