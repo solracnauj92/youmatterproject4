@@ -52,13 +52,13 @@
       <form action="{% url 'like_post' post.id %}" method="post" class="d-inline">
           {% csrf_token %}
           {% if user.is_authenticated %}
-              {% if post.is_liked_by(user) %}
+          {% if liked_by_user %}
                   <button type="submit" class="btn btn-link">Unlike</button>
               {% else %}
                   <button type="submit" class="btn btn-link">Like</button>
               {% endif %}
           {% else %}
-              <a href="{% url 'login' %}" class="btn btn-link">Login to Like</a>
+          <a href="/accounts/login/" class="btn btn-link">Login to Like</a>
           {% endif %}
       </form>
   </div>
