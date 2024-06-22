@@ -24,7 +24,7 @@ from about import views as about_views
 urlpatterns = [
     path('', Index.as_view(), name='home'),
     path('newsletter/', include('newsletter.urls')),
-    path('main-page/', include("main_page.urls"), name="main_page-urls"),
+    path('main-page/', include('main_page.urls')),
     path("about/", include("about.urls")),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),

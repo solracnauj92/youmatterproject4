@@ -2,9 +2,13 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from .models import Post, Comment
-from .forms import CommentForm
-from django.views.generic import ListView
+from .forms import CommentForm, PostForm
+from django.views.generic import ListView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+
 
 
 # Create your views here.
@@ -92,3 +96,31 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+@method_decorator(login_required, name='dispatch')
+class PostUpdateView(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'main_page/post_update.html'
+    success_url = reverse_lazy('home')
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(author=self.request.user)
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(Post, slug=self.kwargs['slug'])
+
+@method_decorator(login_required, name='dispatch')
+class PostDeleteView(DeleteView):
+    model = Post
+    template_name = 'main_page/post_confirm_delete.html'
+    success_url = reverse_lazy('home')
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(author=self.request.user)
+
+    def get_object(self, queryset=None):
+        slug = self.kwargs.get('slug')
+        return get_object_or_404(Post, slug=self.kwargs['slug'])
