@@ -124,3 +124,15 @@ class PostDeleteView(DeleteView):
     def get_object(self, queryset=None):
         slug = self.kwargs.get('slug')
         return get_object_or_404(Post, slug=self.kwargs['slug'])
+
+@login_required
+def like_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    post.like(request.user)
+    return redirect('post-detail', post_id=post.id)
+
+@login_required
+def unlike_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    post.unlike(request.user)
+    return redirect('post-detail', post_id=post.id)

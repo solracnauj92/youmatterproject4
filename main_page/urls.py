@@ -1,4 +1,4 @@
-from .views import Index, post_detail, PostUpdateView, PostDeleteView
+from .views import Index, post_detail, PostUpdateView, PostDeleteView, like_post, unlike_post
 from django.urls import path, include
 from . import views
 
@@ -13,5 +13,7 @@ urlpatterns = [
     path('<slug:slug>/delete_comment/<int:comment_id>',
     views.comment_delete, name='comment_delete'),
     path('about/', include('about.urls')),
+    path('post/<int:post_id>/like/', like_post, name='like_post'),
+    path('post/<int:post_id>/unlike/', unlike_post, name='unlike_post'),
     
 ]

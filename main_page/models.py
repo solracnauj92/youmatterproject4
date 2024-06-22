@@ -21,12 +21,28 @@ class Post(models.Model):
     tag = models.ForeignKey(
         'Tag', on_delete=models.CASCADE, related_name="tags")
     updated_on = models.DateTimeField(auto_now=True)
+    likes = models.ManyToManyField(User, related_name='liked_posts', blank=True)
+
 
     class Meta:
         ordering = ["-created_on"]
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
+
+    def total_likes(self):
+        return self.likes.count()
+
+    def is_liked_by(self, user):
+        return self.likes.filter(id=user.id).exists()
+
+    def like(self, user):
+        if not self.is_liked_by(user):
+            self.likes.add(user)
+
+    def unlike(self, user):
+        if self.is_liked_by(user):
+            self.likes.remove(user)
 
 
 class Comment(models.Model):
@@ -51,3 +67,12 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+class Like(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="post_likes")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_likes")
+
+    class Meta:
+        unique_together = ("post", "user")
+
+    def __str__(self):
+        return f"{self.user} likes {self.post}"
