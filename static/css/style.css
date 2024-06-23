@@ -225,6 +225,16 @@ body {
     font-weight: 400;
     text-align: center;
 }
+
+.bsb-blog-5 .btn {
+    font-family: "Questrial", sans-serif;
+    color: #ffffff; 
+    background-color:#004AAD;
+}
+
+.bsb-blog-5 .btn:hover {
+    background-color: #007bff;}
+
 /* Section: Insightful Articles, Expert Advice, Community Support*/
 
 .bsb-blog-5 h2.display-5 {
@@ -237,7 +247,7 @@ body {
     background-color:#c2d8e5 !important; 
     padding: 10px 0; }
 
-/* styles.css */
+/* Soicals */
 
 .social-icons a {
     color: #004AAD; 
@@ -245,9 +255,11 @@ body {
     transition: color 0.3s; }
 
 .social-icons a:hover {
-    color: #38B6FF; /* Hover color */
+    color: #38B6FF; 
 }
 
+
+/* Copyright */
 .footer-copyright {
         font-family: "Questrial", sans-serif; 
         font-weight: 400; }
