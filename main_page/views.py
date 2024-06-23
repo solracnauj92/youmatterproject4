@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .models import Post, Comment
-from .forms import CommentForm, PostForm
+from .models import Post, Comment, Profile
+from .forms import CommentForm, PostForm, ProfileForm
 from django.views.generic import ListView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
@@ -124,3 +124,31 @@ def unlike_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     post.unlike(request.user)
     return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
+
+@login_required
+def profile_update(request):
+    profile = request.user.profile
+
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Profile picture updated successfully.')
+            return redirect('profile_update')
+    else:
+        form = ProfileForm(instance=profile)
+
+    return render(request, 'profile_update.html', {'form': form})
+
+@login_required
+def profile(request):
+    profile = Profile.objects.get_or_create(user=request.user)
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+    else:
+        form = ProfileForm(instance=profile)
+    
+    return render(request, 'profile.html', {'form': form})   
