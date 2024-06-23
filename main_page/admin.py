@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, Tag, Profile
+from .models import Post, Comment, Tag
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
@@ -19,7 +19,7 @@ class TagAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
 
-admin.site.register(Profile)
+
 
 
 

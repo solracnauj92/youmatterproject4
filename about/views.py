@@ -6,7 +6,7 @@ from .forms import CollaborateForm
 from main_page.models import Post
 
 
-def about_page(request):
+def about_me(request):
     if request.user.is_authenticated:
         user = get_object_or_404(User, username=request.user.username)
         username = user.username if user.username else ""

@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User, AbstractUser
+from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.utils.text import slugify
 
@@ -76,39 +76,3 @@ class Like(models.Model):
 
     def __str__(self):
         return f"{self.user} likes {self.post}"
-
-class CustomUser(AbstractUser):
-    # Add any additional fields you need
-    profile_picture = models.ImageField(upload_to='profile_pics/', default='profile_pics/default.jpg')
-    bio = models.TextField(max_length=500, blank=True)
-
-    # Define groups and permissions relationships
-    groups = models.ManyToManyField(
-        'auth.Group',
-        verbose_name='groups',
-        blank=True,
-        help_text='The groups this user belongs to.',
-        related_name='customuser_set',
-        related_query_name='customuser',
-    )
-    
-    user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        verbose_name='user permissions',
-        blank=True,
-        help_text='Specific permissions for this user.',
-        related_name='customuser_set',
-        related_query_name='customuser',
-    )
-
-    # Ensure this is at the bottom of your model
-    class Meta(AbstractUser.Meta):
-        pass  # Optionally add Meta options for ordering, constraints, etc.
-
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
-    bio = models.TextField(max_length=500, blank=True)
-
-    def __str__(self):
-        return self.user.username
