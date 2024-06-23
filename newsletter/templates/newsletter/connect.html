@@ -1,27 +1,186 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="col">
-            <h2>Community</h2>
-            <p>This section could include information about your community activities.</p>
+{% block content %}  
+<body class="d-flex flex-column min-vh-100">
+        <!-- Cover Section -->
+        <div class="container-fluid">
+            <div class="position-relative">
+                <img src="{% static 'images/community.jpg' %}" class="img-fluid mb-0" alt="about-image" style="width: 100%;" width="2000" height="400">
+            </div>
+        </div>
+        <!-- End Cover Section -->
+
+    <!-- Community -->
+    <section class="bsb-blog-5 py-3 py-md-5 py-xl-8 flex-grow-1 d-flex flex-column justify-content-center">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                    <h2 class="display-5 mb-4 mb-md-5 text-center">Community</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 text-center">
+            <div class="row">
+                <div class="col-12 col-md-4 p-0">
+                    <div class="card community-card">
+                        <div class="card-body community-card-body">
+                            <i class="bi bi-people-fill community-icon"></i>
+                            <h4 class="community-title">Support Group Meetings</h4>
+                            <p class="community-text">Join our weekly support group meetings to connect with others and share experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 p-0 border-top border-bottom border-start border-end">
+                    <div class="card community-card">
+                        <div class="card-body community-card-body">
+                            <i class="bi bi-hand-thumbs-up-fill community-icon"></i>
+                            <h4 class="community-title">Volunteer Opportunities</h4>
+                            <p class="community-text">Get involved and make a difference by participating in our volunteer programs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 p-0">
+                    <div class="card community-card">
+                        <div class="card-body community-card-body">
+                            <i class="bi bi-laptop-fill community-icon"></i>
+                            <h4 class="community-title">Workshops and Webinars</h4>
+                            <p class="community-text">Enhance your skills and knowledge by attending our workshops and webinars.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 col-md-4 p-0">
+                    <div class="card community-card">
+                        <div class="card-body community-card-body">
+                            <i class="bi bi-heart-fill community-icon"></i>
+                            <h4 class="community-title">Community Outreach</h4>
+                            <p class="community-text">Participate in our community outreach programs to support those in need.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 p-0 border-top border-bottom border-start border-end">
+                    <div class="card community-card">
+                        <div class="card-body community-card-body">
+                            <i class="bi bi-calendar-event-fill community-icon"></i>
+                            <h4 class="community-title">Special Events</h4>
+                            <p class="community-text">Join us for special events and activities designed to bring us together.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 p-0">
+                    <div class="card community-card">
+                        <div class="card-body community-card-body">
+                            <i class="bi bi-chat-dots-fill community-icon"></i>
+                            <h4 class="community-title">Discussion Forums</h4>
+                            <p class="community-text">Engage in meaningful conversations and exchange ideas in our discussion forums.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Community -->
+
+<!-- Events -->
+    <section class="py-5 py-xl-8">
+        <div class="container">
+            <div class="row justify-content-md-center mb-4">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+                    <h3 class="fs-5 mb-2 text-secondary text-center text-uppercase">Events</h3>
+                    <h2 class="display-5 mb-5 mb-xl-9 text-center">Stay updated with our latest events and activities.</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <div class="card event-card">
+                        <img src="{% static 'images/youmatter.png' %}" class="card-img-top" alt="Workshop One Day">
+                        <div class="card-body event-card-body">
+                            <h4 class="event-title">Workshop One Day</h4>
+                            <p class="event-text">Join us for an intensive one-day workshop to learn new skills and techniques.</p>
+                            <p class="event-date">Date: July 15, 2024</p>
+                            <p class="event-time">Time: 9:00 AM - 5:00 PM</p>
+                            <a href="https://www.eventbrite.com/" target="_blank" class="btn btn-primary">Register on Eventbrite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <div class="card event-card">
+                        <img src="{% static 'images/youmatter.png' %}" class="card-img-top" alt="Weekly Meeting">
+                        <div class="card-body event-card-body">
+                            <h4 class="event-title">Weekly Meeting</h4>
+                            <p class="event-text">Participate in our weekly meetings to discuss progress and share ideas.</p>
+                            <p class="event-date">Date: July 22, 2024</p>
+                            <p class="event-time">Time: 6:00 PM - 7:30 PM</p>
+                            <a href="https://www.eventbrite.com/" target="_blank" class="btn btn-primary">Register on Eventbrite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <div class="card event-card">
+                        <img src="{% static 'images/youmatter.png' %}" class="card-img-top" alt="Webinars">
+                        <div class="card-body event-card-body">
+                            <h4 class="event-title">Webinars</h4>
+                            <p class="event-text">Attend our webinars to gain insights from industry experts and thought leaders.</p>
+                            <p class="event-date">Date: August 1, 2024</p>
+                            <p class="event-time">Time: 10:00 AM - 11:30 AM</p>
+                            <a href="https://www.eventbrite.com/" target="_blank" class="btn btn-primary">Register on Eventbrite</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <div class="card event-card">
+                        <img src="{% static 'images/youmatter.png' %}" class="card-img-top" alt="Volunteer Day">
+                        <div class="card-body event-card-body">
+                            <h4 class="event-title">Volunteer Day</h4>
+                            <p class="event-text">Join us for a day of volunteering and making a positive impact in the community.</p>
+                            <p class="event-date">Date: August 10, 2024</p>
+                            <p class="event-time">Time: 8:00 AM - 4:00 PM</p>
+                            <a href="https://www.eventbrite.com/" target="_blank" class="btn btn-primary">Register on Eventbrite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <div class="card event-card">
+                        <img src="{% static 'images/youmatter.png' %}" class="card-img-top" alt="Networking Event">
+                        <div class="card-body event-card-body">
+                            <h4 class="event-title">Networking Event</h4>
+                            <p class="event-text">Engage with like-minded professionals, fostering connections with peers and industry experts alike.</p>
+                            <p class="event-date">Date: August 20, 2024</p>
+                            <p class="event-time">Time: 5:30 PM - 7:30 PM</p>
+                            <a href="https://www.eventbrite.com/" target="_blank" class="btn btn-primary text">Register on Eventbrite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <div class="card event-card">
+                        <img src="{% static 'images/youmatter.png' %}" class="card-img-top" alt="Charity Event">
+                        <div class="card-body event-card-body">
+                            <h4 class="event-title">Charity Event</h4>
+                            <p class="event-text">Participate in our charity events to support worthy causes and give back to the community.</p>
+                            <p class="event-date">Date: September 5, 2024</p>
+                            <p class="event-time">Time: 11:00 AM - 3:00 PM</p>
+                            <a href="https://www.eventbrite.com/" target="_blank" class="btn btn-primary">Register on Eventbrite</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Events -->
+
+
+
+    <div class="container mt-5 text-center">
+        <div class="row">
+            <div class="col text-center">
+                {% include 'newsletter/newsletter_signup_form.html' %}
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <h2>Events</h2>
-            <p>This section could include upcoming events or past event summaries.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <h2>Sign up for our Newsletter</h2>
-            {% include 'newsletter/newsletter_signup_form.html' %}
-        </div>
-    </div>
-</div>
 {% endblock %}
 
 
