@@ -35,7 +35,8 @@ ALLOWED_HOSTS = [
 '8000-solracnauj9-youmatterpr-qrrse43ivwv.ws-eu114.gitpod.io',
 '.herokuapp.com',
 '8000-solracnauj9-youmatterpr-6a4aa3gzwe4.ws-eu114.gitpod.io',
-'8000-solracnauj9-youmatterpr-6pvgc2f5dji.ws-eu114.gitpod.io', 
+'8000-solracnauj9-youmatterpr-6pvgc2f5dji.ws-eu114.gitpod.io',
+'8000-solracnauj9-youmatterpr-bk17p6568vb.ws.codeinstitute-ide.net', 
 ]
 
 
@@ -86,7 +87,7 @@ ROOT_URLCONF = 'you_matter.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
