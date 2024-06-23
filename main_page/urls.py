@@ -5,6 +5,7 @@ from . import views
 
 urlpatterns = [
     path('', Index.as_view(), name='home'),
+    path('guidelines/', views.guidelines, name='guidelines'),
     path('<slug:slug>/', views.post_detail, name='post_detail'),
     path('<slug:slug>/update/', PostUpdateView.as_view(), name='post_update'),
     path('<slug:slug>/delete/', PostDeleteView.as_view(), name='post_delete'),
@@ -15,8 +16,5 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('post/<int:post_id>/like/', views.like_post, name='like_post'),
     path('post/<int:post_id>/unlike/', views.unlike_post, name='unlike_post'),
-    path('guidelines/', views.guidelines, name='guidelines'),
-    path('main-page/', include('main_page.urls')),
-
 
 ]
