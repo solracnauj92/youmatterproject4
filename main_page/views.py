@@ -14,7 +14,7 @@ from django.urls import reverse_lazy
 # Create your views here.
 def about_page(request):
     return render(request, 'main_page/about.html')
-    
+
 class Index(ListView):
     model = Post
     template_name = 'main_page/index.html'
@@ -164,7 +164,8 @@ def edit_profile(request):
         form = ProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
-            return redirect('profile')
+            messages.success(request, 'Profile updated successfully.')
+            return redirect('profile')  # Redirect to the profile view or another appropriate URL
     else:
         form = ProfileForm(instance=profile)
 
