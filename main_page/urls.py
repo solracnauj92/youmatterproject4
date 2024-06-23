@@ -15,5 +15,8 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('post/<int:post_id>/like/', views.like_post, name='like_post'),
     path('post/<int:post_id>/unlike/', views.unlike_post, name='unlike_post'),
-    
+    path('guidelines/', views.guidelines, name='guidelines'),
+    path('main-page/', include('main_page.urls')),
+
+
 ]

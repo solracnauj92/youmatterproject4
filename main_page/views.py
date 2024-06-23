@@ -124,3 +124,6 @@ def unlike_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     post.unlike(request.user)
     return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
+
+def guidelines(request):
+    return render(request, 'main_page/guidelines.html')
