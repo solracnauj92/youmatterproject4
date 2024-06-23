@@ -12,6 +12,9 @@ from django.urls import reverse_lazy
 
 
 # Create your views here.
+def about_page(request):
+    return render(request, 'main_page/about.html')
+    
 class Index(ListView):
     model = Post
     template_name = 'main_page/index.html'
