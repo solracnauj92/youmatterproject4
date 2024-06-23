@@ -57,13 +57,13 @@
     <div class="row">
         <div class="col">
 
-            <section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
+            <section id="blog-section" class="bsb-blog-5 py-3 py-md-5 py-xl-8">
                 <div class="container">
                     <div class="row justify-content-md-center">
                         <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
                             <h2 class="display-5 mb-4 mb-md-2 text-center">Latest Articles</h2>
                             <div class="text-center">
-                                <p>Check out our <a href="{% url 'guidelines' %}">Guidelines</a>.</p>
+                                <p>Check out our guidelines <a href="{% url 'guidelines' %}">here</a></p>
                             <a href="{% url 'about' %}#post-your-story" class="btn btn">Post Your Story</a>
                         </div>
                         
@@ -114,18 +114,29 @@
         </div>
     </div>
     {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
+    <nav aria-label="Page navigation" class="mt-4">
+        <ul class="pagination justify-content-center custom-pagination">
+    
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            <li class="page-item">
+                <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-primary" aria-label="Previous">
+                    <span aria-hidden="true">&laquo; PREV</span>
+                </a>
+            </li>
             {% endif %}
+    
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li class="page-item">
+                <a href="?page={{ page_obj.next_page_number }}#blog-section" class="btn btn-primary" aria-label="Next">
+                    <span aria-hidden="true">NEXT &raquo;</span>
+                </a>
+            </li>
             {% endif %}
+    
         </ul>
     </nav>
     {% endif %}
-</div>
+    
 
 <!-- index.html content ends here -->
 {% endblock %}

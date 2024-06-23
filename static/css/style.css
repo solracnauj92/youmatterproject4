@@ -247,6 +247,22 @@ body {
     background-color:#c2d8e5 !important; 
     padding: 10px 0; }
 
+
+    /*next button */
+.custom-pagination .page-item + .page-item {
+        margin-left: 10px;
+         }
+
+.custom-pagination .btn-primary {
+    background-color: #004AAD;
+    color: #ffffff;
+    font-family: "Questrial", sans-serif; 
+    font-weight: 400;
+}
+
+.custom-pagination .btn-primary:hover {
+    background-color: #007bff; }
+
 /* Soicals */
 
 .social-icons a {
