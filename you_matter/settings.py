@@ -31,13 +31,15 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = [
-'youmatterproject4-4051e707d991.herokuapp.com',
-'8000-solracnauj9-youmatterpr-qrrse43ivwv.ws-eu114.gitpod.io',
-'.herokuapp.com',
-'8000-solracnauj9-youmatterpr-6a4aa3gzwe4.ws-eu114.gitpod.io',
-'8000-solracnauj9-youmatterpr-6pvgc2f5dji.ws-eu114.gitpod.io',
-'8000-solracnauj9-youmatterpr-bk17p6568vb.ws.codeinstitute-ide.net', 
+    'youmatterproject4-4051e707d991.herokuapp.com',
+    '.herokuapp.com',
+    '8000-solracnauj9-youmatterpr-qrrse43ivwv.ws-eu114.gitpod.io',
+    '8000-solracnauj9-youmatterpr-6a4aa3gzwe4.ws-eu114.gitpod.io',
+    '8000-solracnauj9-youmatterpr-6pvgc2f5dji.ws-eu114.gitpod.io',
+    '8000-solracnauj9-youmatterpr-bk17p6568vb.ws.codeinstitute-ide.net',
+    'https://8000-solracnauj9-youmatterpr-bk17p6568vb.ws.codeinstitute-ide.net',
 ]
+
 
 
 # Application definition
@@ -82,6 +84,7 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+
 ROOT_URLCONF = 'you_matter.urls'
 
 TEMPLATES = [
@@ -119,7 +122,8 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.io",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "https://8000-solracnauj9-youmatterpr-bk17p6568vb.ws.codeinstitute-ide.net",
 ]
 
 # Password validation
@@ -158,7 +162,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'), 
