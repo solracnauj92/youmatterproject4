@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 
 <!-- index.html content starts here -->
+
 <!-- Cover Section -->
 <div class="container-fluid px-0">
     <div class="position-relative">
@@ -25,15 +27,15 @@
             <h2 class="h4">Insightful Articles</h2>
             <p class="text-muted">Dive into our collection of articles written by mental health professionals and individuals with lived experiences. 
                 From tips on managing anxiety to strategies for fostering resilience, our content aims to inform and empower you. 
-                Explore diverse perspectives for your mental well-being journey.</p></p>
+                Explore diverse perspectives for your mental well-being journey.</p>
         </div>
 
         <!-- Column for Share your Story -->
         <div class="col-lg-4 mb-4">
             <div class="text-center">
-            <h2 class="h4">Share Your Story</h2>
-            <p class="text-muted">We believe in the power of storytelling. Share your personal experiences and insights through our blog platform. 
-                You must register first and then each submission is reviewed by our team to ensure it aligns with our community guidelines before being published.</p>
+                <h2 class="h4">Share Your Story</h2>
+                <p class="text-muted">We believe in the power of storytelling. Share your personal experiences and insights through our blog platform. 
+                    You must register first and then each submission is reviewed by our team to ensure it aligns with our community guidelines before being published.</p>
             </div>
         </div>
 
@@ -44,15 +46,15 @@
             </div>
             <h2 class="h4">Community Support</h2>
             <p class="text-muted">Join our community where you can connect with others through commenting on posts.
-                 Register to share and support fellow members. 
-                 Engage in meaningful discussions that promote understanding in our journey towards mental health awareness and well-being.</p>
+                Register to share and support fellow members. 
+                Engage in meaningful discussions that promote understanding in our journey towards mental health awareness and well-being.</p>
         </div>
     </div>
 
 </div>
 <!-- End Main Content Sections -->
 
-<!-- Blog -->
+<!-- Blog section -->
 <div class="container-fluid">
     <div class="row">
         <div class="col">
@@ -63,83 +65,81 @@
                         <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
                             <h2 class="display-5 mb-4 mb-md-2 text-center">Latest Articles</h2>
                             <div class="text-center">
-                                <p>Check out our guidelines <a href="{% url 'guidelines' %}">here</a></p>
-                            <a href="{% url 'about' %}#post-your-story" class="btn btn">Post Your Story</a>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <!-- Blog Entries Column -->
-                <div class="col-12 mt-3 left">
-                    <div class="row">
-                        {% for post in post_list %}
-                        <div class="col-md-4">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <div class="image-container">
-                                        {% if "placeholder" in post.featured_image.url %}
-                                        <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                            alt="placeholder image">
-                                        {% else %}
-                                        <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                            alt="{{ post.title }}">
-                                        {% endif %}
-                                        <div class="image-flash">
-                                            <p class="author">Author: {{ post.author }}</p>
-                                        </div>
-                                    </div>
-
-                                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
-
-                                        <h2 class="card-title">{{ post.title }}</h2>
-                                        <p class="card-text">{{ post.excerpt }}</p>
-                                    </a>
-
-                                    <hr>
-                                    <p class="card-text text-muted h6">{{ post.created_on}}
-                                    </p>
-                                </div>
+                                <p>Check out our guidelines by <a href="{% url 'guidelines' %}" class="guidelines-link">clicking here</a></p>
+                                <a href="{% url 'about' %}#post-your-story" class="btn btn">Post Your Story</a>
                             </div>
                         </div>
-                        {% if forloop.counter|divisibleby:3 %}
                     </div>
-                    <div class="row">
-                        {% endif %}
-                        {% endfor %}
 
+                    <!-- Blog Entries Column -->
+                    <div class="col-12 mt-3 left">
+                        <div class="row">
+                            {% for post in post_list %}
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="image-container">
+                                            {% if "placeholder" in post.featured_image.url %}
+                                            <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                                alt="placeholder image">
+                                            {% else %}
+                                            <img class="card-img-top" src="{{ post.featured_image.url }}"
+                                                alt="{{ post.title }}">
+                                            {% endif %}
+                                            <div class="image-flash">
+                                                <p class="author">Author: {{ post.author }}</p>
+                                            </div>
+                                        </div>
+
+                                        <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                            <h2 class="card-title">{{ post.title }}</h2>
+                                            <p class="card-text">{{ post.excerpt }}</p>
+                                        </a>
+
+                                        <hr>
+                                        <p class="card-text text-muted h6">{{ post.created_on }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if forloop.counter|divisibleby:3 %}
+                            </div>
+                            <div class="row">
+                            {% endif %}
+                            {% endfor %}
+                        </div>
                     </div>
+
+                    {% if is_paginated %}
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination justify-content-center custom-pagination">
+                            {% if page_obj.has_previous %}
+                            <li class="page-item">
+                                <a href="?page={{ page_obj.previous_page_number }}#blog-section" class="btn btn-primary" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo; PREV</span>
+                                </a>
+                            </li>
+                            {% endif %}
+    
+                            {% if page_obj.has_next %}
+                            <li class="page-item">
+                                <a href="?page={{ page_obj.next_page_number }}#blog-section" class="btn btn-primary" aria-label="Next">
+                                    <span aria-hidden="true">NEXT &raquo;</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                    {% endif %}
                 </div>
             </section>
         </div>
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation" class="mt-4">
-        <ul class="pagination justify-content-center custom-pagination">
-    
-            {% if page_obj.has_previous %}
-            <li class="page-item">
-                <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-primary" aria-label="Previous">
-                    <span aria-hidden="true">&laquo; PREV</span>
-                </a>
-            </li>
-            {% endif %}
-    
-            {% if page_obj.has_next %}
-            <li class="page-item">
-                <a href="?page={{ page_obj.next_page_number }}#blog-section" class="btn btn-primary" aria-label="Next">
-                    <span aria-hidden="true">NEXT &raquo;</span>
-                </a>
-            </li>
-            {% endif %}
-    
-        </ul>
-    </nav>
-    {% endif %}
-    
+</div>
+<!-- End Blog section -->
 
 <!-- index.html content ends here -->
 {% endblock %}
+
 {% block copyright %}
 &copy; 2024 You Matter. All rights reserved.
 {% endblock copyright %}

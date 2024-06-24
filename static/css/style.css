@@ -215,6 +215,29 @@ body {
 
 /* Navbar Text */
 
+
+/* guideline */
+.guidelines-link {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Questrial", sans-serif;
+    font-weight: 800;}
+
+    guidelines-link:hover {
+        color:#007bff;
+     }
+
+/**guideline page */
+
+h1, h2 {
+    font-family: "Questrial", sans-serif; 
+    
+}
+
+ul li {
+    font-family: "Questrial", sans-serif;
+}
+
 /* Section: Insightful Articles, Expert Advice, Community Support*/
 
 .container.bg-white h2,
@@ -273,6 +296,16 @@ body {
 .social-icons a:hover {
     color: #38B6FF; 
 }
+
+/*back button*/
+#back-btn { 
+    background-color: #004AAD;
+    color: #ffffff;
+    font-family: "Questrial", sans-serif; 
+    font-weight: 400;}
+
+#back-btn:hover {
+    background-color: #007bff; }
 
 
 /* Copyright */
