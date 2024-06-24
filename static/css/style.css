@@ -217,14 +217,14 @@ body {
 
 
 /* guideline */
-.guidelines-link {
+.guidelines-link, .link-redirect {
     color: #000000;
     text-decoration: none;
     font-family: "Questrial", sans-serif;
     font-weight: 800;}
 
-    guidelines-link:hover {
-        color:#007bff;
+.guidelines-link:hover , .link-redirect:hover{
+        color: #007bff;
      }
 
 /**guideline page */

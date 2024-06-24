@@ -111,6 +111,21 @@
         </section>
       </section>
 
+      <h2>How to Post Your Story with Us ✨</h2>
+            
+      <ul class="list-unstyled">
+          <li>1- Register: To post, you will need to  <a href="{% url 'about' %}#post-your-story" class="link-redirect">register or login</li></a>
+          <li>2- Guidelines: Read our posting community <a href="{% url 'guidelines' %}" class="link-redirect">guidelines</a></li>
+          <li>3- Post Your Story:Once you register and/or login, you can go to the <a href="{% url 'about' %}#post-your-story" class="link-redirect">story section below</a> and post your story there.</li>
+          <li>4- Review Process: Once posted, the You Matter team will review your post before approval.</li>
+          <li>5- Edit or Delete: In the meantime, if you feel like you need to edit or delete your post, you can do that.</li>
+          <li>6- Pending Posts: The pending post will appear on the home blog page.</li>
+      </ul>
+  
+      <p>By following these guidelines, we can maintain a safe and welcoming environment for all members of the "You Matter" community. Thank you for being part of our community and contributing to a positive and supportive space for mental health and wellbeing.</p>
+      <p>If you have any questions or need further assistance, please contact our support team at <a href="mailto:support@example.com" class="link-redirect">support@youmatter.com</a>.</p>
+  </div>
+
 
       {% if request.user.is_authenticated %}
         <div class="container mt-5" id="post-your-story">
@@ -124,6 +139,12 @@
               <p>Interested in sharing your own story or insights? You can submit your post using the form below. Each
                 submission will be reviewed for compliance with our guidelines before publication.</p>
               <!-- Content goes directly underneath this -->
+
+              
+              <br>
+              <br>
+            
+          </div>
               <form method="post">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}
@@ -136,7 +157,7 @@
       <div class="container mt-5">
         <div class="row">
           <div class="col-8">
-            <p>To collaborate with us, you must first <a href="{% url 'account_login' %}">login</a>.</p>
+            <h2>To collaborate with us, you must first <a href="{% url 'account_login' %}" class="link-redirect">login or Register</a>.</h2>
           </div>
         </div>
       </div>

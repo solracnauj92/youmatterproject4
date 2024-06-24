@@ -127,3 +127,4 @@ def unlike_post(request, post_id):
 
 def guidelines(request):
     return render(request, 'main_page/guidelines.html')
+
