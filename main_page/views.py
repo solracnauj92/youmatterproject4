@@ -8,7 +8,7 @@ from .models import Post, Comment
 from .forms import CommentForm, PostForm, PostUpdateUserForm
 from django.views.generic import ListView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-
+from .utils import resize_image
 
 
 # Create your views here.
@@ -142,3 +142,32 @@ def unlike_post(request, post_id):
 def guidelines(request):
     return render(request, 'main_page/guidelines.html')
 
+def upload_image(request):
+    if request.method == 'POST':
+        form = MyForm(request.POST, request.FILES)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            if instance.image:  # Assuming 'image' is the name of your ImageField
+                try:
+                    resized_image = resize_image(instance.image.path, 800, 600)
+                    # Save the resized image back to the instance if needed
+                    # instance.image = resized_image  # Uncomment this line if you want to save the resized image
+                    # instance.save()  # Save the model instance
+                except Exception as e:
+                    print(f"Error resizing image: {str(e)}")
+            instance.save()
+            return redirect('success_page')  # Replace with your success URL name
+    else:
+        form = MyForm()
+    return render(request, 'upload_form.html', {'form': form})
+
+def handle_uploaded_file(request):
+    try:
+        # Process the file upload to Cloudinary here
+        # Example: cloudinary.uploader.upload(file)
+        pass
+    except CloudinaryError as e:
+        if 'RequestDataTooBig' in str(e):
+            return HttpResponseBadRequest("File size too large. Maximum is 10 MB.")
+        else:
+            return HttpResponseBadRequest("An error occurred during file upload.")

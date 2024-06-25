@@ -29,6 +29,17 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Script to check file size -->
+    <script>
+        document.getElementById("your-file-input-id").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            const maxSize = 10 * 1024 * 1024;  // 10 MB in bytes (Cloudinary limit)
+            if (file.size > maxSize) {
+                alert("File size exceeds the maximum limit of 10 MB.");
+                event.target.value = '';  // Clear the file input
+            }
+        });
+    </script>
 </head>
 
 
