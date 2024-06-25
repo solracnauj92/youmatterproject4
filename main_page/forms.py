@@ -1,7 +1,13 @@
+from django.shortcuts import render, get_object_or_404, redirect
+from django.views.generic import UpdateView
 from .models import Comment, Post
 from django import forms
+from .utils import resize_image
+from django.core.files.uploadedfile import InMemoryUploadedFile
 
 
+import cloudinary.uploader
+import io
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
@@ -19,9 +25,26 @@ class PostUpdateUserForm(forms.ModelForm):
 
     def clean_featured_image(self):
         featured_image = self.cleaned_data.get('featured_image')
-        if featured_image:
-            # Check if the file size exceeds 10 MB (10 * 1024 * 1024 bytes)
-            max_size = 10 * 1024 * 1024
-            if featured_image.size > max_size:
-                raise forms.ValidationError('File size too large. Maximum is 10 MB.')
+        
+        # Check if a new image is uploaded
+        if isinstance(featured_image, InMemoryUploadedFile):
+            try:
+                # Resize the image
+                resized_image = resize_image(featured_image, 800, 600)
+                
+                # Upload the resized image to Cloudinary
+                uploaded_image = cloudinary.uploader.upload(resized_image, folder="uploads")
+                
+                # Update the featured_image field with the Cloudinary URL
+                self.instance.featured_image = uploaded_image['secure_url']
+            except Error as e:
+                if 'File size too large' in str(e):
+                    raise forms.ValidationError("File size is too large. Please upload a picture less than 10MB.")
+                else:
+                    raise forms.ValidationError(f"Error uploading image to Cloudinary: {str(e)}")
+            except Exception as e:
+                raise forms.ValidationError(f"An unexpected error occurred: {str(e)}")
+        
         return featured_image
+
+    

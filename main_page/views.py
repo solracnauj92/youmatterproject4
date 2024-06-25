@@ -113,6 +113,15 @@ class PostUpdateUserView(UpdateView):
     def get_object(self, queryset=None):
         return get_object_or_404(Post, slug=self.kwargs['slug'])
 
+    def form_valid(self, form):
+        try:
+            self.object = form.save(commit=False)
+            self.object.save()
+            return super().form_valid(form)
+        except Exception as e:
+            form.add_error(None, str(e))
+            return self.form_invalid(form)
+
 @method_decorator(login_required, name='dispatch')
 class PostDeleteView(DeleteView):
     model = Post
@@ -144,21 +153,31 @@ def guidelines(request):
 
 def upload_image(request):
     if request.method == 'POST':
-        form = MyForm(request.POST, request.FILES)
+        form = PostUpdateUserForm(request.POST, request.FILES)
         if form.is_valid():
             instance = form.save(commit=False)
-            if instance.image:  # Assuming 'image' is the name of your ImageField
+            
+            # Check if a new image is uploaded
+            if instance.featured_image:
                 try:
-                    resized_image = resize_image(instance.image.path, 800, 600)
-                    # Save the resized image back to the instance if needed
-                    # instance.image = resized_image  # Uncomment this line if you want to save the resized image
-                    # instance.save()  # Save the model instance
+                    # Resize the image
+                    resized_image = resize_image(instance.featured_image.path, 800, 600)
+                    
+                    # Upload the resized image to Cloudinary
+                    uploaded_image = cloudinary.uploader.upload(resized_image)
+                    
+                    # Update the featured_image field with the Cloudinary URL
+                    instance.featured_image = uploaded_image['secure_url']
                 except Exception as e:
-                    print(f"Error resizing image: {str(e)}")
+                    print(f"Error resizing and uploading image: {str(e)}")
+            
+            # Save the instance (whether with updated image or not)
             instance.save()
+            
             return redirect('success_page')  # Replace with your success URL name
     else:
-        form = MyForm()
+        form = PostUpdateUserForm()
+    
     return render(request, 'upload_form.html', {'form': form})
 
 def handle_uploaded_file(request):
