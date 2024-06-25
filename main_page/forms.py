@@ -22,7 +22,7 @@ class PostForm(forms.ModelForm):
 class PostUpdateUserForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title', 'featured_image', 'content', 'tag']  # Only include the fields that users can modify
+        fields = ['title', 'slug', 'featured_image', 'content', 'tag']  # Only include the fields that users can modify
 
     def clean_featured_image(self):
         featured_image = self.cleaned_data.get('featured_image')
