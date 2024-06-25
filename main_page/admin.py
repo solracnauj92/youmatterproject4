@@ -1,11 +1,11 @@
 from django.contrib import admin
 from .models import Post, Comment, Tag
 from django_summernote.admin import SummernoteModelAdmin
-from .forms import PostUserForm
+from .forms import PostUpdateUserForm
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-    form = PostUserForm
+    form = PostUpdateUserForm
 
     list_display = ('title', 'slug', 'status', 'tag')
     search_fields = ['title', 'content']

@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import Post, Comment
-from .forms import CommentForm, PostForm
+from .forms import CommentForm, PostForm, PostUpdateUserForm
 from django.views.generic import ListView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
@@ -91,6 +91,20 @@ class PostUpdateView(UpdateView):
     form_class = PostForm
     template_name = 'main_page/post_update.html'
     success_url = reverse_lazy('home')
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(author=self.request.user)
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(Post, slug=self.kwargs['slug'])
+
+@method_decorator(login_required, name='dispatch')
+class PostUpdateUserView(UpdateView):
+    model = Post
+    form_class = PostUpdateUserForm
+    template_name = 'main_page/post_update_user.html'
+    success_url = reverse_lazy('home')  # Adjust as per your URL setup
 
     def get_queryset(self):
         queryset = super().get_queryset()

@@ -12,7 +12,7 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'slug', 'author', 'featured_image', 'content', 'status', 'excerpt', 'tag']
 
-class PostUserForm(forms.ModelForm):
+class PostUpdateUserForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'featured_image', 'content', 'tag']  # Only include the fields that users can modify
