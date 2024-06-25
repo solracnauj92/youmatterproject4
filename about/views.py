@@ -52,14 +52,21 @@ def approve_collaboration_request(request, id):
         messages.error(request, "Access denied - invalid credentials")
         return redirect('about')
 
-    # find the request, and approve it
+    # Find the request and approve it
     collaboration = get_object_or_404(CollaborateRequest, id=id)
     collaboration.approved = True
     collaboration.save()
 
-    # create a new instance of the Post model using the requested collab data
+    # Generate a unique title for the Post
+    title = f"Collaboration Request {id} - {collaboration.tag}"  # Example of a unique title
+
+    # Check if a Post with the same title already exists
+    while Post.objects.filter(title=title).exists():
+        title += " (Duplicate)"  # Append to make title unique if needed
+
+    # Create a new instance of the Post model using the requested collab data
     Post.objects.create(
-        title="Pending Title",
+        title=title,
         slug=f"pending-title-{id}",
         author=get_object_or_404(User, username=collaboration.name),
         content=collaboration.message,
