@@ -77,5 +77,3 @@ class Like(models.Model):
     def __str__(self):
         return f"{self.user} likes {self.post}"
 
-class MyModel(models.Model):
-    image = models.ImageField(upload_to='upload/path/')

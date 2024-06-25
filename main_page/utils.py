@@ -1,7 +1,6 @@
 from PIL import Image
 import io
 
-
 def resize_image(image_file, width, height):
     """
     Resize an image to the specified dimensions (width, height).

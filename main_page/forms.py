@@ -4,6 +4,7 @@ from .models import Comment, Post
 from django import forms
 from .utils import resize_image
 from django.core.files.uploadedfile import InMemoryUploadedFile
+from django.core.exceptions import ValidationError
 
 
 import cloudinary.uploader
@@ -37,7 +38,7 @@ class PostUpdateUserForm(forms.ModelForm):
                 
                 # Update the featured_image field with the Cloudinary URL
                 self.instance.featured_image = uploaded_image['secure_url']
-            except Error as e:
+            except ValidationError as e:
                 if 'File size too large' in str(e):
                     raise forms.ValidationError("File size is too large. Please upload a picture less than 10MB.")
                 else:

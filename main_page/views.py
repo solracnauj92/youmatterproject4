@@ -161,7 +161,7 @@ def upload_image(request):
             if instance.featured_image:
                 try:
                     # Resize the image
-                    resized_image = resize_image(instance.featured_image.path, 800, 600)
+                    resized_image = resize_image(instance.featured_image.path, 256, 256)
                     
                     # Upload the resized image to Cloudinary
                     uploaded_image = cloudinary.uploader.upload(resized_image)

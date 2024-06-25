@@ -80,22 +80,20 @@
                                     <div class="card-body">
                                         <div class="image-container">
                                             {% if "placeholder" in post.featured_image.url %}
-                                            <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                                alt="placeholder image">
+                                            <img class="card-img-top img-fluid" src="{% static 'images/default.jpg' %}" alt="placeholder image">
                                             {% else %}
-                                            <img class="card-img-top" src="{{ post.featured_image.url }}"
-                                                alt="{{ post.title }}">
+                                            <img class="card-img-top img-fluid" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                                             {% endif %}
                                             <div class="image-flash">
                                                 <p class="author">Author: {{ post.author }}</p>
                                             </div>
                                         </div>
-
+                    
                                         <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                             <h2 class="card-title">{{ post.title }}</h2>
                                             <p class="card-text">{{ post.excerpt }}</p>
                                         </a>
-
+                    
                                         <hr>
                                         <p class="card-text text-muted h6">{{ post.created_on }}</p>
                                     </div>
@@ -108,7 +106,7 @@
                             {% endfor %}
                         </div>
                     </div>
-
+                    
                     {% if is_paginated %}
                     <nav aria-label="Page navigation" class="mt-4">
                         <ul class="pagination justify-content-center custom-pagination">
@@ -119,7 +117,7 @@
                                 </a>
                             </li>
                             {% endif %}
-    
+                    
                             {% if page_obj.has_next %}
                             <li class="page-item">
                                 <a href="?page={{ page_obj.next_page_number }}#blog-section" class="btn btn-primary" aria-label="Next">
@@ -130,11 +128,7 @@
                         </ul>
                     </nav>
                     {% endif %}
-                </div>
-            </section>
-        </div>
-    </div>
-</div>
+                    
 <!-- End Blog section -->
 
 <!-- index.html content ends here -->
