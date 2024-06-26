@@ -21,6 +21,8 @@ def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug, status=1)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    is_liked = post.is_liked_by(request.user) if request.user.is_authenticated else False
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -43,6 +45,8 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "is_liked": is_liked,
+
         }
     )
 
@@ -137,15 +141,14 @@ class PostDeleteView(DeleteView):
         return get_object_or_404(Post, slug=self.kwargs['slug'])
 
 @login_required
-def like_post(request, post_id):
+def toggle_like(request, post_id):
     post = get_object_or_404(Post, id=post_id)
-    post.like(request.user)
-    return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
-
-@login_required
-def unlike_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
-    post.unlike(request.user)
+    if post.is_liked_by(request.user):
+        post.unlike(request.user)
+        messages.add_message(request, messages.SUCCESS, 'You unliked the post.')
+    else:
+        post.like(request.user)
+        messages.add_message(request, messages.SUCCESS, 'You liked the post.')
     return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
 
 def guidelines(request):
