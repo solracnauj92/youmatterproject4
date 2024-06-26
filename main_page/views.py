@@ -8,7 +8,7 @@ from .models import Post, Comment
 from .forms import CommentForm, PostForm, PostUpdateUserForm
 from django.views.generic import ListView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .utils import resize_image
+from .utils import resize_image, handle_image_upload
 
 
 # Create your views here.
@@ -103,6 +103,16 @@ class PostUpdateView(UpdateView):
     def get_object(self, queryset=None):
         return get_object_or_404(Post, slug=self.kwargs['slug'])
 
+    def form_valid(self, form):
+        try:
+            self.object = form.save(commit=False)
+            handle_image_upload(self.object, self.request.FILES.get('featured_image'))
+            self.object.save()
+            return super().form_valid(form)
+        except Exception as e:
+            form.add_error(None, str(e))
+            return self.form_invalid(form)
+
 @method_decorator(login_required, name='dispatch')
 class PostUpdateUserView(UpdateView):
     model = Post
@@ -155,8 +165,13 @@ def guidelines(request):
     return render(request, 'main_page/guidelines.html')
 
 def upload_image(request):
+    if request.user.is_superuser:
+        form_class = PostForm
+    else:
+        form_class = PostUpdateUserForm
+
     if request.method == 'POST':
-        form = PostUpdateUserForm(request.POST, request.FILES)
+        form = form_class(request.POST, request.FILES)
         if form.is_valid():
             instance = form.save(commit=False)
             
@@ -179,7 +194,7 @@ def upload_image(request):
             
             return redirect('success_page')  # Replace with your success URL name
     else:
-        form = PostUpdateUserForm()
+        form = form_class()
     
     return render(request, 'upload_form.html', {'form': form})
 

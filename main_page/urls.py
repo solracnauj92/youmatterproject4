@@ -1,7 +1,6 @@
-from .views import Index, post_detail, PostUpdateView, PostDeleteView, toggle_like
+from .views import Index, post_detail, PostUpdateView, PostDeleteView, PostUpdateUserView, toggle_like
 from django.urls import path, include
 from . import views
-from .views import PostUpdateUserView
 
 
 urlpatterns = [
