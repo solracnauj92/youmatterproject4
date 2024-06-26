@@ -15,7 +15,7 @@
   <!-- Main Content Sections -->
 
  <!-- Main Content Sections -->
-<div class="container py-3 bg-white">
+<div class="container py-3 bg-white" id="content-section">
 
   <!-- Section: Insightful Articles, Expert Advice, Community Support -->
   <div class="row row-cols-1 row-cols-lg-3 g-4">
@@ -56,7 +56,7 @@
 </div>
 
 
-<section class="bsb-blog-5 py-3 py-md-5 py-xl-8" id="blue">
+<section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
  <section>
       <!--Testimonials-->
       <section class="py-5 container-fluid text-center uppercase" id="testimonials" aria-label="testimonials">
@@ -76,9 +76,10 @@
               </div>
               <h4 class="mb-3">Sarah Johnson</h4>
               <p class="text-dark mb-3"><b>Teen with Social Anxiety</b> </p>
-              <p class="px-xl-3">
-                "'You Matter' changed my life. It's a sanctuary for teens like me with social anxiety. This place
-                truly cares."
+              <p class="px-xl-3 mb-4">
+                "'You Matter' changed my life. <br>
+                It's a sanctuary for teens like me with social anxiety. <br>
+                This place truly cares."
               </p>
             </div>
             <div class="col-md-4 mb-5 mb-md-0">
@@ -88,9 +89,10 @@
               </div>
               <h4 class="mb-3">Michael Davis</h4>
               <p class="text-dark mb-3"><b>Working Professional</b></p>
-              <p class="px-xl-3">
-                "'You Matter' saved my career. The resources and support here gave me control over my stress. It's a
-                lifesaver."
+              <p class="px-xl-3 mb-4">
+                "'You Matter' saved my career. <br>
+                The resources and support here gave me control over my stress. <br>
+                It's a lifesaver."
               </p>
             </div>
 
@@ -101,9 +103,10 @@
               </div>
               <h4 class="mb-3">Margaret White</h4>
               <p class="text-dark mb-3"><b>Retired Senior</b></p>
-              <p class="px-xl-3">
-                "At 80, I found joy again with 'You Matter.' The resources and support group keep me going. It's
-                never too late to seek help."
+              <p class="px-xl-3 mb-4">
+                "At 80, I found joy again with 'You Matter.' <br>
+                The resources and support group keep me going. <br>
+                It's never too late to seek help."
               </p>
             </div>
           </div>
@@ -112,6 +115,8 @@
 </section>
 </section>
 
+<br><br>
+
 <section>
       <div class="container">
         <div class="row justify-content-md-center">
@@ -119,7 +124,7 @@
             <h2 class="display-5 mb-4 mb-md-5 text-center" id="post-your-story">Your Story</h2>
           </div>
         </div>
-      </div>
+     
 
       <h2>How to Post Your Story with Us ✨</h2>
             
@@ -134,9 +139,12 @@
   
       <p>By following these guidelines, we can maintain a safe and welcoming environment for all members of the "You Matter" community. Thank you for being part of our community and contributing to a positive and supportive space for mental health and wellbeing.</p>
       <p>If you have any questions or need further assistance, please contact our support team at <a href="mailto:support@example.com" class="link-redirect">support@youmatter.com</a>.</p>
+      <br>
   </div>
+ </div>
 
 
+  <section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
       {% if request.user.is_authenticated %}
         <div class="container mt-5" id="post-your-story">
           <div class="row">
@@ -148,7 +156,7 @@
                 the support they need.</p>
               <p>Interested in sharing your own story or insights? You can submit your post using the form below. Each
                 submission will be reviewed for compliance with our guidelines before publication.</p>
-              <!-- Content goes directly underneath this -->
+             
 
               
               <br>

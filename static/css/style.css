@@ -278,6 +278,26 @@ ul li {
     background-color:#c2d8e5 !important; 
     padding: 10px 0; }
 
+/* Main Content Sections */
+#content-section .container.bg-white h2,
+#content-section .container.bg-white p {
+    line-height: 1.6;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Button Styles for BSB Blog 5 */
+#content-section .bsb-blog-5 .btn {
+    font-family: "Questrial", sans-serif;
+    color: #ffffff;
+    background-color: #004AAD;
+}
+
+#content-section .bsb-blog-5 .btn:hover {
+    background-color: #007bff;
+}
+
 
     /*next button */
 .custom-pagination .page-item + .page-item {
