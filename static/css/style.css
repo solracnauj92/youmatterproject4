@@ -287,6 +287,18 @@ ul li {
     text-align: center;
 }
 
+/* Testimonials */
+#testimonials h4 {
+    font-family: "Questrial", sans-serif;
+    
+    }
+
+#testimonials p {
+    font-family: "Questrial", sans-serif;
+    text-decoration: none;
+        }    
+
+
 /* Button Styles for BSB Blog 5 */
 #content-section .bsb-blog-5 .btn {
     font-family: "Questrial", sans-serif;
@@ -297,7 +309,6 @@ ul li {
 #content-section .bsb-blog-5 .btn:hover {
     background-color: #007bff;
 }
-
 
     /*next button */
 .custom-pagination .page-item + .page-item {
