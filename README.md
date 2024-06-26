@@ -149,3 +149,85 @@ Testimonial 2:
 
 Testimonial 3:
 "At 80, I found joy again with 'You Matter.' The resources and support group keep me going. It's never too late to seek help."
+
+# Bugs and fixes
+
+| **1. Fix Heroku functionality by adding dependencies to requirements.txt and configuring Procfile.** |
+|-------------------------------------------|
+| - Added necessary dependencies to requirements.txt for Heroku deployment. |
+| - Configured Procfile to ensure correct execution on Heroku platform. |
+| - Opened workspace from Gitpod instead of GitHub directly. |
+| - Refreshed workspace until correct dependencies are loaded. |
+
+| **2. Modify runtime.txt to improve compatibility with Heroku** |
+|---------------------------------------------------------------------------|
+| - Updated Python version from 3.8.15 to 3.10.14 for enhanced compatibility with Heroku. |
+
+
+| **3. Fix post_detail view in index and convert it back to a function-based view** |
+|----------------------------------------------------------------|
+| - Restored functionality using a function-based view approach, ensuring proper rendering of post_detail in the index.. |
+
+
+| **4. Modify runtime.txt to improve compatibility with Heroku** |
+|--------------------------------------------------------------|
+| - Re-added Procfile multiple times due to it disappearing, a Gitpod issue. |
+| - Opened workspace from Gitpod instead of GitHub directly. |
+| - Refreshed workspace to apply correct dependencies. |
+
+| **5. Fixed post details view** |
+|------------------------------|
+| - Re-added Procfile multiple times due to it disappearing, a Gitpod issue. |
+| - Opened workspace from Gitpod instead of GitHub directly. |
+| - Refreshed workspace to apply correct dependencies. |
+
+| **6. Fix post_detail view to correctly retrieve and display individual blog** |
+|-----------------------------|
+| - Refactor: Fetch Post object with specific slug and status in view. |
+
+
+| **7. Fix login issue** |
+|-----------------------------------------------------|
+| - Modified the conditional rendering of the edit button to ensure it appears only if the user is authenticated and is the author of the comment. |
+| - Adjusted the script inclusion in the extras block for proper functionality. |
+| - Update the head title block to properly define the title for the signup page using translation tags. |
+| - Adding comments.js |
+
+| **8. Fix sign up.html** |
+|------------------------------------------------|
+| - Modify signup.html to extend base.html for consistent styling and layout across. |
+| - Update the head title block to properly define the title for the signup page using translation tags. |
+| - Correct the ending block tag to ensure proper closure of the content block. |
+
+| **9. Fix newsletter app** |
+|----------------------------|
+| - Update about.html to include a link or section for newsletter signup. |
+| - Adjust newsletter_signup.html to ensure it extends from base.html and includes the necessary form for newsletter signup. |
+| - Add a path for newsletter signup in urls.py to route requests to the appropriate view. |
+| - Implement the newsletter_signup view in views.py to handle newsletter signup requests. |
+| - Modify base.html to include navigation or footer links related to the newsletter. |
+| - Ensure urls.py includes the necessary paths for the entire application, including the newsletter functionality. |
+
+| **13. Fix newsletter submission form** |
+|---------------------------------------|
+| - Update connect_view to handle form submission for newsletter signup and provide success messages. |
+| - Ensure connect.html displays the form and handles the success message. |
+
+| **14. Resolving Issues After Transitioning to a New Gitpod Workspace** |
+|-------------------------------------------------------------|
+| - After transitioning to a new Gitpod workspace due to the exhaustion of personal account hours, several issues arose that required attention to continue the project seamlessly. First by reinstalling Django|
+| - Update Django settings to include the new workspace details for CSRF trusted origins and allowed hosts. |
+| - Reinstalling dependencies to ensure that the environment is correctly set up |
+
+| **15. Fix reverse match error in post detail** |
+|----------------------------------------------|
+| - Re-added Procfile multiple times due to it disappearing, a Gitpod issue. |
+| - Opened workspace from Gitpod instead of GitHub directly. |
+| - Refreshed workspace to apply correct dependencies. |
+
+| **16. Fix login by updating allowed hosts for CBRF troubleshooting** |
+|----------------------------------------------------------------------|
+| - Re-added Procfile multiple times due to it disappearing, a Gitpod issue. |
+| - Opened workspace from Gitpod instead of GitHub directly. |
+| - Refreshed workspace to apply correct dependencies. |
+
