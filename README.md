@@ -236,14 +236,29 @@ Testimonial 3:
 
  # Design 
 
-## Wireframes: designed with Canva 
+## Wireframes
 
 ### Desktop Wireframe 
 
-#### Home page
-![wireframe_desktop](static/images/wireframe_desktop.jpg) 
+The desktop wireframe design created on Canva has played a important role in shaping the direction of this project. It serves as the foundational blueprint that embodies the complete vision of the web page layout. 
+By visualising the page in its entirety on a larger screen, the desktop version provides a comprehensive view of the project's concept.
 
-### Logo Design
+
+![wireframe_desktop](static/images/desktop_wireframe.jpg) 
+![wireframe_desktop_forms](static/images/desktop_wireframe_forms.jpg) 
+
+While the desktop wireframe showcases the full concept of the page, the next steps involve translating this design to tablet and mobile formats. These adaptations will ensure that the page remains responsive and user-friendly across different devices. Users will seamlessly scroll down to explore additional content, maintaining a cohesive experience.
+
+#### Tablet Wireframe
+![wireframe_tablet](static/images/tablet_wireframe.jpg) 
+
+
+#### Mobile Wireframe
+![wireframe_mobile](static/images/mobile_wireframe.jpg) 
+
+
+
+## Logo Design
 
 Designed using Canva, the logo features:
 
@@ -252,7 +267,7 @@ Designed using Canva, the logo features:
 
 Initially, the spiral was red, but considering that red can evoke strong emotions that might not align with a calming and supportive environment, I updated the logo to use a more neutral and soothing grey.
 
-![youmatter](assets/images/logo-designs.jpg) 
+![logo-designs](static/images/logo-designs.jpg) 
 
 
 ## Colour Palette 
@@ -261,7 +276,7 @@ Initially, the spiral was red, but considering that red can evoke strong emotion
 
 In designing the website, I have carefully selected a colour palette that promotes a calming and supportive environment, essential for a mental health platform.  Our colour palette includes:
 
-![colour](assets/images/colour.png) 
+![colour](static/images/colour.png) 
 
 The inspiration for this color scheme comes from my work in the mental health department at the NHS, where the use of blue is prevalent in creating a reassuring and professional atmosphere. 
 
@@ -329,11 +344,11 @@ More complex issues arose from version discrepancies and environment configurati
 
 
 
-
+# Guidance
 
 The live deployed application can be found deployed on [Heroku](https://youmatterproject4-4051e707d991.herokuapp.com/).
 
-### PostgreSQL Database
+## PostgreSQL Database
 
 This project uses a [Code Institute PostgreSQL Database](https://dbs.ci-dbs.net).
 
@@ -349,7 +364,7 @@ To obtain my own Postgres Database from Code Institute, I followed these steps:
 > - Code Institute students are allowed a maximum of 8 databases.
 > - Databases are subject to deletion after 18 months.
 
-### Cloudinary API
+## Cloudinary API
 
 This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
 
@@ -360,7 +375,7 @@ To obtain your own Cloudinary API key, create an account and log in.
 - On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
 - Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
 
-### Heroku Deployment
+## Heroku Deployment
 
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
@@ -419,7 +434,7 @@ Or:
 
 The project should now be connected and deployed to Heroku!
 
-### Local Deployment
+## Local Deployment
 
 This project can be cloned or forked in order to make a local copy on your own system.
 
@@ -456,7 +471,7 @@ Once the project is cloned or forked, in order to run it locally, you'll need to
 - Load fixtures (if applicable): `python3 manage.py loaddata file-name.json` (repeat for each file)
 - Everything should be ready now, so run the Django app again: `python3 manage.py runserver`
 
-#### Cloning
+### Cloning
 
 You can clone the repository by following these steps:
 
@@ -476,7 +491,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
 
-#### Forking
+### Forking
 
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
