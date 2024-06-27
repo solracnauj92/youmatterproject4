@@ -232,6 +232,37 @@ Testimonial 3:
 - **Updated Upcoming Events**:  
   Users can view highlights of any new upcoming events or activities since their last visit, enticing them to explore new opportunities for community engagement.
 
+ # Design 
+
+## Wireframes: designed with Canva 
+
+### Desktop Wireframe 
+
+#### Home page
+![wireframe_desktop](static/images/wireframe_desktop.jpg) 
+
+### Logo Design
+
+Designed using Canva, the logo features:
+
+- **Human Face Outline**: Represents the individuality and personal nature of mental health journeys.
+- **Tornado-like Spiral in the Brain**: Symbolises the complexity and whirlwind of emotions and thoughts associated with mental health.
+
+Initially, the spiral was red, but considering that red can evoke strong emotions that might not align with a calming and supportive environment, I updated the logo to use a more neutral and soothing grey.
+
+![youmatter](assets/images/logo-designs.jpg) 
+
+
+## Colour Palette 
+
+### Design and Color Scheme
+
+In designing the website, I have carefully selected a colour palette that promotes a calming and supportive environment, essential for a mental health platform.  Our colour palette includes:
+
+![colour](assets/images/colour.png) 
+
+The inspiration for this color scheme comes from my work in the mental health department at the NHS, where the use of blue is prevalent in creating a reassuring and professional atmosphere. 
+
 
 
 # Bugs and Fixes
