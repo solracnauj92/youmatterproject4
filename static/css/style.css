@@ -298,6 +298,21 @@ ul li {
     text-decoration: none;
         }    
 
+/* Custom styling for community cards */
+
+.community-card {
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    transition: box-shadow 0.3s ease; 
+    background-color: #fff; 
+}
+
+.community-title {
+    font-family: "Questrial", sans-serif;}
+    
+
+.container {
+        padding-top: 20px; }
 
 /* Button Styles for BSB Blog 5 */
 #content-section .bsb-blog-5 .btn {

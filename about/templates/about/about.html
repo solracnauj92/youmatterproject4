@@ -23,9 +23,9 @@
     <!-- Welcome to Our Mental Health Community -->
     <div class="col mb-4">
       <div class="text-center">
-  
+        <span class="bi bi-people-fill display-1"></span>
       </div>
-      <h2 class="h4">Who We Are 👥</h2>
+      <h2 class="h4">Who We Are </h2>
       <p class="text-muted">We are a dedicated community of mental health professionals, advocates, and individuals with lived experiences. Our platform is built on the foundation of understanding and empathy, 
         providing a sanctuary for those seeking support and guidance. Here, you are never alone.</p>
     </div>
@@ -33,9 +33,9 @@
     <!-- Our Mission -->
     <div class="col mb-4">
       <div class="text-center">
-        
+        <span class="bi bi-bullseye display-1"></span>
       </div>
-      <h2 class="h4">Our Mission 🎯</h2>
+      <h2 class="h4">Our Mission</h2>
       <p class="text-muted">Our mission is to promote mental health awareness, provide valuable resources, and foster a supportive community. 
         We strive to empower individuals by offering insightful articles, expert advice, and real-life stories that inspire and educate. 
     </div>
@@ -44,9 +44,9 @@
     <!-- Funded by Generosity -->
     <div class="col mb-4">
       <div class="text-center">
-        
+        <span class="bi bi-gift display-1"></span>
       </div>
-      <h2 class="h4">Funded by Generosity 🎁</h2>
+      <h2 class="h4">Funded by Generosity</h2>
       <p class="text-muted">Our initiative is funded by generous donations from supporters. Operating as a charity, every contribution helps maintain our services, create new content, and reach more people in need. 
         Your support makes a difference.</p>
     </div>
@@ -125,7 +125,8 @@
         </div>
      
 
-      <h2>How to Post Your Story with Us ✨</h2>
+        <h2><i class="bi bi-file-earmark-text"></i> How to Post Your Story with Us</h2>
+        <br>
             
       <ul class="list-unstyled">
           <li>1- Register: To post, you will need to  <a href="{% url 'account_login' %}" class="link-redirect">register or login</li></a>
@@ -143,13 +144,14 @@
  </div>
 
 
-  <section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
+  <section class="bsb-blog-5 py-3 py-md-2 py-xl-8">
       {% if request.user.is_authenticated %}
         <div class="container mt-5">
           <div class="row">
             <div class="col-8">
               <!-- Post your story -->
-              <h2>Post your Story</h2>
+              <h2><i class="bi bi-pencil"></i> Post your Story</h2>
+              <br>
               <p>We invite you to explore our collection of articles, participate in discussions, and join our community.
                 Together, we can break the stigma surrounding mental health and create a world where everyone has access to
                 the support they need.</p>
