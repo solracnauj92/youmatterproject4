@@ -257,7 +257,6 @@ While the desktop wireframe showcases the full concept of the page, the next ste
 ![wireframe_mobile](static/images/mobile_wireframe.jpg) 
 
 
-
 ## Logo Design
 
 Designed using Canva, the logo features:
@@ -280,6 +279,17 @@ In designing the website, I have carefully selected a colour palette that promot
 
 The inspiration for this color scheme comes from my work in the mental health department at the NHS, where the use of blue is prevalent in creating a reassuring and professional atmosphere. 
 
+## Typography
+
+### Font Import
+
+To ensure consistent typography throughout the project, I've integrated the Questrial font from Google Fonts. This modern and sleek typeface enhances readability and visual appeal across different screen sizes.
+Dedigned by Joe Prince and Laura Meseguer. As of June 2024, these fonts are licensed under the Open Font License. You can use them in your products & projects – print or digital, commercial or otherwise.
+
+![font](static/images/font.png) 
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 
 # Bugs and Fixes
