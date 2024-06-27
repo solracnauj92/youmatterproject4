@@ -1,16 +1,41 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
 body {
     background-color: #F9FAFC;
 }
 
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
+
+/* Alert message styles */
+.alert {
+    margin-bottom: 1rem; 
 }
 
+.alert-dismissible .btn-close {
+    font-size: 1rem; 
+}
+
+/* Main content section styles */
+.main-bg {
+    background-color: #ffffff; 
+}
+
+/* Login/logout status paragraph styles */
+.text-end {
+    font-size: 14px; 
+    font-style: italic; 
+    color: #004AAD; 
+    margin-bottom: 0; 
+}
+
+/* Alert message styles */
+
+
 .red-o {
-    color: #E84610;
+    color: #000000;
 }
 
 .thin {
@@ -35,15 +60,23 @@ body {
 }
 
 .image-container {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-container img {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .image-flash {
     position: absolute;
-    bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-color: #004AAD;
 }
 
 .scale {
@@ -52,9 +85,9 @@ body {
 }
 
 .author {
+    font-family: "Questrial", sans-serif;
     color: white;
     margin: 4px;
-    text-transform: uppercase;
 }
 
 .masthead {
@@ -93,12 +126,13 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #000000;
+    font-family: "Questrial", sans-serif;
 }
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #004AAD;
 }
 
 .post-title {
@@ -113,18 +147,17 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #007bff; 
 }
 
 .link {
-    color: #23BBBB;
+    color: #007bff; 
     text-decoration: none;
 }
 
@@ -158,4 +191,234 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+/* Navbar Link Styles */
+.navbar-nav .nav-item .nav-link {
+    font-family: "Questrial", sans-serif;
+    color: #000000; 
+    font-weight: 400; 
+    font-size: 16px; 
+    
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #38B6FF; 
+}
+
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #004AAD; 
+    border-bottom: 2px solid #007bff; 
+}
+
+/* Navbar Link Styles */
+
+/* Navbar Text */
+
+.navbar-text.text-muted {
+    font-family: "Questrial", sans-serif;
+}
+
+/* Navbar Text */
+
+
+/* guideline */
+.guidelines-link, .link-redirect {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Questrial", sans-serif;
+    font-weight: 800;}
+
+.guidelines-link:hover , .link-redirect:hover{
+        color: #007bff;
+     }
+
+/**guideline page */
+
+h1, h2 {
+    font-family: "Questrial", sans-serif; 
+    
+}
+
+ul li {
+    font-family: "Questrial", sans-serif;
+}
+
+/* Section: Insightful Articles, Expert Advice, Community Support*/
+
+.container.bg-white h2,
+.container.bg-white p {
+    line-height: 1.6; 
+   
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+.bsb-blog-5 .btn {
+    font-family: "Questrial", sans-serif;
+    color: #ffffff; 
+    background-color:#004AAD;
+}
+
+.bsb-blog-5 .btn:hover {
+    background-color: #007bff;}
+
+/* Section: Insightful Articles, Expert Advice, Community Support*/
+
+.bsb-blog-5 h2.display-5 {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    color:  #ffffff; 
+    text-transform: uppercase; }
+
+    .bsb-blog-5 {
+    background-color:#c2d8e5 !important; 
+    padding: 10px 0; }
+
+/* Main Content Sections */
+#content-section .container.bg-white h2,
+#content-section .container.bg-white p {
+    line-height: 1.6;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Testimonials */
+#testimonials h4 {
+    font-family: "Questrial", sans-serif;
+    
+    }
+
+#testimonials p {
+    font-family: "Questrial", sans-serif;
+    text-decoration: none;
+        }    
+
+/* Custom styling for community cards */
+
+.community-card {
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    transition: box-shadow 0.3s ease; 
+    background-color: #fff; 
+}
+
+.community-title {
+    font-family: "Questrial", sans-serif;}
+    
+
+.container {
+        padding-top: 20px; }
+
+        
+/* Events */
+#events h4 {
+            font-family:"Questrial", sans-serif;
+            font-weight: 500;
+            text-transform: uppercase; }
+#events p {
+    font-family:"Questrial", sans-serif;
+    font-weight: 400;
+}
+
+/* Login section */
+#login-section h3 {
+    font-family:"Questrial", sans-serif;
+    font-weight: 800;}
+
+#login-section p {
+    font-family:"Questrial", sans-serif;}
+
+#login-btn {
+    font-family: "Questrial", sans-serif;}
+
+/* Style for Sign Up Section */
+#signup-text h3 {
+    ont-family:"Questrial", sans-serif;
+    font-weight: 800;
+}
+
+#signup-btn {
+    font-family: "Questrial", sans-serif;
+}
+
+/* contact */
+
+#contact h3 {
+    font-family:"Questrial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+#contact p {
+    font-family:"Questrial", sans-serif;
+    font-weight: 400;
+    color: #000000;
+}
+
+
+
+
+/* Button Styles for BSB Blog 5 */
+#content-section .bsb-blog-5 .btn {
+    font-family: "Questrial", sans-serif;
+    color: #ffffff;
+    background-color: #004AAD;
+}
+
+#content-section .bsb-blog-5 .btn:hover {
+    background-color: #007bff;
+}
+
+    /*next button */
+.custom-pagination .page-item + .page-item {
+        margin-left: 10px;
+         }
+
+.custom-pagination .btn-primary {
+    background-color: #004AAD;
+    color: #ffffff;
+    font-family: "Questrial", sans-serif; 
+    font-weight: 400;
+}
+
+.custom-pagination .btn-primary:hover {
+    background-color: #007bff; }
+
+/* Soicals */
+
+.social-icons a {
+    color: #004AAD; 
+    font-size: 24px; 
+    transition: color 0.3s; }
+
+.social-icons a:hover {
+    color: #38B6FF; 
+}
+
+/*back button*/
+#back-btn { 
+    background-color: #004AAD;
+    color: #ffffff;
+    font-family: "Questrial", sans-serif; 
+    font-weight: 400;}
+
+#back-btn:hover {
+    background-color: #007bff; }
+
+
+/* Copyright */
+.footer-copyright {
+        font-family: "Questrial", sans-serif; 
+        font-weight: 400; }
+
+.card-img-top {
+    width: 100%; /* Ensures the image fills its parent container */
+    height: 256px; /* Set the fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    border-radius: 8px; /* Optional: Adds rounded corners */
 }

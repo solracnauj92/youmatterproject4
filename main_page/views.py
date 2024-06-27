@@ -208,3 +208,7 @@ def handle_uploaded_file(request):
             return HttpResponseBadRequest("File size too large. Maximum is 10 MB.")
         else:
             return HttpResponseBadRequest("An error occurred during file upload.")
+            
+def login_view(request):
+    # Your login view logic here
+    return render(request, 'main_page/login.html')

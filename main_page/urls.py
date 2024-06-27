@@ -16,6 +16,7 @@ urlpatterns = [
     views.comment_delete, name='comment_delete'),
     path('about/', include('about.urls')),
     path('post/<int:post_id>/toggle_like/', views.toggle_like, name='toggle_like'),
+    path('login/', views.login_view, name='login'),
 
     
 
