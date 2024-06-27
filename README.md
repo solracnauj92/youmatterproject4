@@ -150,6 +150,89 @@ Testimonial 2:
 Testimonial 3:
 "At 80, I found joy again with 'You Matter.' The resources and support group keep me going. It's never too late to seek help."
 
+### Testimonial 
+
+- Testimonial of story 1:
+" 'You Matter' changed my life. It's a sanctuary for teens like me with social anxiety. This place truly cares."
+
+- Testimonial of story 2:
+" 'You Matter' saved my career. The resources and support here gave me control over my stress. It's a lifesaver."
+
+- Testimonial of story 3:
+"At 80, I found joy again with 'You Matter.' The resources and support group keep me going. It's never too late to seek help."
+
+### User Goals 
+
+1. **Access Relevant Information**
+   - *Goal*: To read blog posts on various mental health topics and stay informed.
+   - *Benefit*: Users can gain knowledge and insights that help them understand and manage their mental health.
+
+2. **Engage with the Community**
+   - *Goal*: To participate in discussions through comments on blog posts.
+   - *Benefit*: Users can share their perspectives, support others, and feel a sense of belonging in the community.
+
+3. **Share Personal Experiences**
+   - *Goal*: To write and publish personal posts about their mental health journey.
+   - *Benefit*: Users can express themselves, find solace in sharing their stories, and inspire others.
+
+4. **Stay Updated**
+   - *Goal*: To subscribe to the newsletter for regular updates on new blog posts and mental health topics.
+   - *Benefit*: Users can stay connected and informed about the latest content and community events.
+
+5. **Find Support Resources**
+   - *Goal*: To access information about crisis contacts and support services.
+   - *Benefit*: Users can quickly find help in times of need and connect with professional support.
+
+6. **Learn from Others**
+   - *Goal*: To read success stories and experiences shared by other community members.
+   - *Benefit*: Users can draw inspiration and motivation from the experiences of others who have overcome similar challenges.
+
+### First Time Visitor
+
+- **Welcoming Design and Clear Message**:  
+  Users should sense a warm and inviting atmosphere when they enter the website, with a welcoming and visually appealing design and message.
+
+- **User-Friendly Navigation**:  
+  Users are able to navigate easily to explore the website. The website is clear about different tabs and sections.
+
+- **Responsiveness**:  
+  The website is responsive across various devices, ensuring a seamless experience for users accessing it from different platforms.
+
+- **Blogs and Inspiring Quotes**:  
+  First-time visitors will see a selection of blogs and inspiring quote cover image, providing an immediate sense of the community’s spirit and focus on mental health.
+
+- **Tell your story Page**:  
+ Information about the website mission, vision, and history, helping new users understand the community's purpose and background. Users can fill in their own posts and stories, but must register first; an alert message will prompt them to register if they attempt to post without an account.
+
+- **Connect Page**:  
+  Options to connect with the community through events, newsletter sign up and contact information.
+
+### Second Time Visitor
+
+- **Blog Functionality**:  
+  The blog is a mental health-focused platform where users can post their own stories and blogs with the approval of the website team. New users can view content but must register to write posts or comment on existing blogs.
+
+- **Signing up tp Newsletters**:  
+ Visitors will receive regular updates and newsletters with the latest news, upcoming events, and new content on the platform, ensuring they are always informed and engaged.
+
+- **Community Engagement**:  
+  Opportunities for visitors to engage more deeply with the community through blogs with mental health experts and other community members.
+
+- **Updated Upcoming Events**:  
+  Users can view highlights of any new upcoming events or activities since their last visit, enticing them to explore new opportunities for community engagement.
+
+### Frequent Visitor
+
+- **Sharing with Friends and Family**:  
+  At this stage, users feel comfortable sharing the platform with friends, family, or colleagues, encouraging them to join the community.
+
+- **Updated Blog and Stories to Read**:  
+  Visitors will have access to an updated collection of blogs and personal stories from the community. This ensures that there is always new and inspiring content to read, helping users stay connected and engaged with the latest experiences and insights shared by other community members.
+
+- **Updated Upcoming Events**:  
+  Users can view highlights of any new upcoming events or activities since their last visit, enticing them to explore new opportunities for community engagement.
+
+
 
 # Bugs and Fixes
 
