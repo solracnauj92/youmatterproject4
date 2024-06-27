@@ -336,7 +336,15 @@ ul li {
 #login-btn {
     font-family: "Questrial", sans-serif;}
 
+/* Style for Sign Up Section */
+#signup-text h3 {
+    ont-family:"Questrial", sans-serif;
+    font-weight: 800;
+}
 
+#signup-btn {
+    font-family: "Questrial", sans-serif;
+}
 
 /* contact */
 
