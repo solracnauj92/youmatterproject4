@@ -325,20 +325,33 @@ ul li {
     font-weight: 400;
 }
 
+/* Login section */
+#login-section h3 {
+    font-family:"Questrial", sans-serif;
+    font-weight: 800;}
+
+#login-section p {
+    font-family:"Questrial", sans-serif;}
+
+#login-btn {
+    font-family: "Questrial", sans-serif;}
+
+
+
 /* contact */
 
 #contact h3 {
     font-family:"Questrial", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    color: #fff;
+    color: #000000;
 }
 
 #contact p {
     font-family:"Questrial", sans-serif;
     font-weight: 400;
+    color: #000000;
 }
-
 
 
 
