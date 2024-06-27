@@ -314,6 +314,35 @@ ul li {
 .container {
         padding-top: 20px; }
 
+        
+/* Events */
+#events h4 {
+            font-family:"Questrial", sans-serif;
+            font-weight: 500;
+            text-transform: uppercase; }
+#events p {
+    font-family:"Questrial", sans-serif;
+    font-weight: 400;
+}
+
+/* contact */
+
+#contact h3 {
+    font-family:"Questrial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#contact p {
+    font-family:"Questrial", sans-serif;
+    font-weight: 400;
+}
+
+
+
+
+
 /* Button Styles for BSB Blog 5 */
 #content-section .bsb-blog-5 .btn {
     font-family: "Questrial", sans-serif;
