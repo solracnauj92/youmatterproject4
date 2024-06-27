@@ -16,17 +16,19 @@ def about_me(request):
         )
     else:
         collaborate_form = CollaborateForm(request.POST or None)
+
     if request.method == "POST":
         if collaborate_form.is_valid():
             collaborate_form.instance.name = request.user.username
             collaborate_form.save()
             messages.success(
                 request,
-                "Collaboration request received! I endeavour to respond within 2 working days.")  # noqa
+                "Collaboration request received! I endeavour to respond within 2 working days."
+            )
             return redirect('about')
-    
+
     about = About.objects.all().order_by("-updated_on").first()
-    
+
     return render(request, "about/about.html", {
         "about": about,
         "collaborate_form": collaborate_form
@@ -57,21 +59,25 @@ def approve_collaboration_request(request, id):
     collaboration.approved = True
     collaboration.save()
 
-    # Generate a unique title for the Post
-    title = f"Collaboration Request {id} - {collaboration.tag}"  # Example of a unique title
+    # Use the user-provided title directly
+    title = collaboration.title
 
-    # Check if a Post with the same title already exists
+    # Ensure the title is unique
+    original_title = title
+    counter = 1
     while Post.objects.filter(title=title).exists():
-        title += " (Duplicate)"  # Append to make title unique if needed
+        title = f"{original_title} ({counter})"
+        counter += 1
 
-    # Create a new instance of the Post model using the requested collab data
-    Post.objects.create(
+    # Create or update the post
+    Post.objects.update_or_create(
         title=title,
         slug=f"pending-title-{id}",
         author=get_object_or_404(User, username=collaboration.name),
-        content=collaboration.message,
+        content=collaboration.content,
         status=1,
         tag=collaboration.tag,
     )
+
     messages.success(request, 'Collaboration successfully approved')
     return redirect('collaboration_requests')

@@ -156,7 +156,7 @@ Testimonial 3:
 I encountered challenges typical of a beginner in Django development, including initial configuration errors and syntax issues. 
 More complex issues arose from version discrepancies and environment configurations. Below are some examples listed:
 
-| **1. Fix Heroku functionality by adding dependencies to requirements.txt and configuring Procfile** | 
+|**1. Fix Heroku functionality by adding dependencies to requirements.txt and configuring Procfile** | 
   - Added necessary dependencies to `requirements.txt` for Heroku deployment.
   - Configured `Procfile` for correct execution on Heroku.
   - Opened workspace from Gitpod instead of GitHub directly.

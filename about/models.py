@@ -18,7 +18,8 @@ class About(models.Model):
 class CollaborateRequest(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField()
-    message = models.TextField()
+    title = models.CharField(max_length=200)
+    content = models.TextField()
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
     approved = models.BooleanField(default=False)
 
