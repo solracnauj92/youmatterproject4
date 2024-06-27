@@ -1,11 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h2>Confirm Delete</h2>
-  <p>Are you sure you want to delete this post?</p>
-  <form method="post">
-    {% csrf_token %}
-    <button type="submit">Yes, delete</button>
-    <a href="{% url 'post_detail' post.pk %}">Cancel</a>
-  </form>
+<div class="container">
+  <div class="row">
+    <div class="col mx-auto">
+      <h2>Confirm Delete</h2>
+      <p>Are you sure you want to delete this post?</p>
+      <form method="post">
+        {% csrf_token %}
+        <a href="{% url 'post_delete' post.slug %}" class="btn btn-info">Yes, delete</a>
+        <a href="{% url 'post_detail' post.slug %}" class="btn btn-danger">Cancel</a>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}

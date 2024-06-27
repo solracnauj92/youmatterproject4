@@ -10,38 +10,7 @@ The live deployed application can be found deployed on [Heroku](https://youmatte
 
 ![Hero Page]() 
 
-----
 
-## [Content](#content)
-- [Aims and Objectives](#aims-objectives)
-- [Agile Development Process](#agile-development-process)
-    - [User Stories](#user-stories)
-    - [Target Audience](#target)
-    - [Age Group and Region](#age-region)
-    - [User Personas](#user-personas)
-     - [First Time Visitor](#first-time-visitor)
-     - [Returning Visitor](#returning-visitor)
-     - [Frequent Visitor](#frequent-visitor)
-  - [Design](#design)
-    - [Wireframes: Figma VS Final version](#wireframes)
-    - [Brand & Logo: Canva ](#brand)
-    - [Colour Palette: Canva ](#colour)
-    - [Typography: Google font / Bootstrap ](#typography)
-  - [Desktop, Tablet, Mobile Responsiveness](#responsiveness)
-  - [Features](#features)
-    - [Future Features](#future)   
-  - [Database Control Flow](#database)
-   - [Django Admin](#admin)
-  - [Testing](#testing)
-      - [CSS Validation](#validation)
-      - [Python CI Testing ](#tythontesting )
-      - [Lighthouse](#manual-testing)
-      - [Bugs](#bugs)
-- [Technologies Used](#testing)
-  - [Credits](#credits)
-  - [Acknowledgement](#acknowledgement)
-
------
 
 ## Aims and Objectives
 1. **Providing Accessible Mental Health Resources**

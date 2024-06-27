@@ -29,17 +29,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- Script to check file size -->
-    <script>
-        document.getElementById("your-file-input-id").addEventListener("change", function(event) {
-            const file = event.target.files[0];
-            const maxSize = 10 * 1024 * 1024;  // 10 MB in bytes (Cloudinary limit)
-            if (file.size > maxSize) {
-                alert("File size exceeds the maximum limit of 10 MB.");
-                event.target.value = '';  // Clear the file input
-            }
-        });
-    </script>
+    
 </head>
 
 
@@ -101,19 +91,22 @@
 
     <!-- displaying Django messages -->
 
-    {% for message in messages %}
-    <div class="alert {{ message.tags }} alert-dismissible
-              fade show" id="msg" role="alert">
-        {{ message | safe }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    {% endfor %}
-
+    {% if messages %}
+        <section id="alerts">
+            {% for msg in messages %}
+                <!-- all django message tags mirror bootstrap, except error/danger -->
+                <aside class="alert alert-{% if msg.tags == 'error' %}danger{% elif msg.tags == 'success' %}info{% else %}{{ msg.tags }}{% endif %} rounded-0 text-center" role="alert">
+                    <h3>{{ msg }}</h3>
+                </aside>
+            {% endfor %}
+        </section>
+    {% endif %}
+    
     <main class="flex-shrink-0 main-bg bg-white">
         {% if user.is_authenticated %}
-        <p class="text-end m-3">You are logged in as {{ user }}</p>
+            <p class="text-end m-3">You are logged in as {{ user }}</p>
         {% else %}
-        <p class="text-end m-3">You are not logged in</p>
+            <p class="text-end m-3">You are not logged in</p>
         {% endif %}
 
         {% block content %}

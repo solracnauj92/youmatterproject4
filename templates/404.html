@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row my-5 py-md-5">
+        <div class="col-12 text-center">
+            <h1 class="text-primary">Oops! We've Lost Our Minds (Page)!</h1>
+            <br>
+            <p class="fs-4">
+                It looks like this page is taking a mental health day.
+                <br>
+                Don't worry, our resources, support, and community are here to help you stay on track!
+                <br><br>
+                Here's what you can do:
+            </p>
+            <p>
+                <a href="{% url 'home' %}" class="btn btn-lg btn-outline-primary m-1">Home</a>
+                <a href="{% url 'about' %}" class="btn btn-lg btn-outline-primary m-1">About</a>
+                <a href="{% url 'connect' %}" class="btn btn-lg btn-outline-primary m-1">Connect</a>
+            </p>
+            <p class="fs-5">
+                Remember, even when pages disappear, support is always just a click away!
+                <br>
+                <small>Hope this brings a smile to your face!</small>
+            </p>
+            <p>
+                <small class="text-info fw-bold fs-6">ERROR: 404</small>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

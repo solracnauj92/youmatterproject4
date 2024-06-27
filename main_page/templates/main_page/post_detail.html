@@ -9,14 +9,16 @@
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ post.title }}</h1>
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-                {% if user == post.author %}
-                {% if user.is_superuser %}
-                    <a href="{% url 'post_update' slug=post.slug %}" class="btn btn-primary">Edit</a>
-                {% else %}
-                    <a href="{% url 'post_update_user' slug=post.slug %}" class="btn btn-primary">Edit</a>
-            {% endif %}
-                    <a href="{% url 'post_delete' slug=post.slug %}" class="btn btn-danger">Delete</a>
-                {% endif %}
+                <p class="post-subtitle">
+                  {% if user == post.author %}
+                      {% if user.is_superuser %}
+                          <a href="{% url 'post_update' slug=post.slug %}" class="btn btn-primary">Edit</a>
+                      {% else %}
+                          <a href="{% url 'post_update_user' slug=post.slug %}" class="btn btn-primary">Edit</a>
+                      {% endif %}
+                    <a href="{% url 'post_delete_confirm' slug=post.slug %}" class="btn btn-danger">Delete</a>
+                  {% endif %}
+                </p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
@@ -52,7 +54,7 @@
     {% if user.is_authenticated %}
       <form action="{% url 'toggle_like' post.id %}" method="POST" class="d-inline">
         {% csrf_token %}
-        <button type="submit">
+        <button type="submit" class="btn btn-info">
             {% if is_liked %}
                 Unlike
             {% else %}
@@ -123,7 +125,7 @@
             {{ comment_form | crispy }}
             {% csrf_token %}
             <button id="submitButton" type="submit"
-              class="btn btn-signup btn-lg">Submit</button>
+              class="btn btn-lg btn-outline-dark">Submit</button>
           </form>
           {% else %}
           <p>Log in to leave a comment</p>

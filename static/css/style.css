@@ -145,10 +145,10 @@ body {
     color: lightgray;
 }
 
-.btn-signup,
+/* .btn-signup,
 .btn-edit {
     color: #fff;
-}
+} */
 
 .btn-signup:hover,
 .btn-signup:active {

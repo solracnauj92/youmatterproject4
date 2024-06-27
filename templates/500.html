@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row my-5 py-md-5">
+        <div class="col-12 text-center">
+            <h1 class="text-primary">Uh-Oh! Our Server Needs a Hug (Error 500)</h1>
+            <br>
+            <p class="fs-4">
+                It seems our server is having a bit of a meltdown.
+                <br>
+                We're working hard to calm it down and get things back on track.
+                <br><br>
+                While we fix this, you can:
+            </p>
+            <p>
+                <a href="{% url 'home' %}" class="btn btn-lg btn-outline-info m-1">Home</a>
+                <a href="{% url 'about' %}" class="btn btn-lg btn-outline-info m-1">About</a>
+                <a href="{% url 'connect' %}" class="btn btn-lg btn-outline-info m-1">Connect</a>
+            </p>
+            <p class="fs-4">
+                Even servers need a little support sometimes.
+                <br>
+                Thanks for your patience!
+                <br>
+                <small>Keep smiling!</small>
+            </p>
+            <p>
+                <small class="text-info fw-bold fs-6">ERROR: 500</small>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
