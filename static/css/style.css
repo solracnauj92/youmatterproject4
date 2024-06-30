@@ -145,17 +145,6 @@ body {
     color: lightgray;
 }
 
-/* .btn-signup,
-.btn-edit {
-    color: #fff;
-} */
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #007bff; 
-}
-
 .link {
     color: #007bff; 
     text-decoration: none;
@@ -178,6 +167,22 @@ body {
     background: #E84610;
 }
 
+.btn-edit {
+    color: #000000;
+    background-color: #004AAD;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-edit:hover,
+.btn-edit:active {
+    background-color: #007bff !important;
+    color: #000000 !important;
+}
+
+
 .btn-like:hover,
 .btn-like:active {
     color: #E84610;
@@ -198,7 +203,7 @@ body {
     font-family: "Questrial", sans-serif;
     color: #000000; 
     font-weight: 400; 
-    font-size: 16px; 
+    font-size: 16px;
     
 }
 
@@ -209,7 +214,7 @@ body {
 
 .navbar-nav .nav-item.active .nav-link {
     color: #004AAD; 
-    border-bottom: 2px solid #007bff; 
+    border-bottom: 2px solid #007bff;
 }
 
 /* Navbar Link Styles */
@@ -258,7 +263,7 @@ ul li {
 
 .bsb-blog-5 .btn {
     font-family: "Questrial", sans-serif;
-    color: #ffffff; 
+    color: #241313; 
     background-color:#004AAD;
 }
 
@@ -303,7 +308,7 @@ ul li {
     border: 1px solid #ddd; 
     border-radius: 8px; 
     transition: box-shadow 0.3s ease; 
-    background-color: #fff; 
+    background-color: #84e4fa; 
 }
 
 .community-title {
@@ -337,12 +342,13 @@ ul li {
 
 /* Style for Sign Up Section */
 #signup-text h3 {
-    ont-family:"Questrial", sans-serif;
+    font-family:"Questrial", sans-serif;
     font-weight: 800;
 }
 
 #signup-btn {
     font-family: "Questrial", sans-serif;
+    
 }
 
 /* contact */
@@ -421,4 +427,18 @@ ul li {
     height: 256px; /* Set the fixed height for uniformity */
     object-fit: cover; /* Ensures the image covers the container without stretching */
     border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+    .navbar-nav .nav-item .nav-link {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .btn {
+        margin: 5px;
+    }
 }

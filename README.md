@@ -257,9 +257,6 @@ Dedigned by Joe Prince and Laura Meseguer. As of June 2024, these fonts are lice
 
 ![font](static/images/font.png) 
 
-```css
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-
 
 # Bugs and Fixes
 

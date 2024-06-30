@@ -106,7 +106,7 @@
           {% if user.is_authenticated and comment.author == user %}
           <button class="btn btn-delete"
           comment_id="{{ comment.id }}">Delete</button>
-          <button class="btn btn-edit"
+          <button class="btn btn-primary"
           comment_id="{{ comment.id }}">Edit</button>
           {% endif %}
         </div>
@@ -125,7 +125,7 @@
             {{ comment_form | crispy }}
             {% csrf_token %}
             <button id="submitButton" type="submit"
-              class="btn btn-lg btn-outline-dark">Submit</button>
+              class="btn btn-primary">Submit</button>
           </form>
           {% else %}
           <p>Log in to leave a comment</p>
