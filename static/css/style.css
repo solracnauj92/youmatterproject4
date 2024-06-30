@@ -8,6 +8,8 @@
 
 body {
     background-color: #ffffff;
+    font-family: "Questrial", sans-serif;
+
 }
 
 
@@ -53,7 +55,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #ffffff;
 }
 
 .card {
@@ -61,91 +63,6 @@ body {
     background-color: transparent;
 }
 
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.image-container img {
-    width: 256px;
-    height: 256px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.image-flash {
-    position: absolute;
-    min-width: 30%;
-    left: -2px;
-    background-color: #004AAD;
-}
-
-.scale {
-    width: 100%;
-    height: auto;
-}
-
-.author {
-    font-family: "Questrial", sans-serif;
-    color: white;
-    margin: 4px;
-}
-
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
-.post-link {
-    text-decoration: none;
-    color: #000000;
-    font-family: "Questrial", sans-serif;
-}
-
-.post-link:hover,
-.page-link {
-    color: #004AAD;
-}
-
-.post-title {
-    margin-top: 10%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: rgb(0, 0, 0);
-}
 
 .btn-signup:hover,
 .btn-signup:active {
@@ -431,10 +348,10 @@ ul li {
         font-weight: 400; }
 
 .card-img-top {
-    width: 100%; /* Ensures the image fills its parent container */
-    height: 256px; /* Set the fixed height for uniformity */
-    object-fit: cover; /* Ensures the image covers the container without stretching */
-    border-radius: 8px; /* Optional: Adds rounded corners */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px; 
 }
 
 
