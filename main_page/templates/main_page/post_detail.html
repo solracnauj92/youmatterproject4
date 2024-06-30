@@ -8,10 +8,10 @@
       <div class="col-md-8 mb-4">
           <div class="card shadow">
           {% if "placeholder" in post.featured_image.url %}
-          <div class="card-body d-flex align-items-center" >
-              <img src="{% static 'images/default.jpg' %}" class="card-img-top" alt="placeholder image">
+          <div class="card-body d-flex align-items-center" style="height: 400px;" >
+              <img src="{% static 'images/default.jpg' %}" class="card-img-top w-100 h-100" alt="placeholder image">
           {% else %}
-              <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.title }}">
+              <img src="{{ post.featured_image.url }}" class="card-img-top w-100 h-100" alt="{{ post.title }}">
           {% endif %}
       </div>
     </div>
