@@ -347,11 +347,34 @@ ul li {
         font-family: "Questrial", sans-serif; 
         font-weight: 400; }
 
+ /* Post detail Image */       
 .card-img-top {
     object-fit: cover; 
     border-radius: 8px; 
+    margin-bottom: 0;
 }
 
+.card-body {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+.post-title {
+    margin-top: 20px !important;
+    font-family: "Questrial", sans-serif;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .post-subtitle {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 0;
+  }
+
+
+ /* Nav Responsiveness */   
 
 @media (max-width: 576px) {
     .navbar {
