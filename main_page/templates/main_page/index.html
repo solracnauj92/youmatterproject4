@@ -55,79 +55,68 @@
 <!-- End Main Content Sections -->
 
 <!-- Blog section -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
+<section id="blog-section" class="py-3 py-md-5 py-xl-8">
+    <div class="container">
+        <!-- Section Title and Call to Action -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="display-5 mb-4 mb-md-2 text-center">Latest Blogs</h2>
+                <div class="text-center mb-4">
+                    <p>Check out our guidelines by <a href="{% url 'guidelines' %}" class="guidelines-link">clicking here</a></p>
+                    <a href="{% url 'about' %}#post-your-story" class="btn btn-primary">Post Your Story</a>
+                </div>
+            </div>
+        </div>
 
-            <section id="blog-section" class="bsb-blog-5 py-3 py-md-5 py-xl-8">
-                <div class="container">
-                    <div class="row justify-content-md-center">
-                        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                            <h2 class="display-5 mb-4 mb-md-2 text-center">Latest Blogs</h2>
-                            <div class="text-center">
-                                <p>Check out our guidelines by <a href="{% url 'guidelines' %}" class="guidelines-link">clicking here</a></p>
-                                <a href="{% url 'about' %}#post-your-story" class="btn btn">Post Your Story</a>
-                            </div>
-                        </div>
+        <!-- Blog Entries Column -->
+        <div class="row mt-4">
+            {% for post in post_list %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <a href="{% url 'post_detail' post.slug %}">
+                        {% if "placeholder" in post.featured_image.url %}
+                            <img class="card-img-top img-fluid" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                        {% else %}
+                            <img class="card-img-top img-fluid" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                        {% endif %}
+                    </a>
+                    <div class="card-body">
+                        <p class="text-secondary mb-1">{{ post.created_on }}</p>
+                        <h2 class="h4 mb-3"><a class="link-dark text-decoration-none" href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h2>
+                        <p class="mb-4">{{ post.excerpt }}</p>
+                        <p>By: {{ post.author }}</p>
+                        <a class="btn btn-primary" href="{% url 'post_detail' post.slug %}" target="_self">Read More</a>
                     </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
 
-                    <!-- Blog Entries Column -->
-                    <div class="col-12 mt-3 left">
-                        <div class="row">
-                            {% for post in post_list %}
-                            <div class="col-md-4">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <div class="image-container">
-                                            {% if "placeholder" in post.featured_image.url %}
-                                            <img class="card-img-top img-fluid" src="{% static 'images/default.jpg' %}" alt="placeholder image">
-                                            {% else %}
-                                            <img class="card-img-top img-fluid" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
-                                            {% endif %}
-                                            <div class="image-flash">
-                                                <p class="author">Author: {{ post.author }}</p>
-                                            </div>
-                                        </div>
-                    
-                                        <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                            <h2 class="card-title">{{ post.title }}</h2>
-                                            <p class="card-text">{{ post.excerpt }}</p>
-                                        </a>
-                    
-                                        <hr>
-                                        <p class="card-text text-muted h6">{{ post.created_on }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {% if forloop.counter|divisibleby:3 %}
-                            </div>
-                            <div class="row">
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                    
-                    {% if is_paginated %}
-                    <nav aria-label="Page navigation" class="mt-4">
-                        <ul class="pagination justify-content-center custom-pagination">
-                            {% if page_obj.has_previous %}
-                            <li class="page-item">
-                                <a href="?page={{ page_obj.previous_page_number }}#blog-section" class="btn btn-primary" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo; PREV</span>
-                                </a>
-                            </li>
-                            {% endif %}
-                    
-                            {% if page_obj.has_next %}
-                            <li class="page-item">
-                                <a href="?page={{ page_obj.next_page_number }}#blog-section" class="btn btn-primary" aria-label="Next">
-                                    <span aria-hidden="true">NEXT &raquo;</span>
-                                </a>
-                            </li>
-                            {% endif %}
-                        </ul>
-                    </nav>
-                    {% endif %}
+        <!-- Pagination -->
+        {% if is_paginated %}
+        <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center custom-pagination">
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a href="?page={{ page_obj.previous_page_number }}#blog-section" class="btn btn-primary" aria-label="Previous">
+                        <span aria-hidden="true">&laquo; PREV</span>
+                    </a>
+                </li>
+                {% endif %}
+
+                {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a href="?page={{ page_obj.next_page_number }}#blog-section" class="btn btn-primary" aria-label="Next">
+                        <span aria-hidden="true">NEXT &raquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</section>
+
                     
 <!-- End Blog section -->
 
