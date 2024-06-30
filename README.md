@@ -205,7 +205,7 @@ Designed using Canva, the logo features:
 
 Initially, the spiral was red, but considering that red can evoke strong emotions that might not align with a calming and supportive environment, I updated the logo to use a more neutral and soothing grey.
 
-![logo-designs](Documentation/logo-designs.jpg) 
+![logo-design-process](Documentation/logo_design_process.jpg) 
 
 
 ## Colour Palette 
