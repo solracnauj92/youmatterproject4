@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #F9FAFC;
+    background-color: #ffffff;
 }
 
 
@@ -97,7 +97,7 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 200;
+    height: 33vh;
     width: 100%;
 }
 
@@ -144,7 +144,7 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: rgb(0, 0, 0);
 }
 
 .btn-signup:hover,
