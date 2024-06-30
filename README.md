@@ -1,18 +1,21 @@
-![Logo]()
+
+# [YOU MATTER](https://youmatterproject4-4051e707d991.herokuapp.com)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/solracnauj92/youmatterproject4)](https://github.com/solracnauj92/youmatterproject4/commits/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/solracnauj92/youmatterproject4)](https://github.com/solracnauj92/youmatterproject4/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/solracnauj92/youmatterproject4)](https://github.com/solracnauj92/youmatterproject4)
+
+![Logo](static/images/youmatter.png) 
 
 I'm excited to share with you to You Matter, a fictional blog website developed using Django Framework as part of Portfolio Project 4. 
 
-## Project Overview
+The live deployed application can be found deployed on [Heroku](https://youmatterproject4-4051e707d991.herokuapp.com/).
+
+# Project Overview
 
 Welcome to "You Matter" – a transformative project dedicated to mental health support and fostering community connections. Imagine a place where understanding flourishes, and empathy turns challenges into victories. As a mental health practitioner, my goal is not just to build a website, but to create a space for people seeking support and connection.
 
-The live deployed application can be found deployed on [Heroku](https://youmatterproject4-4051e707d991.herokuapp.com/).
 
-![Hero Page]() 
-
-
-
-## Aims and Objectives
+# Aims and Objectives
 1. **Providing Accessible Mental Health Resources**
 
 - Offer a wide range of articles, videos, and tools to educate and support individuals in their mental health journey.
@@ -38,11 +41,11 @@ The live deployed application can be found deployed on [Heroku](https://youmatte
 - Facilitate ongoing learning through webinars, workshops, and expert talks.
 - Promote the latest research and developments in mental health care and wellness.
 
-## Agile Development Process
+# Agile Development Process
 
 In developing "You Matter," we have utilized an Agile methodology, specifically employing the Kanban board feature in GitHub. This approach allows us to:
 
-- **Highlight Must-Haves, Could-Haves, and More**: Clearly categorize and prioritize tasks and features based on their importance and impact.
+- **Highlight Must-Haves, Could-Haves, and More**: Clearly categorize and prioritise tasks and features based on their importance and impact.
 - **Track Progress**: Continuously monitor the project's development and adjust priorities as needed.
 - **Add Issues on the Go**: Dynamically create and manage issues as they arise, ensuring that all aspects of the project are addressed in a timely manner.
 - **User Story Statements**: Each issue includes a user story statement to clarify the goal and context, ensuring that all team members have a shared understanding of the task at hand.
@@ -112,15 +115,6 @@ Michael, a 35-year-old working professional, had been dealing with work-related 
 
 Margaret, an 80-year-old retiree, had been feeling increasingly lonely and anxious after losing her spouse and dealing with the challenges of aging. She discovered the "You Matter" website through her grandson and found a wealth of resources tailored to seniors facing mental health issues. The website provided information on coping with grief and isolation and tips for maintaining emotional well-being in later life. Margaret also joined an online seniors' support group where she met fellow retirees facing similar challenges. The connections she made and the compassionate discussions helped her combat her feelings of loneliness and find joy in her golden years. Margaret's experience demonstrates that it's never too late to seek support and that "You Matter" is there for people of all ages.
 
-Testimonial 1:
-" 'You Matter' changed my life. It's a sanctuary for teens like me with social anxiety. This place truly cares."
-
-Testimonial 2:
-" 'You Matter' saved my career. The resources and support here gave me control over my stress. It's a lifesaver."
-
-Testimonial 3:
-"At 80, I found joy again with 'You Matter.' The resources and support group keep me going. It's never too late to seek help."
-
 ### Testimonial 
 
 - Testimonial of story 1:
@@ -132,76 +126,52 @@ Testimonial 3:
 - Testimonial of story 3:
 "At 80, I found joy again with 'You Matter.' The resources and support group keep me going. It's never too late to seek help."
 
-### User Goals 
+## Users / Admin Goals 
 
-1. **Access Relevant Information**
-   - *Goal*: To read blog posts on various mental health topics and stay informed.
-   - *Benefit*: Users can gain knowledge and insights that help them understand and manage their mental health.
+### New Site Users
 
-2. **Engage with the Community**
-   - *Goal*: To participate in discussions through comments on blog posts.
-   - *Benefit*: Users can share their perspectives, support others, and feel a sense of belonging in the community.
-
-3. **Share Personal Experiences**
-   - *Goal*: To write and publish personal posts about their mental health journey.
-   - *Benefit*: Users can express themselves, find solace in sharing their stories, and inspire others.
-
-4. **Stay Updated**
-   - *Goal*: To subscribe to the newsletter for regular updates on new blog posts and mental health topics.
-   - *Benefit*: Users can stay connected and informed about the latest content and community events.
-
-5. **Find Support Resources**
-   - *Goal*: To access information about crisis contacts and support services.
-   - *Benefit*: Users can quickly find help in times of need and connect with professional support.
-
-6. **Learn from Others**
-   - *Goal*: To read success stories and experiences shared by other community members.
-   - *Benefit*: Users can draw inspiration and motivation from the experiences of others who have overcome similar challenges.
+- As a new site user, I would like to access relevant information, so that I can read blog posts on various mental health topics and stay informed.
+- As a new site user, I would like to engage with the community, so that I can participate in discussions through comments on blog posts.
+- As a new site user, I would like to share personal experiences, so that I can write and publish personal posts about my mental health journey.
+- As a new site user, I would like to stay updated, so that I can subscribe to the newsletter for regular updates on new blog posts and mental health topics.
+- As a new site user, I would like to find support resources, so that I can access information about crisis contacts and support services.
+- As a new site user, I would like to learn from others, so that I can read success stories and experiences shared by other community members.
 
 ### First Time Visitor
 
-- **Welcoming Design and Clear Message**:  
-  Users should sense a warm and inviting atmosphere when they enter the website, with a welcoming and visually appealing design and message.
-
-- **User-Friendly Navigation**:  
-  Users are able to navigate easily to explore the website. The website is clear about different tabs and sections.
-
-- **Responsiveness**:  
-  The website is responsive across various devices, ensuring a seamless experience for users accessing it from different platforms.
-
-- **Blogs and Inspiring Quotes**:  
-  First-time visitors will see a selection of blogs and inspiring quote cover image, providing an immediate sense of the community’s spirit and focus on mental health.
-
-- **Tell your story Page**:  
- Information about the website mission, vision, and history, helping new users understand the community's purpose and background. Users can fill in their own posts and stories, but must register first; an alert message will prompt them to register if they attempt to post without an account.
-
-- **Connect Page**:  
-  Options to connect with the community through events, newsletter sign up and contact information.
+- As a first-time visitor, I would like to feel welcomed by the design and clear message, so that I can sense a warm and inviting atmosphere when entering the website.
+- As a first-time visitor, I would like user-friendly navigation, so that I can easily explore the website and understand the different tabs and sections.
+- As a first-time visitor, I would like the website to be responsive across various devices, so that I can have a seamless experience accessing it from different platforms.
+- As a first-time visitor, I would like to see blogs and inspiring quotes, so that I can get an immediate sense of the community’s spirit and focus on mental health.
+- As a first-time visitor, I would like to visit the "Story" page, so that I can learn about the website's mission, vision, and history, and understand the community's purpose and background.
+- As a first-time visitor, I would like to visit the "Connect" page, so that I can find options to connect with the community through events, newsletter sign-ups, and contact information.
 
 ### Second Time Visitor
 
-- **Blog Functionality**:  
-  The blog is a mental health-focused platform where users can post their own stories and blogs with the approval of the website team. New users can view content but must register to write posts or comment on existing blogs.
-
-- **Signing up tp Newsletters**:  
- Visitors will receive regular updates and newsletters with the latest news, upcoming events, and new content on the platform, ensuring they are always informed and engaged.
-
-- **Community Engagement**:  
-  Opportunities for visitors to engage more deeply with the community through blogs with mental health experts and other community members.
-
-- **Updated Upcoming Events**:  
-  Users can view highlights of any new upcoming events or activities since their last visit, enticing them to explore new opportunities for community engagement.
+- As a second-time visitor, I would like to utilize the blog functionality, so that I can post my own stories and blogs with the approval of the website team.
+- As a second-time visitor, I would like to sign up for newsletters, so that I can receive regular updates and stay informed about the latest news, upcoming events, and new content on the platform.
+- As a second-time visitor, I would like to engage with the community, so that I can participate more deeply through blogs with mental health experts and other community members.
+- As a second-time visitor, I would like to view updated upcoming events, so that I can explore new opportunities for community engagement since my last visit.
 
 ### Frequent Visitor
 
-- **Sharing with Friends and Family**:  
-  At this stage, users feel comfortable sharing the platform with friends, family, or colleagues, encouraging them to join the community.
+- As a frequent visitor, I would like to share the platform with friends and family, so that I can encourage them to join the community and benefit from its resources.
+- As a frequent visitor, I would like to access updated blogs and stories, so that I can stay connected and engaged with the latest experiences and insights shared by other community members.
+- As a frequent visitor, I would like to view updated upcoming events, so that I can explore new opportunities for community engagement and stay informed about any new activities since my last visit.
 
-- **Updated Blog and Stories to Read**:  
-  Visitors will have access to an updated collection of blogs and personal stories from the community. This ensures that there is always new and inspiring content to read, helping users stay connected and engaged with the latest experiences and insights shared by other community members.
 
-- **Updated Upcoming Events**:  
-  Users can view highlights of any new upcoming events or activities since their last visit, enticing them to explore new opportunities for community engagement.
+### Site Admin Goals 
+
+- As a user administrator, I should be able to create an account, so that I can access and use the features of the website.
+- As a user administrator, I should be able to log in and log out, so that I can securely access my account.
+- As a site administrator, I should be able to approve users' posts, so that I can ensure content quality and relevance before publishing on the website.
+- As a site administrator, I should be able to delete intolerant or abusive comments, so that I can maintain a respectful and safe community environment.
+- As a site administrator, I should be able to manage user accounts, so that I can control access and maintain the security of the website.
+- As a site administrator, I should be able to categorise and tag posts, so that I can organize content and make it easier for users to find relevant information.
+- As a site administrator, I should be able to manage site settings and configurations, so that I can customise the website's functionality and appearance according to the needs of the community.
+- As a site administrator, I should be able to communicate with users through announcements or newsletters, so that I can keep the community informed about important updates or changes.
+
+
 
  # Design 
 
@@ -213,17 +183,17 @@ The desktop wireframe design created on Canva has played a important role in sha
 By visualising the page in its entirety on a larger screen, the desktop version provides a comprehensive view of the project's concept.
 
 
-![wireframe_desktop](static/images/desktop_wireframe.jpg) 
-![wireframe_desktop_forms](static/images/desktop_wireframe_forms.jpg) 
+![wireframe_desktop](Documentation/desktop_wireframe.jpg) 
+![wireframe_desktop_forms](Documentation/desktop_wireframe_forms.jpg) 
 
 While the desktop wireframe showcases the full concept of the page, the next steps involve translating this design to tablet and mobile formats. These adaptations will ensure that the page remains responsive and user-friendly across different devices. Users will seamlessly scroll down to explore additional content, maintaining a cohesive experience.
 
 #### Tablet Wireframe
-![wireframe_tablet](static/images/tablet_wireframe.jpg) 
+![wireframe_tablet](Documentation/tablet_wireframe.jpg) 
 
 
 #### Mobile Wireframe
-![wireframe_mobile](static/images/mobile_wireframe.jpg) 
+![wireframe_mobile](Documentation/mobile_wireframe.jpg) 
 
 
 ## Logo Design
@@ -235,7 +205,7 @@ Designed using Canva, the logo features:
 
 Initially, the spiral was red, but considering that red can evoke strong emotions that might not align with a calming and supportive environment, I updated the logo to use a more neutral and soothing grey.
 
-![logo-designs](static/images/logo-designs.jpg) 
+![logo-designs](Documentation/logo-designs.jpg) 
 
 
 ## Colour Palette 
@@ -244,7 +214,7 @@ Initially, the spiral was red, but considering that red can evoke strong emotion
 
 In designing the website, I have carefully selected a colour palette that promotes a calming and supportive environment, essential for a mental health platform.  Our colour palette includes:
 
-![colour](static/images/colour.png) 
+![colour](Documentation/colour.png) 
 
 The inspiration for this color scheme comes from my work in the mental health department at the NHS, where the use of blue is prevalent in creating a reassuring and professional atmosphere. 
 
@@ -255,7 +225,7 @@ The inspiration for this color scheme comes from my work in the mental health de
 To ensure consistent typography throughout the project, I've integrated the Questrial font from Google Fonts. This modern and sleek typeface enhances readability and visual appeal across different screen sizes.
 Dedigned by Joe Prince and Laura Meseguer. As of June 2024, these fonts are licensed under the Open Font License. You can use them in your products & projects – print or digital, commercial or otherwise.
 
-![font](static/images/font.png) 
+![font](Documentation/font.png) 
 
 
 # Bugs and Fixes
@@ -475,4 +445,14 @@ You can fork this repository by using the following steps:
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/solracnauj92/youmatterproject4)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+
+# Acknowledgements
+
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
+- I would like to thank my wife Sharon, for believing in me, and allowing me to make this transition into software development.
+- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
 
