@@ -1,8 +1,10 @@
 /* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 
+.btn {
+    background-color: #38B6FF;
+}
 
 body {
     background-color: #F9FAFC;
@@ -95,7 +97,7 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 200;
     width: 100%;
 }
 
@@ -143,6 +145,12 @@ body {
 .post-subtitle {
     margin-left: 5%;
     color: lightgray;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #ffffff;
+    color: #007bff; 
 }
 
 .link {

@@ -3,40 +3,45 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <h1 class="post-title">{{ post.title }}</h1>
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-                <p class="post-subtitle">
-                  {% if user == post.author %}
-                      {% if user.is_superuser %}
-                          <a href="{% url 'post_update' slug=post.slug %}" class="btn btn-primary">Edit</a>
-                      {% else %}
-                          <a href="{% url 'post_update_user' slug=post.slug %}" class="btn btn-primary">Edit</a>
-                      {% endif %}
-                    <a href="{% url 'post_delete_confirm' slug=post.slug %}" class="btn btn-danger">Delete</a>
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+        <div class="masthead">
+          <div class="row g-0">
+              <div class="col-md-12">
+                  {% if "placeholder" in post.featured_image.url %}
+                      <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="placeholder image">
+                  {% else %}
+                      <img src="{{ post.featured_image.url }}" class="img-fluid" alt="{{ post.title }}">
                   {% endif %}
+              </div>
+          </div>
+      </div>
+
+      <div class="row mt-2 text-center">
+        <div class="col-md-11">
+            <h1 class="post-title">{{ post.title }}</h1>
+            <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+
+            {% if user == post.author %}
+                <p class="post-subtitle">
+                    {% if user.is_superuser %}
+                        <a href="{% url 'post_update' slug=post.slug %}" class="btn btn-primary">Edit</a>
+                    {% else %}
+                        <a href="{% url 'post_update_user' slug=post.slug %}" class="btn btn-primary">Edit</a>
+                    {% endif %}
+                    <a href="{% url 'post_delete_confirm' slug=post.slug %}" class="btn btn-danger">Delete</a>
                 </p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in post.featured_image.url %}
-                    <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder image">
-                {% else %}
-                    <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
+                </div>
+                </div>
+            {% endif %}
+
 
 <div class="container mt-4">
     <div class="row">
         <div class="col">
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Content</h5>
                     <p class="card-text">{{ post.content | safe }}</p>
                 </div>
             </div>
@@ -47,7 +52,7 @@
 <div class="row">
   <div class="col-12">
     <strong class="text-secondary">
-      <i class="far fa-thumbs-up"></i> {{ post.total_likes }}
+      <i class="bi bi-hand-thumbs-up"></i> {{ post.total_likes }}
     </strong>
   </div>
   <div class="col-12">
@@ -67,21 +72,23 @@
     {% endif %}
   </div>
 </div>
-<!-- Displaying count of comments -->
+
+<div class="col-12">
+  <hr>
+</div>
+
+  <!-- Displaying Comments -->
+  <div class="row">
+  <!-- Displaying count of comments -->
 <div class="row">
     <div class="col-12">
       <strong class="text-secondary">
-        <i class="far fa-comments"></i> {{ comment_count }}
+        <i class="bi bi-envelope"></i> {{ comment_count }}
       </strong>
     </div>
-    <div class="col-12">
-      <hr>
-    </div>
   </div>
-  <!-- Displaying Comments -->
-  <div class="row">
     <div class="col-md-8 card mb-4  mt-3 ">
-      <h3>Comments:</h3>
+      <h3>Comments</h3>
       <div class="card-body">
         <!-- We want a for loop inside the empty control tags
           to iterate through each comment in comments -->
@@ -118,7 +125,7 @@
     <div class="col-md-4 card mb-4 mt-3">
         <div class="card-body">
           {% if user.is_authenticated %}
-          <h3>Leave a comment:</h3>
+          <h3>Add a comment</h3>
           <p>Posting as: {{ user.username }}</p>
           <form id="commentForm" method="post"
             style="margin-top: 1.3em;">
@@ -128,7 +135,7 @@
               class="btn btn-primary">Submit</button>
           </form>
           {% else %}
-          <p>Log in to leave a comment</p>
+          <p>Log in to add a comment</p>
           {% endif %}
         </div>
       </div>
