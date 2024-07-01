@@ -124,16 +124,16 @@ body {
 }
 
 /* Navbar Link Styles */
+
 .navbar-nav .nav-item .nav-link {
     font-family: "Questrial", sans-serif;
     color: #000000; 
     font-weight: 400; 
     font-size: 16px;
-    
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #38B6FF; 
+    color: #38B6FF;
 }
 
 
@@ -372,19 +372,3 @@ ul li {
     color: #555;
     margin-bottom: 0;
   }
-
-
- /* Nav Responsiveness */   
-
-@media (max-width: 576px) {
-    .navbar {
-        padding: 10px 20px;
-    }
-    .navbar-nav .nav-item .nav-link {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .btn {
-        margin: 5px;
-    }
-}
