@@ -4,30 +4,23 @@
 
 {% block content %}
 <!-- Cover Section -->
-<div class="container-fluid">
+<div class="container-fluid p-0">
   <div class="position-relative">
-    <img src="{% static 'images/story.jpg' %}" class="img-fluid mb-0" alt="about-image" style="width: 100%;"
-      width="2000" height="400">
+    <img src="{% static 'images/story.jpg' %}" class="img-fluid mb-0" alt="about-image" style="width: 100%;" width="2000" height="400">
   </div>
 </div>
 <!-- End Cover Section -->
-  <section>
+
+<section class="container py-3 bg-white" id="content-section">
   <!-- Main Content Sections -->
-
- <!-- Main Content Sections -->
-<div class="container py-3 bg-white" id="content-section">
-
-  <!-- Section: Insightful Articles, Expert Advice, Community Support -->
   <div class="row row-cols-1 row-cols-lg-3 g-4">
-    
     <!-- Welcome to Our Mental Health Community -->
     <div class="col mb-4">
       <div class="text-center">
         <span class="bi bi-people-fill display-1"></span>
       </div>
       <h2 class="h4">Who We Are </h2>
-      <p class="text-muted">We are a dedicated community of mental health professionals, advocates, and individuals with lived experiences. Our platform is built on the foundation of understanding and empathy, 
-        providing a sanctuary for those seeking support and guidance. Here, you are never alone.</p>
+      <p class="text-muted">We are a dedicated community of mental health professionals, advocates, and individuals with lived experiences. Our platform is built on the foundation of understanding and empathy, providing a sanctuary for those seeking support and guidance. Here, you are never alone.</p>
     </div>
 
     <!-- Our Mission -->
@@ -36,10 +29,8 @@
         <span class="bi bi-bullseye display-1"></span>
       </div>
       <h2 class="h4">Our Mission</h2>
-      <p class="text-muted">Our mission is to promote mental health awareness, provide valuable resources, and foster a supportive community. 
-        We strive to empower individuals by offering insightful articles, expert advice, and real-life stories that inspire and educate. 
+      <p class="text-muted">Our mission is to promote mental health awareness, provide valuable resources, and foster a supportive community. We strive to empower individuals by offering insightful articles, expert advice, and real-life stories that inspire and educate.</p>
     </div>
-
 
     <!-- Funded by Generosity -->
     <div class="col mb-4">
@@ -47,153 +38,99 @@
         <span class="bi bi-gift display-1"></span>
       </div>
       <h2 class="h4">Funded by Generosity</h2>
-      <p class="text-muted">Our initiative is funded by generous donations from supporters. Operating as a charity, every contribution helps maintain our services, create new content, and reach more people in need. 
-        Your support makes a difference.</p>
+      <p class="text-muted">Our initiative is funded by generous donations from supporters. Operating as a charity, every contribution helps maintain our services, create new content, and reach more people in need. Your support makes a difference.</p>
     </div>
-
-  </div>
-
-</div>
-
-
-<section class="bsb-blog-5 py-3 py-md-5 py-xl-8">
- <section>
-      <!--Testimonials-->
-      <section id="testimonials" class="bsb-blog-5 py-3 py-md-5 py-xl-8">
-                    <h2 class="display-5 mb-4 mb-md-2 text-center">Kind words from our community</h2>
-        
-                    <br><br>
-                  
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-10 col-xl-8 text-center">
-          </div>
-        </div>
-
-        <section>
-          <div class="row text-center">
-            <div class="col-md-4 mb-5 mb-md-0">
-              <div class="d-flex justify-content-center mb-4">
-                <img src="{% static 'images/sarah.jpg' %}" class="rounded shadow-1-strong" width="150" height="150"
-                  alt="art-teacher">
-              </div>
-              <h4 class="mb-3">Sarah Johnson</h4>
-              <p class="px-xl-3 mb-4">
-                "'You Matter' changed my life. <br>
-                It's a sanctuary for teens like me with social anxiety. <br>
-                This place truly cares. <a href="{% url 'post_detail' 'overcoming-social-anxiety' %}" > To read more click here</a>
-              </p>
-            </div>
-            <div class="col-md-4 mb-5 mb-md-0">
-              <div class="d-flex justify-content-center mb-4">
-                <img src="{% static 'images/michael.jpg' %}" class="rounded shadow-1-strong" width="150" height="150"
-                  alt="oil-painter">
-              </div>
-              <h4 class="mb-3">Michael Davis</h4>
-              <p class="px-xl-3 mb-4">
-                "'You Matter' saved my career. 
-                The resources<br> and support here gave me control over my stress. <br>
-                It's a lifesaver.<a href="{% url 'post_detail' 'finding-balance-and-renewal' %}" > To read more click here</a>
-              </p>
-            </div>
-
-            <div class="col-md-4 mb-0">
-              <div class="d-flex justify-content-center mb-4">
-                <img src="{% static 'images/margaret.jpg' %}" class="rounded shadow-1-strong" width="150" height="150"
-                  alt="sculpturer">
-              </div>
-              <h4 class="mb-3">Margaret White</h4>
-              <p class="px-xl-3 mb-4">
-                "At 80, I found joy again with 'You Matter.' <br>
-                The resources and support group keep me going. <br>
-                It's never too late to seek help. <a href="{% url 'post_detail' 'embracing-joy-in-the-golden-years-my-journey-with-you-matter' %}" >To read more click here</a>
-              </p>
-            </div>
-          </div>
-        </section>
-    </section>
-</section>
-</section>
-
-<br><br>
-
-<section>
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-            <h2 class="display-5 mb-4 mb-md-5 text-center" id="post-your-story">Your Story</h2>
-          </div>
-        </div>
-     
-
-        <h2><i class="bi bi-file-earmark-text"></i> How to Post Your Story with Us</h2>
-        <br>
-            
-      <ul class="list-unstyled">
-          <li>1- Register: To post, you will need to  <a href="{% url 'account_login' %}" class="link-redirect">register or login</li></a>
-          <li>2- Guidelines: Read our posting community <a href="{% url 'guidelines' %}" class="link-redirect">guidelines</a></li>
-          <li>3- Post Your Story:Once you register and/or login, you can go to the <a href="{% url 'about' %}#post-your-story" class="link-redirect">story section below</a> and post your story there.</li>
-          <li>4- Review Process: Once posted, the You Matter team will review your post before approval.</li>
-          <li>5- Edit or Delete: In the meantime, if you feel like you need to edit or delete your post, you can do that.</li>
-          <li>6- Pending Posts: The pending post will appear on the home blog page.</li>
-      </ul>
-  
-      <p>By following these guidelines, we can maintain a safe and welcoming environment for all members of the "You Matter" community. Thank you for being part of our community and contributing to a positive and supportive space for mental health and wellbeing.</p>
-      <p>If you have any questions or need further assistance, please contact our support team at <a href="mailto:support@example.com" class="link-redirect">support@youmatter.com</a>.</p>
-      <br>
-  </div>
- </div>
-
-
-  <section class="bsb-blog-5 py-3 py-md-2 py-xl-8">
-      {% if request.user.is_authenticated %}
-        <div class="container mt-5">
-          <div class="row">
-            <div class="col-8">
-              <!-- Post your story -->
-              <h2><i class="bi bi-pencil"></i> Post your Story</h2>
-              <br>
-              <p>We invite you to explore our collection of articles, participate in discussions, and join our community.
-                Together, we can break the stigma surrounding mental health and create a world where everyone has access to
-                the support they need.</p>
-              <p>Interested in sharing your own story or insights? You can submit your post using the form below. Each
-                submission will be reviewed for compliance with our guidelines before publication.</p>
-             
-
-              
-              <br>
-              <br>
-            
-          </div>
-              <form method="post">
-                {{ collaborate_form | crispy }}
-                {% csrf_token %}
-                <button class="btn btn-secondary" type="submit">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      {% else %}
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-8">
-            <h2>To collaborate with us, you must first <a href="{% url 'account_login' %}" class="link-redirect">login or Register</a>.</h2>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-    </div>
-    <div class="row">
-      <div class="col text-right">
-        <!-- Updated on field goes in here -->
-        <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-
-      </div>
-    </div>
-
   </div>
 </section>
+
+<section class="container py-3 py-md-5 py-xl-8">
+  <section id="testimonials" class="text-center">
+    <h2 class="display-5 mb-4 mb-md-2">Kind words from our community</h2>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-10 col-xl-8 text-center"></div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4 mb-5 mb-md-0">
+        <div class="d-flex justify-content-center mb-4">
+          <img src="{% static 'images/sarah.jpg' %}" class="rounded shadow-1-strong" width="150" height="150" alt="art-teacher">
+        </div>
+        <h4 class="mb-3">Sarah Johnson</h4>
+        <p class="px-xl-3 mb-4">"'You Matter' changed my life. It's a sanctuary for teens like me with social anxiety. This place truly cares. <a href="{% url 'post_detail' 'overcoming-social-anxiety' %}">To read more click here</a></p>
+      </div>
+      <div class="col-md-4 mb-5 mb-md-0">
+        <div class="d-flex justify-content-center mb-4">
+          <img src="{% static 'images/michael.jpg' %}" class="rounded shadow-1-strong" width="150" height="150" alt="oil-painter">
+        </div>
+        <h4 class="mb-3">Michael Davis</h4>
+        <p class="px-xl-3 mb-4">"'You Matter' saved my career. The resources and support here gave me control over my stress. It's a lifesaver.<a href="{% url 'post_detail' 'finding-balance-and-renewal' %}">To read more click here</a></p>
+      </div>
+      <div class="col-md-4 mb-0">
+        <div class="d-flex justify-content-center mb-4">
+          <img src="{% static 'images/margaret.jpg' %}" class="rounded shadow-1-strong" width="150" height="150" alt="sculpturer">
+        </div>
+        <h4 class="mb-3">Margaret White</h4>
+        <p class="px-xl-3 mb-4">"At 80, I found joy again with 'You Matter.' The resources and support group keep me going. It's never too late to seek help. <a href="{% url 'post_detail' 'embracing-joy-in-the-golden-years-my-journey-with-you-matter' %}">To read more click here</a></p>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="container py-3 py-md-5">
+  <div class="row justify-content-md-center">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 text-center">
+      <h2 class="display-5 mb-4 mb-md-5" id="post-your-story">Your Story</h2>
+    </div>
+  </div>
+
+  <h2><i class="bi bi-file-earmark-text"></i> How to Post Your Story with Us</h2>
+  <br>
+  <ul class="list-unstyled">
+    <li>1- Register: To post, you will need to <a href="{% url 'account_login' %}" class="link-redirect">register or login</a></li>
+    <li>2- Guidelines: Read our posting community <a href="{% url 'guidelines' %}" class="link-redirect">guidelines</a></li>
+    <li>3- Post Your Story: Once you register and/or login, you can go to the <a href="{% url 'about' %}#post-your-story" class="link-redirect">story section below</a> and post your story there.</li>
+    <li>4- Review Process: Once posted, the You Matter team will review your post before approval.</li>
+    <li>5- Edit or Delete: In the meantime, if you feel like you need to edit or delete your post, you can do that.</li>
+    <li>6- Pending Posts: The pending post will appear on the home blog page.</li>
+  </ul>
+  <p>By following these guidelines, we can maintain a safe and welcoming environment for all members of the "You Matter" community. Thank you for being part of our community and contributing to a positive and supportive space for mental health and wellbeing.</p>
+  <p>If you have any questions or need further assistance, please contact our support team at <a href="mailto:support@example.com" class="link-redirect">support@youmatter.com</a>.</p>
+</section>
+
+<section class="container py-3 py-md-5"> 
+  {% if request.user.is_authenticated %}
+    <div class="container mt-5"> 
+      <div class="row">
+        <div class="col-12">
+          <h2><i class="bi bi-pencil"></i> Post your Story</h2>
+          <br>
+          <p>We invite you to explore our collection of articles, participate in discussions, and join our community. Together, we can break the stigma surrounding mental health and create a world where everyone has access to the support they need.</p>
+          <p>Interested in sharing your own story or insights? You can submit your post using the form below. Each submission will be reviewed for compliance with our guidelines before publication.</p>
+          <form method="post">
+            {{ collaborate_form | crispy }}
+            {% csrf_token %}
+            <button class="btn btn-secondary" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <h2>To collaborate with us, you must first <a href="{% url 'account_login' %}" class="link-redirect">login or Register</a>.</h2>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+<section class="container py-3 py-md-5">
+  <div class="row">
+    <div class="col text-right">
+      <!-- Updated on field goes in here -->
+      <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+    </div>
+  </div>
+</section>
+
 {% endblock content %}
