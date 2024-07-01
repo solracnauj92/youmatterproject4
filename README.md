@@ -660,6 +660,37 @@ Models for Story Page: **2**
 
 #### 7.. `NewsletterSignup` Model
 
+## Defensive Programming: Preventing Unauthorized Access
+
+
+Defensive programming is a critical approach we implement to ensure the security and integrity of user sessions. One specific scenario we address is preventing unauthorised access when users attempt to copy links intended for logged-in users.
+
+### Implementation
+
+To safeguard against unauthorized access:
+
+1. **Session Validation**: Each critical action or access attempt within the application verifies the user's session validity.
+   
+2. **Access Control**: URLs and endpoints that provide sensitive functionality (like accessing another user's account) are protected by access controls and permissions.
+
+3. **Tokenization**: When transmitting sensitive links or data, tokens or unique identifiers are used to authenticate and authorise the user, preventing tampering or unauthorised use.
+
+### Measures Against Unauthorized Access
+
+#### Scenario: Copying Links
+
+- **Unauthorized Access Prevention**: Users attempting to access another user's session by copying links are automatically denied access.
+  
+- **Error Handling**: Proper error messages and redirects are implemented to handle unauthorised access attempts, maintaining a seamless user experience.
+
+### Benefits of Defensive Programming
+
+- **Security**: Ensures that user data and sessions are protected against unauthorised access and manipulation.
+  
+- **Reliability**: Enhances the reliability of our application by minimising the risk of unintended operations or security breaches.
+  
+- **User Trust**: Builds trust with users by demonstrating our commitment to safeguarding their information and interactions on our platform.
+
 
 # Credits
 ## Bootstrap Main Code Sources
@@ -685,6 +716,70 @@ Models for Story Page: **2**
 
 By using these resources, I was able to incorporate a variety of Bootstrap templates, components, and snippets to enhance the design and functionality of the website.
 
+# Testing 
+
+### HTML
+
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
+| Directory | File | Screenshot | Notes |
+| --- | --- | --- | --- |
+| about | about.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| about | about_starter.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| about | collaboration_requests.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | guidelines.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | index.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | post_confirm_delete.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | post_detail.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | post_update.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | post_update_user.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| newsletter | connect.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| newsletter | newsletter_signup.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| newsletter | newsletter_signup_form.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| templates | 404.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| templates | 500.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+
+## CSS
+
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+
+| Directory | File | Screenshot | Notes |
+| --- | --- | --- | --- |
+| static | style.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+
+### JavaScript
+
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
+
+| Directory | File | Screenshot | Notes |
+| --- | --- | --- | --- |
+| static | comments.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+
+### Python
+
+I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+
+| Directory | File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| about | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| about | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/forms.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| about | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| about | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| about | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/forms.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | utils.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/utils.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| main_page | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/manage.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| newsletter | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| newsletter | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/forms.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| newsletter | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| newsletter | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| newsletter | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| you_matter | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/you_matter/settings.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| you_matter | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/you_matter/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 
 # Bugs and Fixes
 
@@ -904,8 +999,76 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
+### Handling Sensitive Information
 
-# Acknowledgements
+#### Confidentiality
+
+- **Do not share**: Never share your usernames or passwords in public forums, documentation, or version control systems like Git repositories.
+- **Environment Variables**: Store sensitive information securely using environment variables. Use a `.env` file (listed in `.gitignore`) to manage these variables locally.
+
+#### Security Best Practices
+
+- **Secure Storage**: Use secure methods to store and transmit usernames and passwords. Avoid hardcoding these credentials directly in your application code.
+- **Encryption**: Whenever possible, transmit passwords securely over HTTPS and ensure sensitive data is encrypted at rest.
+
+#### Example Usage
+
+When setting up your environment, ensure that:
+
+1. You create a `.env` file to store your environment variables securely.
+2. Replace placeholder values in the `.env` file with your actual usernames and passwords.
+3. Never commit your `.env` file or any files containing sensitive information to version control.
+
+
+# Credits
+
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
+| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
+| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
+| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
+| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
+| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
+| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
+| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
+| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
+| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
+| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+
+
+
+## Bootstrap Code Sources
+
+# Bootstrap Resources
+
+1. **BootstrapBrain**:
+   BootstrapBrain comprises a small group of designers and developers who create content-focused and awesome Bootstrap templates, components, and snippets. They provide free Bootstrap templates for artists, writers, businesses, and bloggers.
+
+   For more information, visit: [BootstrapBrain](https://bootstrapbrain.com)
+
+2. **Bootstrap Documentation**:
+   The official Bootstrap documentation was also utilized to ensure proper implementation and customization of Bootstrap components and templates. The documentation provides comprehensive guides and examples to help developers build responsive, mobile-first projects on the web.
+
+   For more information, visit: [Bootstrap Documentation](https://getbootstrap.com/docs/)
+
+3. **Material Design for Bootstrap**:
+   Material Design for Bootstrap (MDB) offers 700+ UI components and templates. This resource was invaluable for acquiring Bootstrap templates that adhere to the Material Design principles, enhancing both the aesthetics and functionality of the website.
+
+   For more information, visit: [MDB Design for Bootstrap](https://mdbootstrap.com)
+
+4. **Code Institute Bootstrap Blog Website Walkthrough**:
+   The Code Institute provides a comprehensive walkthrough on creating a Bootstrap blog website. This walkthrough was instrumental in understanding the practical application of Bootstrap in real-world projects, guiding me through various steps and best practices.
+
+
+By using these resources, I was able to incorporate a variety of Bootstrap templates, components, and snippets to enhance the design and functionality of the website.
+
+### Image Sources
+
+The images used on this website have been sourced from Canva, where I am subscribed as a Pro member. As per Canva's licensing agreement, these images are copyright-free as long as I maintain my membership.
+
+## Acknowledgements
 
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
