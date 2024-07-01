@@ -385,6 +385,12 @@ The "How to Post Your Story" feature provides users with a clear, step-by-step g
 - **Guided Navigation**: Hyperlinks guide users to the necessary pages and resources, reducing confusion and effort.
 - **Engagement**: Encourages user participation by making the story-posting process straightforward and easy to follow.
 
+### User Story Posting Process
+
+This describes the steps a user needs to follow to post a story on the platform, from signing up to having their post published and interacted with by others.
+
+![Story Chart](Documentation/post_story_chart.png) 
+
 ## Guideline Sheet for Posting Feature
 ![Guideline Feature](Documentation/guidelines_features.PNG)
 
@@ -553,6 +559,8 @@ The "User Login/Logout Notification Feature" displays a prominent notification a
 
 ----
 <br>
+
+
 
 # Django Project Setup
 
