@@ -14,6 +14,7 @@ The live deployed application can be found deployed on [Heroku](https://youmatte
 
 Welcome to "You Matter" – a transformative project dedicated to mental health support and fostering community connections. Imagine a place where understanding flourishes, and empathy turns challenges into victories. As a mental health practitioner, my goal is not just to build a website, but to create a space for people seeking support and connection.
 
+<br>
 
 # Aims and Objectives
 1. **Providing Accessible Mental Health Resources**
@@ -40,6 +41,11 @@ Welcome to "You Matter" – a transformative project dedicated to mental health 
 
 - Facilitate ongoing learning through webinars, workshops, and expert talks.
 - Promote the latest research and developments in mental health care and wellness.
+
+
+----
+
+<br>
 
 # Agile Development Process
 
@@ -95,23 +101,23 @@ As a site user, I want to:
 
 ## User Persona
 
-In this section, I used UserPersona.dev free AI-powered User Persona Generator. By offering a concise description, it generates insightful user personas. The narratives presented below are inspired by real-life struggles, with due consideration given to privacy and protection through the alteration of names, locations, image and ages. 
+In this section, I utilized [UserPersona.dev](https://userpersona.dev) free AI-powered User Persona Generator. By providing a concise description, it generates insightful user personas. The narratives presented below are inspired by real-life struggles, with due consideration given to privacy and protection through the alteration of names, locations, images, and ages. The images were sourced from [Canva](https://canva.com), and I have ensured to resize and remove backgrounds to match the style of the website.
 
 - Story 1: Sarah (Teenager)
 
-![User1](youmatter/media/shop_images/sarah-userpersona.png) 
+![Sarah](static/images/sarah.jpg) 
 
 Sarah is a 17-year-old high school student who has been struggling with social anxiety. She often felt isolated and overwhelmed in crowded social situations, which affected her academic performance and overall well-being. One day, she stumbled upon the "You Matter" website, where she found articles and self-help resources specifically tailored to teenagers facing similar challenges. She joined a support group and gradually built the confidence to share her experiences. Through the encouragement and guidance of the group, Sarah learned strategies to manage her anxiety and discovered that she wasn't alone in her struggles. Today, Sarah is thriving in school and is excited about the future, thanks to the support and resources she found on the website.
 
 - Story 2: Michael (Working Professional)
 
-![User2](youmatter/media/shop_images/michael-userpersona.png) 
+![Micheal](static/images/michael.jpg) 
 
 Michael, a 35-year-old working professional, had been dealing with work-related stress, anxiety, and burnout for years. He felt overwhelmed and on the brink of quitting his job. After a particularly tough week, he decided to search for mental health support online and came across the "You Matter" website. The resources on stress management, work-life balance, and burnout prevention resonated with him. He started using the self-assessment tools and strategies provided, which helped him regain control over his mental health. Michael also found an online support group for professionals in similar situations. With the support and insights he gained from the community, he made significant changes in his life and career, ultimately finding a better work-life balance and improved mental well-being.
 
 - Story 3: Margaret (Retired Senior)
 
-![User3](youmatter/media/shop_images/margaret-userpersona.png) 
+![Margaret](static/images/margaret.jpg) 
 
 Margaret, an 80-year-old retiree, had been feeling increasingly lonely and anxious after losing her spouse and dealing with the challenges of aging. She discovered the "You Matter" website through her grandson and found a wealth of resources tailored to seniors facing mental health issues. The website provided information on coping with grief and isolation and tips for maintaining emotional well-being in later life. Margaret also joined an online seniors' support group where she met fellow retirees facing similar challenges. The connections she made and the compassionate discussions helped her combat her feelings of loneliness and find joy in her golden years. Margaret's experience demonstrates that it's never too late to seek support and that "You Matter" is there for people of all ages.
 
@@ -128,14 +134,6 @@ Margaret, an 80-year-old retiree, had been feeling increasingly lonely and anxio
 
 ## Users / Admin Goals 
 
-### New Site Users
-
-- As a new site user, I would like to access relevant information, so that I can read blog posts on various mental health topics and stay informed.
-- As a new site user, I would like to engage with the community, so that I can participate in discussions through comments on blog posts.
-- As a new site user, I would like to share personal experiences, so that I can write and publish personal posts about my mental health journey.
-- As a new site user, I would like to stay updated, so that I can subscribe to the newsletter for regular updates on new blog posts and mental health topics.
-- As a new site user, I would like to find support resources, so that I can access information about crisis contacts and support services.
-- As a new site user, I would like to learn from others, so that I can read success stories and experiences shared by other community members.
 
 ### First Time Visitor
 
@@ -171,9 +169,9 @@ Margaret, an 80-year-old retiree, had been feeling increasingly lonely and anxio
 - As a site administrator, I should be able to manage site settings and configurations, so that I can customise the website's functionality and appearance according to the needs of the community.
 - As a site administrator, I should be able to communicate with users through announcements or newsletters, so that I can keep the community informed about important updates or changes.
 
+----
 
-
- # Design 
+# Design 
 
 ## Wireframes
 
@@ -195,6 +193,8 @@ While the desktop wireframe showcases the full concept of the page, the next ste
 #### Mobile Wireframe
 ![wireframe_mobile](Documentation/mobile_wireframe.jpg) 
 
+----
+<br>
 
 ## Logo Design
 
@@ -210,13 +210,10 @@ Initially, the spiral was red, but considering that red can evoke strong emotion
 
 ## Colour Palette 
 
-### Design and Color Scheme
-
-In designing the website, I have carefully selected a colour palette that promotes a calming and supportive environment, essential for a mental health platform.  Our colour palette includes:
+I used [coolors.co](https://coolors.co/a6a6a6-e0e0e0-ffffff-004aad-38b6ff-c2d8e5) to generate my colour palette. The inspiration for this color scheme comes from my work in the mental health department at the NHS, where the use of blue is prevalent in creating a reassuring and professional atmosphere.
 
 ![colour](Documentation/colour.png) 
 
-The inspiration for this color scheme comes from my work in the mental health department at the NHS, where the use of blue is prevalent in creating a reassuring and professional atmosphere. 
 
 ## Typography
 
@@ -227,6 +224,76 @@ Dedigned by Joe Prince and Laura Meseguer. As of June 2024, these fonts are lice
 
 ![font](Documentation/font.png) 
 
+----
+<br>
+
+
+# Django Project Setup
+
+This project is set up using Django, with a combination of built-in, third-party, and custom applications to manage various functionalities. Below is an explanation of the apps used and a flowchart illustrating their relationships.
+
+![Django Project Flowchart](Documentation/django_diagram.png)
+
+## Installed Apps
+
+### 1. Django Built-in Apps
+
+These are the core applications provided by Django that offer essential functionalities like authentication, sessions, and admin interface.
+
+- `django.contrib.admin`: Provides the admin interface for managing your site's content.
+- `django.contrib.auth`: Handles authentication and authorization.
+- `django.contrib.contenttypes`: Framework for generic relations between models.
+- `django.contrib.sessions`: Manages session data for individual users.
+- `django.contrib.messages`: Provides a messaging framework for sending temporary messages to users.
+- `django.contrib.staticfiles`: Manages static files (CSS, JavaScript, images).
+- `django.contrib.sites`: Allows for the management of multiple websites with a single Django installation.
+
+### 2. Third-party Apps
+
+These applications are added to extend Django's capabilities with additional features and integrations.
+
+- `cloudinary_storage`: Integrates Cloudinary for managing media files.
+- `allauth`: Handles authentication, registration, and account management.
+- `allauth.account`: Submodule of `allauth` for handling standard user account management.
+- `allauth.socialaccount`: Submodule of `allauth` for handling social authentication.
+- `crispy_forms`: Enhances the rendering of Django forms.
+- `crispy_bootstrap5`: An extension of `crispy_forms` to work specifically with Bootstrap 5.
+- `django_summernote`: Integrates the Summernote WYSIWYG editor into Django admin.
+- `cloudinary`: Python SDK for Cloudinary.
+
+### 3. Custom Apps
+
+These applications are specific to the project and contain the main business logic and site-specific functionalities.
+
+- `main_page`: Handles the main page of the website.
+- `about`: Manages the "About Us" section of the website.
+- `newsletter`: Manages newsletter subscriptions and content.
+
+
+## Models
+### Models Used - 7 Models
+
+Models for Home Page: **4**
+
+#### 1. `Post` Model
+![Post Model](Documentation/post_model.jpg)
+#### 2. `Comment` Model
+![Comment Model](Documentation/comment_model.jpg)
+#### 3. `Tag` Model
+![Tag Model](Documentation/tag_model.jpg)
+#### 4. `Like` Model
+![Like Model](Documentation/like_model.jpg)
+
+Models for Story Page: **2**
+
+#### 5.. `About` Model
+
+#### 6. `CollaborateRequest` Model
+![Django Project Flowchart](Documentation/django_diagram.png)
+
+Models for Connect Page: **1**
+
+#### 7.. `NewsletterSignup` Model
 
 # Bugs and Fixes
 
