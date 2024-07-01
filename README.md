@@ -242,7 +242,57 @@ Dedigned by Joe Prince and Laura Meseguer. As of June 2024, these fonts are lice
 
 # Features 
 
-## Nav bar
+## Nav bar Feature
+![NavFeatures](Documentation/navbar_features.PNG) 
+
+The navigation bar is a critical component, providing users with quick and easy access to various sections and features. Below is a detailed explanation of each element in our navigation bar.
+
+### 1. Home (Blog)
+- **Description:** The Home section is the central hub of the website where users can access the latest blog posts and updates.
+- **Purpose:** 
+  - Serves as the main entry point for users.
+  - Encourages users to explore new content, increasing engagement and time spent on the site.
+
+### 2. Story (Our story + Post Your Story)
+  - **Description 1:** Provides information about the website, its mission, and its creators.
+  - **Purpose:** Builds trust and gives users a clear understanding of the website’s purpose.
+  - **Description 2:** Allows users to share their personal stories and experiences.
+  - **Purpose:** 
+    - Encourages user-generated content.
+    - Fosters a sense of community.
+    - Increases user engagement and repeat visits.
+
+### 3. Connect (Events, Contact)
+  - **Description 1:** Lists upcoming events that users can attend.
+  - **Purpose:** 
+    - Promotes community building.
+    - Encourages real-world interactions.
+  - **Description 2:** Provides contact information and a form for users to reach out to the site administrators.
+  - **Purpose:** 
+    - Enhances user satisfaction and trust.
+    - Offers support, answers inquiries, and collects feedback.
+
+### 4. Register, Login, Logout
+- 
+  - **Description 1:** Allows new users to create an account.
+  - **Purpose:** 
+    - Facilitates personalized user experiences.
+    - Enables user-generated content.
+
+  - **Description 2:** Provides returning users with access to their accounts.
+  - **Purpose:** 
+    - Enables personalized content and interactions.
+    - Enhances user retention.
+
+  - **Description 3:** Allows users to securely end their session.
+  - **Purpose:** 
+    - Ensures user security and privacy.
+
+### 5. Quote on the Right
+- **Description:** A quote displayed on the right side of the navigation bar.
+- **Purpose:** 
+  - Enhances the user experience by providing inspiration or motivation.
+  - Reflects the site’s ethos and branding.
 
 ## Cover Image with Quote Feature
 ### Design and Purpose
@@ -289,7 +339,7 @@ The purpose of the CTA hyperlinks is to:
 - Provide quick access to important information and actions.
 
 ## Testimonials Feature
-![youmatter](assets/images/logo-designs.jpg) 
+![Kind Words Features](Documentation/kindwords_features.PNG) 
 
 ### Purpose 
 
@@ -300,6 +350,180 @@ Testimonials play a crucial role in building trust and credibility with visitors
 - **Credibility**: Testimonials provide social proof and reassure potential users or clients about the quality and reliability of the services offered.
 - **Engagement**: Linking testimonials to related blog posts allows visitors to explore more in-depth insights or experiences shared by users or clients.
 - **SEO Benefits**: The interlinking between testimonials and blog posts can enhance SEO by improving internal linking structure and providing valuable content.
+
+## Event Feature
+![event_feature](Documentation/event_feature.PNG) 
+
+### Purpose and Implementation
+
+The event feature allows users to see a list of upcoming events. Each event is unique and linked to its respective Eventbrite page for further details and registration.
+
+### Benefits
+
+- **User Engagement**: Keeps users informed about upcoming events, encouraging participation and engagement.
+- **Convenience**: Direct links to Eventbrite pages provide users with easy access to event details and registration.
+- **Variety**: Showcases a range of events, catering to different interests and preferences.
+
+I implemented this feature by using and customising the [Bootstrap Album example](https://getbootstrap.com/docs/4.0/examples/album/). This provided a flexible and visually appealing layout which I adapted to suit the event listings.
+
+### Customisations
+
+1. **Styling Adjustments**: Modified the color scheme, fonts, and card design to align with You Mattere's branding.
+2. **Content Enhancements**: Included event-specific details such as date, time, location, and a brief description.
+3. **Integration with Eventbrite**: Added direct links to the Eventbrite pages for each event to facilitate easy access to detailed information and registration.
+
+## How to Post Your Story Feature
+![How to Feature](Documentation/how_to_feature.PNG) 
+
+### Purpose 
+
+The "How to Post Your Story" feature provides users with a clear, step-by-step guide on how to share their stories on the platform. This guide is designed to be user-friendly, with hyperlinks to relevant sections and resources to ensure a smooth posting experience.
+
+### Benefits
+
+- **User-Friendly**: Simplifies the process of posting stories, making it accessible for all users.
+- **Guided Navigation**: Hyperlinks guide users to the necessary pages and resources, reducing confusion and effort.
+- **Engagement**: Encourages user participation by making the story-posting process straightforward and easy to follow.
+
+## Guideline Sheet for Posting Feature
+![Guideline Feature](Documentation/guidelines_features.PNG)
+
+### Purpose
+
+The "Guideline Sheet for Posting" feature provides users with a clear set of rules and expectations for posting content on the platform. This ensures that all content is respectful, relevant, and supportive, fostering a positive community environment.
+
+### Benefits
+
+- **Community Respect**: Ensures that all posts respect the privacy and confidentiality of others.
+- **Relevance and Appropriateness**: Keeps content relevant to mental health and wellbeing while maintaining a safe and respectful space.
+- **Supportive Environment**: Encourages constructive feedback and supportive comments, enhancing the overall user experience.
+- **Original and Authentic Content**: Promotes the sharing of personal experiences and original content, ensuring authenticity and integrity.
+
+
+## Post List Blog Section Feature
+![Post List Feature](Documentation/post_list_features.png)
+### Purpose
+
+The "Post List Blog Section" feature provides users with a visually appealing and informative list of blog posts. Each post in the list displays an image, title, author, and the date it was posted. This feature allows users to easily browse through recent blog entries and select those that interest them.
+
+### Benefits
+
+- **Visual Appeal**: The inclusion of images alongside blog posts makes the section more engaging and attractive.
+- **Informative**: Displaying the title, author, and date of each post provides users with essential information at a glance.
+- **User Engagement**: Encourages users to explore different posts, increasing their interaction with the content.
+
+### Implementation
+
+I used the component from [BootstrapBrain](https://bootstrapbrain.com/component/bootstrap-5-stylish-blog-layout-section/) to style the post list and adapted it to fit You Matters's design and requirements. This component provided a solid foundation with a stylish layout, which I customised to enhance its functionality and visual appeal for our users.
+
+### Customisations
+
+1. **Styling Adjustments**: Modified the color scheme, and spacing to align with our website's branding.
+2. **Enhanced Responsiveness**: Ensured the layout is fully responsive, providing a seamless experience across various devices and screen sizes.
+3. **Additional Information**: Added more details to each post entry, such as author, to provide users with more context.
+
+## Blog Page Feature
+![Blog Image Feature](Documentation/post_imagepage_features.png)
+![Blog page Feature](Documentation/post_page_features.png)
+
+### Purpose
+
+The "Blog Page" feature allows users to read individual blog articles, view the title, author, and posting date. Users can interact with the article by commenting, liking, and viewing others' comments. Additionally, users can delete their comments if they choose. To add or delete comments, users must be logged in. Authors of the articles have the ability to edit or delete their articles.
+
+### Benefits
+
+- **User Interaction**: Encourages users to engage with content through comments and likes.
+- **Content Management**: Authors can manage their articles, ensuring the content remains relevant and accurate.
+- **Community Building**: Facilitates conversations and feedback among users, fostering a sense of community.
+
+## Newsletter Feature
+![Newsletter](Documentation/newsletter_feature.png)
+
+### Purpose 
+
+The "Newsletter Feature" allows users to subscribe to regular updates and announcements from the website. Users can sign up with their email addresses to receive newsletters
+
+### Benefits
+
+- **User Engagement**: Keeps users informed and engaged with regular updates and announcements.
+- **Traffic Boost**: Drives traffic back to the website through newsletter links to blog posts and events.
+- **Community Building**: Strengthens the community by keeping users connected and informed about recent activities and updates.
+
+## Google Map Feature in Contact Information
+![Map Feature](Documentation/map_feature.png)
+
+### Purpose
+
+The "Google Map Feature" integrates a Google Map into the contact information section of the website. This feature allows users to easily locate the physical address of You Matter, enhancing accessibility and providing clear directions.
+
+### Benefits
+
+- **Accessibility**: Provides users with a visual representation of the location, making it easier to find.
+- **User Convenience**: Offers an interactive way for users to get directions and view the surrounding area.
+- **Professional Appearance**: Enhances the contact page with a modern and useful feature.
+
+### Implementation
+
+I implemented the Google Map Feature using the guidelines and components from [MDBootstrap's Google Maps documentation](https://mdbootstrap.com/docs/standard/extended/google-maps/). This provided a robust and customisable solution that I tailored to fit the needs of our contact page.
+
+### Customizations
+
+2. **Zoom and Controls**: Adjusted zoom levels and added necessary controls to improve user experience.
+3. **Styling**: Incorporated custom styling to ensure the map integrates seamlessly with You Matter design.
+
+## Social Media Feature
+
+![Social Media Feature](Documentation/social_media_features.png)
+
+### Purpose
+
+The "Social Media Feature" integrates social media links and sharing buttons throughout the website. This feature allows users to connect with You Matter on various social media platforms and share content easily with their networks.
+
+### Benefits
+
+- **Increased Engagement**: Encourages users to follow You Matter on social media and stay updated with the latest news and updates.
+- **Content Sharing**: Enables users to share blog posts, events, and other content with their friends and followers, increasing the reach of the website.
+- **Brand Presence**: Strengthens You Matter's online presence and brand visibility across multiple social media platforms.
+## Social Media Icons
+
+![Social Media Icons](Documentation/social_media_icons.png)
+
+### Purpose
+
+The social media icons feature integrates icons from [Bootstrap Icons](https://icons.getbootstrap.com/) into our website's footer. These icons link to our social media profiles, allowing users to easily connect with us on various platforms.
+
+### Implementation
+
+I implemented the social media icons using icons provided by Bootstrap Icons. This resource offers a wide range of high-quality icons that are scalable and customizable to fit our website's design.
+
+### Customizations
+
+1. **Icon Selection**: Chose icons that represent our social media platforms, ensuring clarity and recognition for users.
+2. **Styling**: Applied custom styles to the icons to match our website's color scheme and visual identity.
+3. **Link Integration**: Linked each icon to its respective social media profile for direct access.
+
+### Benefits
+
+- **Enhanced Connectivity**: Provides users with direct links to our social media profiles, enhancing user engagement and interaction.
+- **Visual Appeal**: Adds visual interest and professionalism to our website's footer.
+- **User-Friendly**: Offers intuitive navigation for users to connect with us on their preferred social platforms.
+
+### Implementation
+
+I implemented the social media icons using icons provided by [Bootstrap Icons](https://icons.getbootstrap.com/). This resource offers a wide range of high-quality icons that are scalable and customizable to fit our website's design.
+
+## User Login/Logout Notification Feature
+![Logged in Feature](Documentation/signedin_feature.PNG)
+
+### Purpose
+
+The "User Login/Logout Notification Feature" displays a prominent notification at the top of the page whenever a user logs in or out. This notification includes a message indicating whether the user has signed in or out, along with the user's name. This feature provides immediate feedback to users about their login status.
+
+### Benefits
+
+- **Immediate Feedback**: Provides clear and immediate feedback to users about their login status.
+- **User Experience**: Enhances the user experience by confirming successful logins and logouts.
+- **Personalization**: Personalises the notification with the user's name, creating a more engaging experience.
 
 ----
 <br>
