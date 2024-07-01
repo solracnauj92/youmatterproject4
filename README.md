@@ -81,6 +81,8 @@ As a site user, I want to:
 
 "You Matter" is designed to support and connect the following groups:
 
+![Target](Documentation/target_audeince.png) 
+
 1. **Individuals Seeking Mental Health Resources**
    - People looking for reliable information and resources on mental health topics.
 2. **Community Members Seeking Support**
@@ -227,12 +229,75 @@ Dedigned by Joe Prince and Laura Meseguer. As of June 2024, these fonts are lice
 ----
 <br>
 
+# Features 
+
+## Nav bar
+
+## Cover Image with Quote Feature
+### Design and Purpose
+![Cover Features](Documentation/cover_features.jpg) 
+
+One of the prominent features of this website is the cover image with a quote displayed on all main pages. This feature serves multiple purposes:
+
+- **Visual Appeal**: The cover image enhances the aesthetics of each page, making a strong first impression on visitors.
+- **Message Reinforcement**: The quote provides a succinct and impactful message that aligns with the theme or purpose of the website.
+- **Consistency**: By placing the cover image with a quote across all main pages, it creates a cohesive and unified look throughout the website.
+
+## Key Features 
+
+![Key Features](Documentation/key_features.jpg) 
+
+### Purpose
+The Key Features section is strategically placed to help users quickly understand the purpose of the page, what they can find on it, and what to expect. This enhances the user experience by providing clear and concise information at a glance.
+
+### Design
+The Key Features section on the Home, Story, and Connect pages was designed using resources from [Bootstrap Brain](https://bootstrapbrain.com/component/bootstrap-5-services-section-design-example/#code) and [Bootstrap Icons](https://icons.getbootstrap.com/).
+
+#### Bootstrap Brain
+I used a service section design example from Bootstrap Brain as the base for our Key Features section. This provided a solid, responsive foundation with modern design elements.
+
+#### Bootstrap Icons
+To enhance the visual appeal, I incorporated icons from the Bootstrap Icons library. Bootstrap Icons is a free, high-quality, open-source icon library with over 2,000 icons. These icons can be included as SVGs, SVG sprites, or web fonts, and can be used with or without Bootstrap in any project.
+
+#### Custom Modifications
+I then modified the base design and icons to fit our specific needs. The customisation included:
+- Adjusting the layout and styling to match the overall theme of our website.
+- Selecting icons that accurately represent the key features of each page.
+- Adding custom text and descriptions to clearly convey the purpose of the page, what users can find, and what to expect.
+
+## Call-to-Action Hyperlinks Section
+
+![Call To Action](Documentation/call_to_action_features.jpg) 
+
+To enhance navigation and user experience, I integrated call-to-action (CTA) hyperlinks within the content. These hyperlinks are strategically placed to guide users to specific sections of the website, reducing the need to search for relevant information.
+
+### Purpose
+The purpose of the CTA hyperlinks is to:
+- Direct users to specific sections within a page or to entirely different pages.
+- Improve user experience by minimizing the effort needed to navigate the website.
+- Provide quick access to important information and actions.
+
+## Testimonials Feature
+![youmatter](assets/images/logo-designs.jpg) 
+
+### Purpose 
+
+Testimonials play a crucial role in building trust and credibility with visitors. Each testimonial provides a personal endorsement or review of the website, service, or product, contributed by users or clients. Moreover, to provide further context and depth to these testimonials, each testimonial is linked to a related blog post written by the user or client.
+
+### Benefits
+
+- **Credibility**: Testimonials provide social proof and reassure potential users or clients about the quality and reliability of the services offered.
+- **Engagement**: Linking testimonials to related blog posts allows visitors to explore more in-depth insights or experiences shared by users or clients.
+- **SEO Benefits**: The interlinking between testimonials and blog posts can enhance SEO by improving internal linking structure and providing valuable content.
+
+----
+<br>
 
 # Django Project Setup
 
 This project is set up using Django, with a combination of built-in, third-party, and custom applications to manage various functionalities. Below is an explanation of the apps used and a flowchart illustrating their relationships.
 
-![Django Project Flowchart](Documentation/django_diagram.png)
+![Django Project Flowchart](Documentation/diagram_django.png)
 
 ## Installed Apps
 
@@ -270,30 +335,87 @@ These applications are specific to the project and contain the main business log
 - `newsletter`: Manages newsletter subscriptions and content.
 
 
+For more detailed flow chart
+
+<details>
+<summary>For more detailed flow chart, click here</summary>
+
+![Post Model](Documentation/django_diagram.png)
+</details>
+
+
 ## Models
 ### Models Used - 7 Models
 
 Models for Home Page: **4**
 
-#### 1. `Post` Model
+<details>
+<summary>1. `Post` Model</summary>
+
 ![Post Model](Documentation/post_model.jpg)
-#### 2. `Comment` Model
+</details>
+
+<details>
+<summary>2. `Comment` Model</summary>
+
 ![Comment Model](Documentation/comment_model.jpg)
-#### 3. `Tag` Model
+</details>
+
+<details>
+<summary>3. `Tag` Model</summary>
+
 ![Tag Model](Documentation/tag_model.jpg)
-#### 4. `Like` Model
+</details>
+
+<details>
+<summary>4. `Like` Model</summary>
+
 ![Like Model](Documentation/like_model.jpg)
+</details>
+
+### Models for Story Page: **2**
+
 
 Models for Story Page: **2**
 
 #### 5.. `About` Model
 
-#### 6. `CollaborateRequest` Model
-![Django Project Flowchart](Documentation/django_diagram.png)
+<details>
+<summary>6. `CollaborateRequest` Model</summary>
 
-Models for Connect Page: **1**
+![CollaborateRequest Model](Documentation/collab_model.jpg)
+</details>
+<br>
+
+### Models for Connect Page: **1**
 
 #### 7.. `NewsletterSignup` Model
+
+
+# Credits
+## Bootstrap Main Code Sources
+
+1. **BootstrapBrain**:
+   BootstrapBrain comprises a small group of designers and developers who create content-focused and awesome Bootstrap templates, components, and snippets. They provide free Bootstrap templates for artists, writers, businesses, and bloggers.
+
+   For more information, visit: [BootstrapBrain](https://bootstrapbrain.com)
+
+2. **Bootstrap Documentation**:
+   The official Bootstrap documentation was also utilized to ensure proper implementation and customization of Bootstrap components and templates. The documentation provides comprehensive guides and examples to help developers build responsive, mobile-first projects on the web.
+
+   For more information, visit: [Bootstrap Documentation](https://getbootstrap.com/docs/)
+
+3. **Material Design for Bootstrap**:
+   Material Design for Bootstrap (MDB) offers 700+ UI components and templates. This resource was invaluable for acquiring Bootstrap templates that adhere to the Material Design principles, enhancing both the aesthetics and functionality of the website.
+
+   For more information, visit: [MDB Design for Bootstrap](https://mdbootstrap.com)
+
+4. **Code Institute Bootstrap Blog Website Walkthrough**:
+   The Code Institute provides a comprehensive walkthrough on creating a Bootstrap blog website. This walkthrough was instrumental in understanding the practical application of Bootstrap in real-world projects, guiding me through various steps and best practices.
+
+
+By using these resources, I was able to incorporate a variety of Bootstrap templates, components, and snippets to enhance the design and functionality of the website.
+
 
 # Bugs and Fixes
 
