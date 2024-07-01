@@ -49,14 +49,25 @@ Welcome to "You Matter" – a transformative project dedicated to mental health 
 
 # Agile Development Process
 
-In developing "You Matter," we have utilized an Agile methodology, specifically employing the Kanban board feature in GitHub. This approach allows us to:
+In developing "You Matter," I have used an Agile methodology, specifically employing the Kanban board feature in GitHub. This approach allows to:
 
-- **Highlight Must-Haves, Could-Haves, and More**: Clearly categorize and prioritise tasks and features based on their importance and impact.
+- **Highlight Must-Haves, Could-Haves, and More**: Clearly categorise and prioritise tasks and features based on their importance and impact.
 - **Track Progress**: Continuously monitor the project's development and adjust priorities as needed.
 - **Add Issues on the Go**: Dynamically create and manage issues as they arise, ensuring that all aspects of the project are addressed in a timely manner.
 - **User Story Statements**: Each issue includes a user story statement to clarify the goal and context, ensuring that all team members have a shared understanding of the task at hand.
 
-![Kanban Board]() 
+[GitHub Projects](https://github.com/solracnauj92/youmatterproject4/projects) served as an Agile tool for this project.
+It isn't a specialised tool, but with the right tags and project creation/issue assignments, it can be made to work.
+
+Through it, user stories, issues, tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+
+![board](Documentation/userstory.png) 
+
+## GitHub Issues
+
+[GitHub Issues](https://github.com/solracnauj92/youmatterproject4/issues) served as an another Agile tool.
+There, I used my own **User Story Template** to manage user stories.
+
 
 ### Example User Stories
 
@@ -289,6 +300,32 @@ Testimonials play a crucial role in building trust and credibility with visitors
 - **Credibility**: Testimonials provide social proof and reassure potential users or clients about the quality and reliability of the services offered.
 - **Engagement**: Linking testimonials to related blog posts allows visitors to explore more in-depth insights or experiences shared by users or clients.
 - **SEO Benefits**: The interlinking between testimonials and blog posts can enhance SEO by improving internal linking structure and providing valuable content.
+
+----
+<br>
+
+# Future Features
+
+- **Website Redesign and Maintenance**:  
+  Continuous improvement and redesign of the website to enhance user experience, visual appeal, and functionality. Regular updates will ensure that the website remains modern, responsive across various devices, and aligned with current design trends and user expectations.
+
+- **Merchandise Page to Support the Organisation**:  
+  Introducing a range of merchandise that users can purchase to support the organization financially. This will include branded apparel, accessories, and other items that promote mental health awareness.
+
+![Shop](Documentation/shop.jpg) 
+
+
+- **Podcast on Mental Health**:  
+  Launching a podcast series focused on various mental health topics. This podcast will feature expert interviews, personal stories, and discussions on mental health issues to provide valuable insights and support to the community.
+
+- **Expansion of the Organisation**:  
+  Plans to expand the reach of the organization to new regions and communities. This will involve setting up local chapters, collaborating with regional mental health organisations, and hosting events to engage a wider audience and provide localized support.
+
+- **Virtual Chat Function**:  
+  Planned introduction of a virtual chat feature that allows users to engage in real-time conversations. The chat will include features such as emoji reactions, file sharing for resources, and message history for continuity in conversations. Enhancing community interaction, the virtual chat aims to foster a supportive environment where users can openly discuss and seek guidance on mental health issues.
+
+- **Social Media Single Sign-On (SSO)**:  
+  Implementing Social Media Single Sign-On (SSO) functionality, allowing users to sign up and log in with one click using their Google account or other popular social media platforms. This feature streamlines the registration process, enhancing user convenience and reducing barriers to entry for new users.
 
 ----
 <br>
