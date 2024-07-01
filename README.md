@@ -492,7 +492,7 @@ The "Social Media Feature" integrates social media links and sharing buttons thr
 - **Brand Presence**: Strengthens You Matter's online presence and brand visibility across multiple social media platforms.
 ## Social Media Icons
 
-![Social Media Icons](Documentation/social_media_icons.png)
+![Social Media Icons](Documentation/social_media_features.png)
 
 ### Purpose
 
@@ -560,6 +560,34 @@ The "User Login/Logout Notification Feature" displays a prominent notification a
 ----
 <br>
 
+# Technologies Used:
+
+- [![Markdown Builder](https://img.shields.io/badge/Markdown_Builder-grey?logo=markdown&logoColor=000000)](https://tim.2bn.dev/markdown-builder) used to generate README and TESTING templates.
+- [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [![GitHub](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
+
+
+- [![Gitpod](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) used as a cloud-based IDE for development.
+
+
+- [![HTML](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) used for the main site content.
+- [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
+- [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
+- [![jQuery](https://img.shields.io/badge/jQuery-grey?logo=jquery&logoColor=0769AD)](https://jquery.com) used for user interaction on the site.
+- [![Python](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) used as the back-end programming language.
+
+
+- [![Heroku](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) used for hosting the deployed back-end site.
+
+- [![Bootstrap](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+
+
+- [![Google Sheets](https://img.shields.io/badge/Google_Sheets-grey?logo=googlesheets&logoColor=34A853)](https://docs.google.com/spreadsheets) used for storing data from my Python app.
+- [![Django](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
+- [![ElephantSQL](https://img.shields.io/badge/ElephantSQL-grey?logo=postgresql&logoColor=36A6E2)](https://www.elephantsql.com) used as the Postgres database.
+- [![Cloudinary](https://img.shields.io/badge/Cloudinary-grey?logo=cloudinary&logoColor=3448C5)](https://cloudinary.com) used for online static file storage.
+- [![WhiteNoise](https://img.shields.io/badge/WhiteNoise-grey?logo=python&logoColor=FFFFFF)](https://whitenoise.readthedocs.io) used for serving static files with Heroku.
+- [![Canva](https://img.shields.io/badge/Canva-grey?logo=canva&logoColor=00C4CC)](https://www.canva.com/p/canvawireframes) used for creating wireframes, logo, getting copyright images,..etc
 
 
 # Django Project Setup
@@ -692,28 +720,6 @@ To safeguard against unauthorized access:
 - **User Trust**: Builds trust with users by demonstrating our commitment to safeguarding their information and interactions on our platform.
 
 
-# Credits
-## Bootstrap Main Code Sources
-
-1. **BootstrapBrain**:
-   BootstrapBrain comprises a small group of designers and developers who create content-focused and awesome Bootstrap templates, components, and snippets. They provide free Bootstrap templates for artists, writers, businesses, and bloggers.
-
-   For more information, visit: [BootstrapBrain](https://bootstrapbrain.com)
-
-2. **Bootstrap Documentation**:
-   The official Bootstrap documentation was also utilized to ensure proper implementation and customization of Bootstrap components and templates. The documentation provides comprehensive guides and examples to help developers build responsive, mobile-first projects on the web.
-
-   For more information, visit: [Bootstrap Documentation](https://getbootstrap.com/docs/)
-
-3. **Material Design for Bootstrap**:
-   Material Design for Bootstrap (MDB) offers 700+ UI components and templates. This resource was invaluable for acquiring Bootstrap templates that adhere to the Material Design principles, enhancing both the aesthetics and functionality of the website.
-
-   For more information, visit: [MDB Design for Bootstrap](https://mdbootstrap.com)
-
-4. **Code Institute Bootstrap Blog Website Walkthrough**:
-   The Code Institute provides a comprehensive walkthrough on creating a Bootstrap blog website. This walkthrough was instrumental in understanding the practical application of Bootstrap in real-world projects, guiding me through various steps and best practices.
-
-
 By using these resources, I was able to incorporate a variety of Bootstrap templates, components, and snippets to enhance the design and functionality of the website.
 
 # Testing 
@@ -757,29 +763,29 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 ### Python
 
-I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files. Please view the link to check validation. 
 
-| Directory | File | CI URL | Screenshot | Notes |
-| --- | --- | --- | --- | --- |
-| about | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| about | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/forms.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| about | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| about | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| about | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| main_page | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| main_page | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/forms.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| main_page | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| main_page | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| main_page | utils.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/utils.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| main_page | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/manage.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| newsletter | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| newsletter | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/forms.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| newsletter | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| newsletter | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| newsletter | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| you_matter | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/you_matter/settings.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| you_matter | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/you_matter/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| Directory | File | CI URL 
+| --- | --- | --- | 
+| about | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/admin.py) 
+| about | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/forms.py) 
+| about | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/models.py) 
+| about | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/urls.py) 
+| about | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/about/views.py) 
+| main_page | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/admin.py) 
+| main_page | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/forms.py) 
+| main_page | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/models.py) 
+| main_page | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/urls.py) | 
+| main_page | utils.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/utils.py) 
+| main_page | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/main_page/views.py) 
+|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/manage.py) | 
+| newsletter | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/admin.py) 
+| newsletter | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/forms.py) | 
+| newsletter | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/models.py) |
+| newsletter | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/urls.py) | 
+| newsletter | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/newsletter/views.py) 
+| you_matter | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/you_matter/settings.py) 
+| you_matter | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/solracnauj92/youmatterproject4/main/you_matter/urls.py) | 
 
 # Bugs and Fixes
 
@@ -1029,19 +1035,11 @@ When setting up your environment, ensure that:
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
 | [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
 | [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
 
 
 
 ## Bootstrap Code Sources
-
-# Bootstrap Resources
 
 1. **BootstrapBrain**:
    BootstrapBrain comprises a small group of designers and developers who create content-focused and awesome Bootstrap templates, components, and snippets. They provide free Bootstrap templates for artists, writers, businesses, and bloggers.

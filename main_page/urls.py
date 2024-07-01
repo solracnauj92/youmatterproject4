@@ -18,6 +18,4 @@ urlpatterns = [
     path('post/<int:post_id>/toggle_like/', views.toggle_like, name='toggle_like'),  # noqa
     path('login/', views.login_view, name='login'),
 
-    
-
 ]

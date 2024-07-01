@@ -35,10 +35,8 @@ def handle_image_upload(instance, image_file):
             
             # Resize the image
             resized_image = resize_image(image_file, 800, 600)
-            
             # Upload the resized image to Cloudinary
             uploaded_image = cloudinary.uploader.upload(resized_image, folder="uploads")
-            
             # Update the instance with the Cloudinary URL
             instance.featured_image = uploaded_image['secure_url']
     

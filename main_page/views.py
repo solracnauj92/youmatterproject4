@@ -33,8 +33,7 @@ def post_detail(request, slug):
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
-    )
+                'Comment submitted and awaiting approval')
 
     comment_form = CommentForm()
 
@@ -173,6 +172,7 @@ def post_delete(request, slug):
     messages.success(request, "Post successfully deleted")
     return redirect("home")
 
+
 @login_required
 def toggle_like(request, post_id):
     post = get_object_or_404(Post, id=post_id)
@@ -205,10 +205,8 @@ def upload_image(request):
                 try:
                     # Resize the image
                     resized_image = resize_image(instance.featured_image.path, 256, 256)  # noqa
-                    
                     # Upload the resized image to Cloudinary
                     uploaded_image = cloudinary.uploader.upload(resized_image)
-                    
                     # Update the featured_image field with the Cloudinary URL
                     instance.featured_image = uploaded_image['secure_url']
                 except Exception as e:
@@ -222,7 +220,6 @@ def upload_image(request):
             return redirect('success_page') 
     else:
         form = form_class()
-    
     return render(request, 'upload_form.html', {'form': form})
 
 
